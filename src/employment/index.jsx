@@ -10,34 +10,20 @@ export default function Employment () {
 
   const series = [
     {
-      category: "0-14",
-      value: 0.2545,
+      category: 'Full-time employee',
+      value: 81,
     },
     {
-      category: "15-24",
-      value: 0.1552,
+      category: 'Self-employed',
+      value: 16,
     },
     {
-      category: "25-54",
-      value: 0.4059,
-    },
-    {
-      category: "55-64",
-      value: 0.0911,
-    },
-    {
-      category: "65+",
-      value: 0.0933,
+      category: 'Part-time employee',
+      value: 3,
     },
   ];
 
-  const labelContent = (props) => {
-    let formatedNumber = Number(props.dataItem.value).toLocaleString(undefined, {
-      style: "percent",
-      minimumFractionDigits: 2,
-    });
-    return `${props.dataItem.category} years old: ${formatedNumber}`;
-  };
+
 
 return (
   <Chart>
@@ -48,10 +34,6 @@ return (
         data={series}
         field="value"
         categoryField="category"
-        labels={{
-          visible: true,
-          content: labelContent,
-        }}
       />
     </ChartSeries>
   </Chart>

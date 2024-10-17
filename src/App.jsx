@@ -2,6 +2,7 @@ import './App.scss'
 
 import Titles from './titles'
 import Employment from './employment'
+import Location from './location'
 
 function App() {
 
@@ -100,8 +101,22 @@ function App() {
 
         <p>The majority of respondents were full-time employees.</p>
         <p>One interesting difference between developer and designer roles is that while 18% of all engineering roles reported being self-employed, only 7% of designers did. What's more, while 20% of developers chose the “solo entrepreneur” label, none of the designers did. </p>
-      <Employment/>
 
+        <h3>Are you...</h3>
+        <Employment/>
+      </section>
+      <section>
+        <h2>Geography</h2>
+        <p>We received responses from 50 different countries spread across six continents. </p>
+
+        <h3>In which country do you currently reside?</h3>
+        <Location/>
+      </section>
+      <section>
+        <h2>Experience</h2>
+        <p>Age is but a number; you could be 60 and just starting on a new career path. That’s why, instead of age, we asked for the respondents’ years of experience. A majority (54%) of respondents have 11+ years in the software development industry, and 27% have been at it for 5 years or less.  </p>
+
+        <h3>How long have you been involved in the software development industry? </h3>
       </section>
     </>
   )
