@@ -10,6 +10,7 @@ function App() {
 
   return (
     <>
+      <main>
       <section>
         <h1>State of Designer-Developer Collaboration 2024</h1>
         <h2>Survey Report</h2>
@@ -32,8 +33,8 @@ function App() {
       <section className='highlights'>
         <h2>Highlights</h2>
         <div className='flex'>
-          <div><p>While 36% of engineers say designer-developer collaboration goes smoothly and without challenges...</p></div>
-          <div><p>only 10% of designers would agree.</p></div>
+          <div className='callout'><p>While 36% of engineers say designer-developer collaboration goes smoothly and without challenges...</p></div>
+          <div className='callout'><p>only 10% of designers would agree.</p></div>
         </div>
         <h3>The top three interventions your teams yearn for are:</h3>
         <ul>
@@ -51,12 +52,12 @@ function App() {
         <p>Respondents were invited to take the survey through various channels—being prompted on the telerik.com website, through social media and blog post promotion, and through paid promotion in newsletters and on social media.</p> 
         <p>The survey was open for submissions for the period July 18 - September 08, 2024.</p>
         <p>We received a total of 467 responses from 51 countries. Before proceeding with the analysis, we cleaned and validated data for accuracy and relevance using both targeted survey distribution and screening questions to filter out respondents outside our target group and bots. We also learned that bots taking surveys are getting more and more advanced, leaving AI-generated feedback on open-ended questions. After the clean-up, we ended up with 222 respondents.</p>
-        <div>
+        <div className='callout'>
           <h3>Note on the Data</h3>
           <p>All results published here have been tested for statistical significance—and passed.</p>
           <p>If the sum of all responses is more than 100%, the question was multiple-choice. </p>
         </div>
-        <div>
+        <div className='callout'>
           <h3>Note on the Wording</h3>
           <p>Whenever we look at the differences between designer and development roles, we'll refer to them as “design/designers” and “development/developers/engineers/dev” for short. The job roles are grouped in these two categories in the following way: </p>
           <table>
@@ -423,6 +424,7 @@ function App() {
         <p>The Telerik and Kendo UI component libraries and UI customization tools give developers and designers a common language. This toolkit removes many of the obstacles presented by the design-to-code process and significantly reduces tedious CSS, guesswork, and frustrating back and forth—and, ultimately, time to market. </p>
         <a href="https://www.telerik.com/ui-customization-tools?utm_medium=pdf&utm_source=telerik&utm_campaign=dt_ar_design_dev_collab_report"><Button>I want better designer-developer collaboration</Button></a>
       </section>
+      </main>
     </>
   )
 }

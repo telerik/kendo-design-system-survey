@@ -4,11 +4,17 @@
   display: flex;
 }
 
-.highlights .flex div{
-  background-color: lightblue;
+.callout {
+  background-color: $tb-tertiary-subtle;
   padding: 20px;
   border-radius: 10px;
-  margin: 10px;
+  margin: 20px 10px;
+
+  h3 {
+    margin-top: 0;
+    margin-bottom: 5px;
+    font-weight: 300;
+  }
 }
 
 table {
@@ -16,7 +22,9 @@ table {
   max-width: 800px;
   text-align: left;
   border: 1px solid black;
-  border-collapse: collapse;
+  border-radius: 10px;
+  border-spacing: 0;
+  background-color: rgba(255, 255, 255, 0.8);
 
   tr th {
     font-weight: bold;
@@ -26,5 +34,21 @@ table {
   tr td {
     border: 1px solid black;
     padding: 5px;
+  }
+
+  tr th:first-child {
+    border-top-left-radius: 10px;
+  }
+
+  tr th:last-child {
+    border-top-right-radius: 10px;
+  }
+
+  tr:last-child td:first-child {
+    border-bottom-left-radius: 10px;
+  }
+    
+  tr:last-child td:last-child {
+    border-bottom-right-radius: 10px;
   }
 }
