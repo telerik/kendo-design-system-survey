@@ -18,6 +18,7 @@
     "@progress/kendo-react-layout": "^8.5.0",
     "@progress/kendo-react-progressbars": "^8.5.0",
     "@progress/kendo-svg-icons": "^3.1.0",
+    "@progress/kendo-theme-default": "^9.1.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1"
   },

@@ -1,0 +1,197 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+// Compatible with @progress/kendo-theme-default v.8.2.0
+
+$tb-primary: #4B4CF6;
+$tb-primary-hover: #5c5df8ff;
+$tb-tertiary: #75C1FF;
+$tb-light-subtle: #fafafa;
+$tb-tertiary-hover: #54a4e6ff;
+$tb-tertiary-active: #338bd3ff;
+$tb-tertiary-on-subtle: #1b598dff;
+$tb-primary-subtle: #e4e4ffff;
+$tb-base-on-surface: #3d3d3d;
+$tb-primary-subtle-hover: #c6c6ffff;
+$tb-primary-emphasis: #8f90fcff;
+$tb-primary-active: #2525f4;
+$tb-primary-on-subtle: #434387ff;
+$tb-tertiary-subtle: #d9eeffff;
+$tb-tertiary-subtle-hover: #bae0ffff;
+$tb-tertiary-emphasis: #91ccfcff;
+$tb-series-b: #FFAD1B;
+$tb-series-b-bold: #FF9131;
+$tb-series-b-bolder: #c86815ff;
+$tb-series-b-subtle: #ffcf79ff;
+$tb-series-b-subtler: #feebcaff;
+$tb-series-c: #0CA39F;
+$tb-series-c-bold: #086663ff;
+$tb-series-c-bolder: #043836ff;
+$tb-series-c-subtle: #88cfcdff;
+$tb-series-c-subtler: #c4f3f1ff;
+$tb-series-e: #89A1F1;
+$tb-series-e-bold: #5378f1ff;
+$tb-series-e-bolder: #234bd1ff;
+$tb-series-e-subtle: #aabcfaff;
+$tb-series-e-subtler: #d4ddfeff;
+$tb-kendo-button-bg: $tb-tertiary;
+$tb-kendo-button-text: $tb-light-subtle;
+$tb-kendo-button-hover-bg: $tb-tertiary-hover;
+$tb-kendo-button-active-bg: $tb-tertiary-active;
+$tb-kendo-button-selected-bg: $tb-tertiary-on-subtle;
+$tb-kendo-chip-base-bg: $tb-primary-subtle;
+$tb-kendo-chip-solid-text: $tb-base-on-surface;
+$tb-kendo-chip-solid-hover-bg: $tb-primary-subtle-hover;
+$tb-primary-subtle-active: $tb-primary-emphasis;
+$tb-kendo-chip-solid-selected-bg: $tb-primary-subtle-active;
+$tb-primary-on-surface: $tb-primary;
+$tb-tertiary-subtle-active: $tb-tertiary-emphasis;
+$tb-tertiary-on-surface: $tb-tertiary;
+$tb-series-a: $tb-tertiary;
+$tb-series-a-bold: $tb-tertiary-active;
+$tb-series-a-bolder: $tb-tertiary-on-subtle;
+$tb-series-a-subtle: $tb-tertiary-subtle-hover;
+$tb-series-a-subtler: $tb-tertiary-subtle;
+$tb-series-d: $tb-primary;
+$tb-series-d-bold: $tb-primary-active;
+$tb-series-d-bolder: $tb-primary-on-subtle;
+$tb-series-d-subtle: $tb-primary-subtle-active;
+$tb-series-d-subtler: $tb-primary-subtle;
+
+
+$kendo-button-bg: $tb-kendo-button-bg;
+$kendo-button-text: $tb-kendo-button-text;
+$kendo-button-hover-bg: $tb-kendo-button-hover-bg;
+$kendo-button-active-bg: $tb-kendo-button-active-bg;
+$kendo-button-selected-bg: $tb-kendo-button-selected-bg;
+$kendo-chip-base-bg: $tb-kendo-chip-base-bg;
+$kendo-chip-solid-text: $tb-kendo-chip-solid-text;
+$kendo-chip-solid-hover-bg: $tb-kendo-chip-solid-hover-bg;
+$kendo-chip-solid-selected-bg: $tb-kendo-chip-solid-selected-bg;
+    $kendo-font-family: "Open Sans", sans-serif;
+    $kendo-font-size: 14px;
+    $kendo-font-weight-normal: 400;
+    $kendo-line-height: 1.4285714286;
+    
+$kendo-colors: (
+primary: #4B4CF6,
+primary-hover: #5c5df8ff,
+tertiary: #75C1FF,
+tertiary-hover: #54a4e6ff,
+tertiary-active: #338bd3ff,
+tertiary-on-subtle: #1b598dff,
+primary-subtle: #e4e4ffff,
+primary-subtle-hover: #c6c6ffff,
+primary-emphasis: #8f90fcff,
+primary-active: #2525f4,
+primary-on-subtle: #434387ff,
+tertiary-subtle: #d9eeffff,
+tertiary-subtle-hover: #bae0ffff,
+tertiary-emphasis: #91ccfcff,
+series-b: #FFAD1B,
+series-b-bold: #FF9131,
+series-b-bolder: #c86815ff,
+series-b-subtle: #ffcf79ff,
+series-b-subtler: #feebcaff,
+series-c: #0CA39F,
+series-c-bold: #086663ff,
+series-c-bolder: #043836ff,
+series-c-subtle: #88cfcdff,
+series-c-subtler: #c4f3f1ff,
+series-e: #89A1F1,
+series-e-bold: #5378f1ff,
+series-e-bolder: #234bd1ff,
+series-e-subtle: #aabcfaff,
+series-e-subtler: #d4ddfeff,
+primary-subtle-active: $tb-primary-emphasis,
+primary-on-surface: $tb-primary,
+tertiary-subtle-active: $tb-tertiary-emphasis,
+tertiary-on-surface: $tb-tertiary,
+series-a: $tb-tertiary,
+series-a-bold: $tb-tertiary-active,
+series-a-bolder: $tb-tertiary-on-subtle,
+series-a-subtle: $tb-tertiary-subtle-hover,
+series-a-subtler: $tb-tertiary-subtle,
+series-d: $tb-primary,
+series-d-bold: $tb-primary-active,
+series-d-bolder: $tb-primary-on-subtle,
+series-d-subtle: $tb-primary-subtle-active,
+series-d-subtler: $tb-primary-subtle,
+);
+
+$enable-gradients: true;
+
+$tb-typography: (
+  kendo-default-typography: (
+      font-family: "Open Sans",
+      font-size: 14px,
+      font-weight: 400,
+      line-height: 1.4285714286,
+    ),
+);
+
+@mixin typography-classes ($typography) {
+  @each $selector, $property in $typography {
+    &-#{$selector} {
+      @each $propName, $propValue in $property {
+        #{$propName}: #{$propValue};
+      }
+    } &-#{$selector}-important {
+      @each $propName, $propValue in $property {
+        #{$propName}: $propValue !important;
+      }
+    }
+  }
+}
+
+$tb-effects: (
+  tb-internal-none-effects: (
+      box-shadow: (none), filter: (none), backdrop-filter: (none),  ),
+  kendo-appbar-box-shadow: (
+      box-shadow: (0px 8px 10px 0 rgba(0, 0, 0, 0.12), 0px 4px 16px 0 rgba(0, 0, 0, 0.12)),  ),
+  kendo-bottom-nav-shadow: (
+      box-shadow: (0px 8px 10px 0 rgba(0, 0, 0, 0.12), 0px 4px 16px 0 rgba(0, 0, 0, 0.12)),  ),
+  kendo-color-gradient-focus-shadow: (
+      box-shadow: (0px 6px 8px 0 rgba(0, 0, 0, 0.08), 0px 4px 16px 0 rgba(0, 0, 0, 0.12)),  ),
+  kendo-fab-shadow: (
+      box-shadow: (0px 10px 12px 0 rgba(0, 0, 0, 0.16), 0px 4px 16px 0 rgba(0, 0, 0, 0.12)),  ),
+  kendo-fab-disabled-shadow: (
+      box-shadow: (0px 10px 12px 0 rgba(0, 0, 0, 0.16), 0px 4px 16px 0 rgba(0, 0, 0, 0.12)),  ),
+  kendo-list-header-shadow: (
+      box-shadow: (0px 4px 6px 0 rgba(0, 0, 0, 0.06), 0px 4px 16px 0 rgba(0, 0, 0, 0.12)),  ),
+  kendo-popup-shadow: (
+      box-shadow: (0px 8px 10px 0 rgba(0, 0, 0, 0.12), 0px 4px 16px 0 rgba(0, 0, 0, 0.12)),  ),
+  kendo-prompt-suggestion-shadow: (
+      box-shadow: (0px 2px 3px 0 rgba(0, 0, 0, 0.04), 0px 4px 16px 0 rgba(0, 0, 0, 0.12)),  ),
+  kendo-scheduler-tooltip-shadow: (
+      box-shadow: (0px 4px 6px 0 rgba(0, 0, 0, 0.06), 0px 4px 16px 0 rgba(0, 0, 0, 0.12)),  ),
+  kendo-tabstrip-item-dragging-shadow: (
+      box-shadow: (0px 6px 8px 0 rgba(0, 0, 0, 0.08), 0px 4px 16px 0 rgba(0, 0, 0, 0.12)),  ),
+  kendo-tooltip-shadow: (
+      box-shadow: (0px 4px 6px 0 rgba(0, 0, 0, 0.06), 0px 4px 16px 0 rgba(0, 0, 0, 0.12)),  ),
+  kendo-window-shadow: (
+      box-shadow: (0px 16px 18px 0 rgba(0, 0, 0, 0.28), 0px 4px 16px 0 rgba(0, 0, 0, 0.12)),  ),
+  kendo-window-focus-shadow: (
+      box-shadow: (0px 32px 34px 0 rgba(0, 0, 0, 0.32), 0px 4px 16px 0 rgba(0, 0, 0, 0.12)),  ),
+);
+
+@mixin effects-classes ($effects) {
+  @each $selector, $property in $effects {
+    &-#{$selector} {
+      @each $propName, $propValue in $property {
+        #{$propName}: $propValue;
+      }
+    } &-#{$selector}-important {
+      @each $propName, $propValue in $property {
+        #{$propName}: $propValue !important;
+      }
+    }
+  }
+}
+
+%tb-typography {
+  @include typography-classes($tb-typography);
+}
+
+%tb-effects {
+  @include effects-classes($tb-effects);
+}
