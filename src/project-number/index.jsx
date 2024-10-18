@@ -7,20 +7,28 @@ import {
   ChartTooltip
 } from "@progress/kendo-react-charts";
 
-export default function Employment () {
+export default function ProjectNumber () {
 
   const series = [
     {
-      category: 'Full-time employee',
-      value: 81,
+      category: "I'm focused on a single project/product",
+      value: 22,
     },
     {
-      category: 'Self-employed',
-      value: 16,
+      category: '2-5',
+      value: 47,
     },
     {
-      category: 'Part-time employee',
-      value: 3,
+      category: '6-10',
+      value: 20,
+    },
+    {
+      category: '11-20',
+      value: 7,
+    },
+    {
+      category: '20+ different projects/products',
+      value: 4,
     },
   ];
 

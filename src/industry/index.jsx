@@ -4,7 +4,6 @@ import {
   ChartSeries,
   ChartSeriesItem,
   ChartCategoryAxis,
-  ChartCategoryAxisTitle,
   ChartCategoryAxisItem,
   ChartTooltip,
   ChartValueAxis,
@@ -12,13 +11,13 @@ import {
   ChartValueAxisTitle
 } from "@progress/kendo-react-charts";
 
-export default function Titles () {
+export default function Industry () {
 
 const [firstSeries] = [
-        [41, 17, 13, 9, 4, 4, 3, 2, 1, 1, 1, 1, 1, 1, 1]
+        [16, 13, 12, 12, 7, 6, 5, 5, 5, 3, 1, 1, 1, 1, 1, 1, 1]
       ];
 
-const categories = ["Full-stack developer", "Web developer", "Front-end developer", "UI/UX designer", "Product manager", "CEO/CTO/VP of Engineering", "Engineering manager", "Information Architect", "Product designer", "Design (UI/UX) manager", "Project manager", "Interaction designer", "Design system lead", "Graphic designer", "Other"];
+const categories = ["Education", "Government/Military", "Finance/Banking", "Manufacturing", "Healthcare", "Printing/Publishing", "Engineering/Architecture", "Insurance", "Professional Services", "Chemicals", "Agriculture/Forest/Fishing", "Entertainment", "Online IT services", "Retail", "Telecommunication", "Transportation", "Wholesale"];
 
 return (
   <Chart>
@@ -30,11 +29,10 @@ return (
     </ChartValueAxis>
     <ChartCategoryAxis >
       <ChartCategoryAxisItem categories={categories}>
-        <ChartCategoryAxisTitle text="Titles" />
       </ChartCategoryAxisItem>
     </ChartCategoryAxis>
     <ChartSeries>
-      <ChartSeriesItem type="bar" gap={2} spacing={0.25} data={firstSeries} />
+      <ChartSeriesItem type="bar" data={firstSeries} />
     </ChartSeries>
   </Chart>
   )

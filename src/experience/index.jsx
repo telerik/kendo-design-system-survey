@@ -12,13 +12,13 @@ import {
   ChartValueAxisTitle
 } from "@progress/kendo-react-charts";
 
-export default function Titles () {
+export default function Experience () {
 
 const [firstSeries] = [
-        [41, 17, 13, 9, 4, 4, 3, 2, 1, 1, 1, 1, 1, 1, 1]
+        [7, 20, 19, 17, 37]
       ];
 
-const categories = ["Full-stack developer", "Web developer", "Front-end developer", "UI/UX designer", "Product manager", "CEO/CTO/VP of Engineering", "Engineering manager", "Information Architect", "Product designer", "Design (UI/UX) manager", "Project manager", "Interaction designer", "Design system lead", "Graphic designer", "Other"];
+const categories = ["Just starting – less than a year", "Between 1 and 5 years", "Between 6 and 10 years", "Between 11 and 20 years", "More than 20 years"];
 
 return (
   <Chart>
@@ -30,11 +30,10 @@ return (
     </ChartValueAxis>
     <ChartCategoryAxis >
       <ChartCategoryAxisItem categories={categories}>
-        <ChartCategoryAxisTitle text="Titles" />
       </ChartCategoryAxisItem>
     </ChartCategoryAxis>
     <ChartSeries>
-      <ChartSeriesItem type="bar" gap={2} spacing={0.25} data={firstSeries} />
+      <ChartSeriesItem type="bar" data={firstSeries} />
     </ChartSeries>
   </Chart>
   )

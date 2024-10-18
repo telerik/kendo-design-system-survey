@@ -5,6 +5,12 @@ import { Button } from "@progress/kendo-react-buttons";
 import Titles from './titles'
 import Employment from './employment'
 import Location from './location'
+import Experience from './experience';
+import CompanySize from './companysize';
+import Description from './describe';
+import Industry from './industry';
+import InternalExternal from './internal-external';
+import ProjectNumber from './project-number';
 
 function App() {
 
@@ -125,7 +131,7 @@ function App() {
         <p>Age is but a number; you could be 60 and just starting on a new career path. That's why, instead of age, we asked for the respondents' years of experience. A majority (54%) of respondents have 11+ years in the software development industry, and 27% have been at it for 5 years or less.  </p>
 
         <h3>How long have you been involved in the software development industry? </h3>
-        {/* TO-DO: Experience chart */}
+        <Experience/>
       </section>
 
       <section>
@@ -133,29 +139,29 @@ function App() {
         <p>The survey represents the full spectrum, from one-person businesses to small and medium-sized companies and enterprises with 5,000+ employees.</p>
         <p>30% of all respondents work in large enterprises of 500+ employees, while 41% work in small businesses of 2-100 employees.</p>  
         <h3>What is the total number of employees in your company? </h3>
-        {/* TO-DO: Size chart */}
+        <CompanySize/>
         <p>The largest share of respondents (31%) work at companies whose focus is not on software development (e.g. a manufacturer or an educational institution), and 22% work for independent software vendors.</p>
 
         <h3>Which of the below best describes your company? </h3>
-        {/* TO-DO: Focus chart */}
+        <Description/> 
         <p>People working in over 20 different industries took the survey. <b>Education, government, finance, manufacturing and healthcare</b> were the most represented ones.</p>
         <h3>In which industry does your company operate?</h3> 
         <p><i>(Only people who selected “The focus of my company is not development-related” to the previous question were asked)</i></p> 
-        {/* TO-DO: Industry chart */}
+        <Industry/>
       </section>
 
       <section>
         <h2>Work Type</h2>
         <h3>What kind of web apps are you currently working on? </h3>
-        {/* TO-DO: InternalExternal chart */}
+        <InternalExternal/>
         <h3>How many different projects/products do you usually work on in one full year? </h3>
-        {/* TO-DO: ProjectNumber chart */}
+        <ProjectNumber/>
       </section>
 
       <section>
         <h2>Team Composition</h2>
-        <p>The more, the merrier, the saying goes—but is that so when it comes to team composition? The most prevalent team model involves 2-5 developers and 1 designer. This aligns with the ratio that zeroheight saw in their Design Systems Report 2023, where they saw ranges between 1:6 and 1:15 depending on company size.</p>
-        <p>One in four developers we surveyed doesn't have a designer assigned to their current project. Often, this means that developers are leveraging resources with design “built-in” and making minimal UI changes. This could include UI component libraries or pre-existing design systems such as Material or Fluent. For specific design needs, these groups may hire a freelancer or contract worker to help with a one-off design project (read on for more insight on this). Generally, we see this kind of setup in startups, small businesses or other similarly under-resourced ventures. As businesses (and userbases) grow, so does the need for a dedicated designer.</p>
+        <p>The more, the merrier, the saying goes—but is that so when it comes to team composition? The most prevalent team model involves 2-5 developers and 1 designer. This aligns with the ratio that zeroheight saw in their <a href="https://19492330.fs1.hubspotusercontent-na1.net/hubfs/19492330/Community%20and%20Content/How%20We%20Document/HowWeDocument-2024.pdf">Design Systems Report 2023</a>, where they saw ranges between 1:6 and 1:15 depending on company size.</p>
+        <p>One in four developers we surveyed doesn't have a designer assigned to their current project. Often, this means that developers are leveraging resources with design “built-in” and making minimal UI changes. This could include <a href="https://www.telerik.com/?utm_medium=pdf&utm_source=telerik&utm_campaign=dt_ar_design_dev_collab_report">UI component libraries</a> or pre-existing design systems such as Material or Fluent. For specific design needs, these groups may hire a freelancer or contract worker to help with a one-off design project (read on for more insight on this). Generally, we see this kind of setup in startups, small businesses or other similarly under-resourced ventures. As businesses (and userbases) grow, so does the need for a dedicated designer.</p>
 
         <h3>How many designers are working on your current project/product? </h3>
         {/* TO-DO: NumDesigners Chart */}
