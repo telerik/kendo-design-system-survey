@@ -18,28 +18,38 @@ import DeveloperNumber from './developer-number';
 import OutsideHelp from './outside-help';
 
 //Images
+import logo from './assets/progress-telerik-black.svg'
 import screen from './assets/screen.svg'
 import wheel from './assets/wheel.svg'
+import design from './assets/design-comp.svg'
+import dots from './assets/dots.png'
 
 function App() {
 
   return (
     <>
     <section className='intro'>
-        <div className='illustration'>
-          <img className='wheel' src={wheel}/>
-          <img className='screen' src={screen}/>
+      <div className='cover' style= {{backgroundImage: `url(${dots})`, backgroundSize: 'cover'}}>
+      <img className='logo' src={logo}/>
+        <div>
           
+          <div className='illustration'>
+            <img className='wheel' src={wheel}/>
+            <img className='screen' src={screen}/>
+            <img className='design' src={design}/>
+          </div>
+          <h1>State of <br/> Designer-Developer<br/> Collaboration 2024</h1>
         </div>
-        <h1>State of Designer-Developer Collaboration 2024</h1>
-        <h2>Survey Report</h2>
+      </div>
+      <div className='text'>
+        <h4>Survey Report</h4>
+        <hr/>
         <p>Whether you're on the development or design end of creating web applications, it's equally easy to lose track of the world beyond your daily work. Sometimes, it can be hard to break out of the silos our companies create for us, inadvertently or on purpose. However, the crossroads of design and development is a bustling, beautiful, and, yes, sometimes a bit of a bumpy place, and it is one worth visiting often for anyone looking to be a better and happier professional.</p>
         <p>We went deep into the findings of the State of Designer-Developer Collaboration 2024 survey and created a report that surfaces everything there is to learn about the relationship between designers and developers, including ideas for making it more efficient and satisfying. <b>To quote Figma's Front End Developer Research Report (Oct 2023), “The designer/developer relationship just might be the most important partnership in business today.”</b></p>
-      </section>
-      <main>
-      
-
-      <section className='toc'>
+      </div>
+    </section>
+    <main>
+        <section className='toc'>
         <h2>Jump to Section:</h2>
         <ol>
           <li><a>Highlights</a></li>

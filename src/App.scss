@@ -14,21 +14,71 @@ main {
 
 .intro {
   margin: 0;
+  background-color: #141850;
+  color: white;
+  padding-bottom: 50px;
+
+  .cover {
+    border-bottom: 10px solid $tb-primary;
+    padding: 30px;
+    
+    div {
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    h1 {
+      margin-top: 0;
+    }
+  }
+
+  .logo {
+    width: clamp(100px, 100%, 150px)
+  }
+
+  .text {
+    max-width: 1000px;
+    margin: auto;
+    padding-top: 20px;
+
+    p {
+      line-height: 33px;
+    }
+
+    h4 {
+      font-style: italic;
+    }
+  }
 
   .illustration {
-    height: 300px;
-    border: 1px solid red;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: 100%;
+    margin: auto;
 
     .screen {
-      width: 60%;
-      position: absolute;
-      left: 15%;
-      top: 10%;
+      grid-row-start: 1;
+      grid-column-start: 2;
+      grid-column-end: 6;
+      max-height: 90%;
+      justify-self: center;
+      align-self: center;
     }
 
     .wheel {
-      width: 30%;
-      position: absolute;
+      grid-row-start: 1;
+      grid-column-start: 1;
+      grid-column-end: 3;
+      max-height: 60%;
+      justify-self: end;
+      align-self: start;
+    }
+
+    .design {
+      grid-row-start: 1;
+      grid-column-start: 5;
+      align-self: end;
+      justify-self: end;
     }
   }
 }
