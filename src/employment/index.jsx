@@ -4,7 +4,8 @@ import {
   ChartSeries,
   ChartSeriesItem,
   ChartLegend,
-  ChartTooltip
+  ChartTooltip,
+  ChartArea
 } from "@progress/kendo-react-charts";
 
 export default function Employment () {
@@ -26,6 +27,7 @@ export default function Employment () {
 
 return (
   <Chart>
+    <ChartArea background="rgba(0,0,0,0"/>
     <ChartTooltip format="{0}%"/>
     <ChartLegend position="bottom" />
     <ChartSeries>

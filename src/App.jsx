@@ -23,6 +23,8 @@ import screen from './assets/screen.svg'
 import wheel from './assets/wheel.svg'
 import design from './assets/design-comp.svg'
 import dots from './assets/dots.png'
+import ninjaKendoka from './assets/ninja-kendoka.svg'
+import info from './assets/info.svg'
 
 function App() {
 
@@ -64,86 +66,108 @@ function App() {
       <section className='highlights'>
         <h2>Highlights</h2>
         <div className='flex'>
-          <div className='callout'><p>While 36% of engineers say designer-developer collaboration goes smoothly and without challenges...</p></div>
-          <div className='callout'><p>only 10% of designers would agree.</p></div>
+          <div className='callout'><p>While <b style={{fontSize: '30px'}}>36%</b> of engineers say designer-developer collaboration goes smoothly and without challenges...</p></div>
+          <div className='callout' style={{backgroundColor: '#ffcf79ff'}}><p>only <b style={{fontSize: '30px'}}>10%</b> of designers would agree.</p></div>
         </div>
-        <h3>The top three interventions your teams yearn for are:</h3>
-        <ul>
-          <li>For designers to be trained on the technical constraints developers work with.</li>
-          <li>For developers to be brought into the design process earlier.</li>
-          <li>For developers to learn more about the principles of design.</li>
-        </ul>
-        <p>For the folks that don't yet have a finished design system — better user experience, improved consistency and faster design to dev time are the top three reasons why they want one. And great news: <b>those are also the top three benefits listed by folks who do have them!</b></p>
+
+        <div className='imgFlex'>
+       
+          <img src={ninjaKendoka} className='decoImage'/>
+      
+          <div>
+            <h3>The top three interventions your teams yearn for are:</h3>
+            <ul>
+              <li>For designers to be trained on the technical constraints developers work with.</li>
+              <li>For developers to be brought into the design process earlier.</li>
+              <li>For developers to learn more about the principles of design.</li>
+            </ul>
+            <p>For the folks that don't yet have a finished design system — better user experience, improved consistency and faster design to dev time are the top three reasons why they want one. And great news: <b>those are also the top three benefits listed by folks who do have them!</b></p>
+          </div>
+        </div>
+        
       </section>
 
       <section className='methodology'>
         <h2>Methodology</h2>
         <p>The State of Designer-Developer Collaboration 2024 survey was conducted through an online self-completion questionnaire. The questionnaire consisted of pre-defined questions exploring the designer-developer collaboration process and design system creation and adoption with their related challenges and benefits.</p>
-        <p>The target audience for the survey was everyone involved in the design and development of web applications.</p>
+        <p><b>The target audience for the survey was everyone involved in the design and development of web applications.</b></p>
         <p>Respondents were invited to take the survey through various channels—being prompted on the telerik.com website, through social media and blog post promotion, and through paid promotion in newsletters and on social media.</p> 
         <p>The survey was open for submissions for the period July 18 - September 08, 2024.</p>
         <p>We received a total of 467 responses from 51 countries. Before proceeding with the analysis, we cleaned and validated data for accuracy and relevance using both targeted survey distribution and screening questions to filter out respondents outside our target group and bots. We also learned that bots taking surveys are getting more and more advanced, leaving AI-generated feedback on open-ended questions. After the clean-up, we ended up with 222 respondents.</p>
-        <div className='callout'>
-          <h3>Note on the Data</h3>
-          <p>All results published here have been tested for statistical significance—and passed.</p>
-          <p>If the sum of all responses is more than 100%, the question was multiple-choice. </p>
-        </div>
-        <div className='callout'>
-          <h3>Note on the Wording</h3>
-          <p>Whenever we look at the differences between designer and development roles, we'll refer to them as “design/designers” and “development/developers/engineers/dev” for short. The job roles are grouped in these two categories in the following way: </p>
-          <table>
-            <tr>
-              <th>Designer Roles</th>
-              <th>Developer Roles</th>
-            </tr>
-            <tr>
-              <td>Design (UI/UX) manager</td>
-              <td>CEO/CTO/VP of engineering</td>
-            </tr>
-            <tr>
-              <td>Design system lead</td>
-              <td>Engineering manager</td>
-            </tr>
-            <tr>
-              <td>Graphic designer</td>
-              <td>Front-end developer</td>
-            </tr>
-            <tr>
-              <td>Interaction designer</td>
-              <td>Full-stack developer</td>
-            </tr>
-            <tr>
-              <td>Product designer</td>
-              <td>Product manager</td>
-            </tr>
-            <tr>
-              <td>UI/UX designer</td>
-              <td>Web developer</td>
-            </tr>
-          </table>
+        <div className='imgFlex'>
+          <div className='callout'>
+            <img className='infoIcon' src={info}/>
+            <h3>Note on the Data</h3>
+            <p>All results published here have been tested for statistical significance—and passed.</p>
+            <p>If the sum of all responses is more than 100%, the question was multiple-choice. </p>
+          </div>
+          <div className='callout'>
+           <img className='infoIcon' src={info}/>
+            <h3>Note on the Wording</h3>
+            <p>Whenever we look at the differences between designer and development roles, we'll refer to them as “design/designers” and “development/developers/engineers/dev” for short. The job roles are grouped in these two categories in the following way: </p>
+            <table>
+              <tr>
+                <th>Designer Roles</th>
+                <th>Developer Roles</th>
+              </tr>
+              <tr>
+                <td>Design (UI/UX) manager</td>
+                <td>CEO/CTO/VP of engineering</td>
+              </tr>
+              <tr>
+                <td>Design system lead</td>
+                <td>Engineering manager</td>
+              </tr>
+              <tr>
+                <td>Graphic designer</td>
+                <td>Front-end developer</td>
+              </tr>
+              <tr>
+                <td>Interaction designer</td>
+                <td>Full-stack developer</td>
+              </tr>
+              <tr>
+                <td>Product designer</td>
+                <td>Product manager</td>
+              </tr>
+              <tr>
+                <td>UI/UX designer</td>
+                <td>Web developer</td>
+              </tr>
+            </table>
+          </div>
         </div>
       </section>
 
       <section>
         <h2>Participants</h2>
-        <p>The survey invitation specifically recruited people who were:</p>
-        <ul>
-          <li>Web designers or developers</li>
-          <li>Stakeholders in the designer-developer handoff (e.g. managers, product owners, senior leadership)</li>
-        </ul>
-        <p>Anyone who selected a role outside this scope exited the survey.</p>
-        <p>While the responses we got are skewed (82% of respondents were on the engineering side vs. 14% on the design side), the sample is large enough to give us valuable insights. </p>
+        <div className='chartFlex'>
+          <div className='text'>
+          <p>The survey invitation specifically recruited people who were:</p>
+          <ul>
+            <li>Web designers or developers</li>
+            <li>Stakeholders in the designer-developer handoff (e.g. managers, product owners, senior leadership)</li>
+          </ul>
+          <p>Anyone who selected a role outside this scope exited the survey.</p>
+          <p>While the responses we got are skewed (82% of respondents were on the engineering side vs. 14% on the design side), the sample is large enough to give us valuable insights. </p>
 
-        <h3>Would you describe yourself as...</h3>
+        </div>
         <div className='chartWrapperDark'>
+          <h3>Would you describe yourself as...</h3>
           <Titles/>
         </div>
+        </div>
 
-        <p>The majority of respondents were full-time employees.</p>
-        <p>One interesting difference between developer and designer roles is that while 18% of all engineering roles reported being self-employed, only 7% of designers did. What's more, while 20% of developers chose the “solo entrepreneur” label, none of the designers did. </p>
-
-        <h3>Are you...</h3>
-        <Employment/>
+        <div className='chartFlex'>
+          <div className='chartWrapperLight'>
+            <h3>Are you...</h3>
+            <Employment/>
+          </div>
+          <div className='text'>
+            <p>The majority of respondents were full-time employees.</p>
+            <p>One interesting difference between developer and designer roles is that while 18% of all engineering roles reported being self-employed, only 7% of designers did. What's more, while 20% of developers chose the “solo entrepreneur” label, none of the designers did. </p>
+          </div>
+      </div>
       </section>
       <section>
         <h2>Geography</h2>
@@ -156,41 +180,59 @@ function App() {
       <section>
         <h2>Experience</h2>
         <p>Age is but a number; you could be 60 and just starting on a new career path. That's why, instead of age, we asked for the respondents' years of experience. A majority (54%) of respondents have 11+ years in the software development industry, and 27% have been at it for 5 years or less.  </p>
-
-        <h3>How long have you been involved in the software development industry? </h3>
         <div className='chartWrapperLight'>
+          <h3>How long have you been involved in the software development industry? </h3>
           <Experience/>
         </div>
       </section>
 
       <section>
         <h2>The Businesses</h2>
-        <p>The survey represents the full spectrum, from one-person businesses to small and medium-sized companies and enterprises with 5,000+ employees.</p>
-        <p>30% of all respondents work in large enterprises of 500+ employees, while 41% work in small businesses of 2-100 employees.</p>  
-        <h3>What is the total number of employees in your company? </h3>
-        <div className='chartWrapperDark'>
-          <CompanySize/>
+        <div className='chartFlex'>
+          <div>
+            <p>The survey represents the full spectrum, from one-person businesses to small and medium-sized companies and enterprises with 5,000+ employees.</p>
+            <p>30% of all respondents work in large enterprises of 500+ employees, while 41% work in small businesses of 2-100 employees.</p> 
+            <p>The largest share of respondents (31%) work at companies whose focus is not on software development (e.g. a manufacturer or an educational institution), and 22% work for independent software vendors.</p> 
+          </div>
+          <div className='chartWrapperDark'>
+            <h3>What is the total number of employees in your company? </h3>
+            <CompanySize/>
+          </div>
         </div>
-        <p>The largest share of respondents (31%) work at companies whose focus is not on software development (e.g. a manufacturer or an educational institution), and 22% work for independent software vendors.</p>
-
-        <h3>Which of the below best describes your company? </h3>
-        <div className='chartWrapperDark'>
-          <Description/> 
-        </div>
-        <p>People working in over 20 different industries took the survey. <b>Education, government, finance, manufacturing and healthcare</b> were the most represented ones.</p>
-        <h3>In which industry does your company operate?</h3> 
-        <p><i>(Only people who selected “The focus of my company is not development-related” to the previous question were asked)</i></p> 
-        <div className='chartWrapperDark'>
+        
+        <div className='doubleChartFlex'>
+          <div className='chartWrapperDark'>
+            <h3>Which of the below best describes your company? </h3>
+            <Description/> 
+          </div>
+          <div className='chartWrapperDark'>
+          <h3>In which industry does your company operate?</h3> 
+          <p><i>(Only people who selected “The focus of my company is not development-related” to the previous question were asked)</i></p> 
           <Industry/>
         </div>
+        </div>
+      
+       
+        
+        <p>People working in over 20 different industries took the survey. <b>Education, government, finance, manufacturing and healthcare</b> were the most represented ones.</p>
+        
+        
       </section>
 
       <section>
         <h2>Work Type</h2>
-        <h3>What kind of web apps are you currently working on? </h3>
-        <InternalExternal/>
-        <h3>How many different projects/products do you usually work on in one full year? </h3>
-        <ProjectNumber/>
+        <div className='doubleChartFlex'>
+          <div>
+            <h3>What kind of web apps are you currently working on? </h3>
+            <InternalExternal/>
+          </div>
+          <div>
+            <h3>How many different projects/products do you usually work on in one full year? </h3>
+            <ProjectNumber/>
+          </div>
+        </div>
+  
+   
       </section>
 
       <section>

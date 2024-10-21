@@ -39,6 +39,7 @@ main {
   .text {
     max-width: 1000px;
     margin: auto;
+    padding: 30px;
     padding-top: 20px;
 
     p {
@@ -47,6 +48,7 @@ main {
 
     h4 {
       font-style: italic;
+      color: white;
     }
   }
 
@@ -87,16 +89,84 @@ main {
   display: flex;
 }
 
+.imgFlex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (max-width: 600px) {
+  .imgFlex {
+    flex-wrap: wrap;
+  }
+}
+
+.chartFlex {
+  display: flex;
+  align-items: center;
+  
+  .chartWrapperDark, .chartWrapperLight {
+    min-width: 50%;
+    padding: 50px;
+  }
+}
+
+@media (max-width: 800px) {
+  .chartFlex {
+    flex-wrap: wrap;
+  }
+
+  .chartWrapperDark, .chartWrapperLight {
+    width: 100%;
+  }
+}
+
+.doubleChartFlex {
+  display: flex;
+
+  > div {
+    width: 50%;
+  }
+}
+
+@media (max-width: 800px) {
+  .doubleChartFlex {
+    flex-wrap: wrap;
+    
+    div {
+      width: 100%
+    }
+  }
+}
+
+.decoImage {
+  width: 200px;
+  padding: 1% 5% 1% 1%;
+}
+
+.infoIcon {
+  width: 40px;
+  position: relative;
+  top: 12px;
+  left: -20px;
+  position: absolute;
+}
+
 .callout {
   background-color: $tb-tertiary-subtle;
-  padding: 20px;
+  padding: 1% 5%;
   border-radius: 10px;
-  margin: 20px 10px;
+  margin: 1%;
+  position: relative;
 
   h3 {
     margin-top: 0;
     margin-bottom: 5px;
     font-weight: 300;
+  }
+
+  table {
+    margin-bottom: 20px;
   }
 }
 
@@ -105,6 +175,15 @@ main {
   border-radius: 10px;
   padding: 20px;
   margin: 10px;
+
+  h3 {
+    color: white;
+    margin: 0 0 2% 0;
+  }
+
+  p {
+    color: white;
+  }
 }
 
 .chartWrapperLight {
@@ -127,10 +206,12 @@ table {
     font-weight: bold;
     border: 1px solid black;
     padding: 5px;
+    word-wrap: break-word; 
   }
   tr td {
     border: 1px solid black;
     padding: 5px;
+    word-wrap: break-word; 
   }
 
   tr th:first-child {
