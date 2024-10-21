@@ -2,6 +2,35 @@
 
 body {
   font-family: 'Open Sans', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  max-width: 1000px;
+  padding: 30px;
+  margin: auto;
+}
+
+.intro {
+  margin: 0;
+
+  .illustration {
+    height: 300px;
+    border: 1px solid red;
+
+    .screen {
+      width: 60%;
+      position: absolute;
+      left: 15%;
+      top: 10%;
+    }
+
+    .wheel {
+      width: 30%;
+      position: absolute;
+    }
+  }
 }
 
 .flex {

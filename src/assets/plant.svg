@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 87.09 77.65">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #5777ea;
+      }
+
+      .cls-2 {
+        fill: #ace5d9;
+        stroke: #d6f5f3;
+        stroke-miterlimit: 10;
+        stroke-width: .56px;
+      }
+
+      .cls-3 {
+        fill: #0aa39f;
+      }
+    </style>
+  </defs>
+  <g id="Headers">
+    <g id="Plant">
+      <path id="Path_192182" data-name="Path 192182" class="cls-3" d="M0,0s62.05,10.17,59.26,72.97C-1.54,63.42,0,0,0,0"/>
+      <path id="Path_192183" data-name="Path 192183" class="cls-2" d="M61.25,15.21s20.15,33.58-11.72,56.33c-19.95-32.75,11.72-56.33,11.72-56.33"/>
+      <path id="Path_192180" data-name="Path 192180" class="cls-1" d="M84.58,77.65H17.23c-1.42.04-2.61-1.09-2.65-2.51-.04-1.42,1.09-2.61,2.51-2.65.04,0,.09,0,.13,0h67.34c1.42.04,2.55,1.22,2.51,2.65-.03,1.37-1.14,2.48-2.51,2.51"/>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 90 131.47">
+  <defs>
+    <style>
+      .cls-1 {
+        stroke-width: .75px;
+      }
+
+      .cls-1, .cls-2 {
+        fill: none;
+        stroke: #0357ff;
+        stroke-miterlimit: 10;
+      }
+
+      .cls-2 {
+        stroke-width: 1.86px;
+      }
+
+      .cls-3 {
+        fill: #5777ea;
+      }
+
+      .cls-4 {
+        fill: #eef5ff;
+      }
+
+      .cls-5 {
+        fill: #ff9133;
+      }
+
+      .cls-6 {
+        fill: #89a0f0;
+      }
+    </style>
+  </defs>
+  <g id="Headers">
+    <g id="Design_comp_3" data-name="Design comp 3">
+      <g>
+        <circle id="Ellipse_132" data-name="Ellipse 132" class="cls-6" cx="45" cy="86.47" r="45"/>
+        <circle id="Ellipse_133" data-name="Ellipse 133" class="cls-3" cx="45" cy="86.47" r="22.5"/>
+        <circle id="Ellipse_134" data-name="Ellipse 134" class="cls-1" cx="45" cy="86.47" r="33.3"/>
+      </g>
+      <g>
+        <g id="Group_11309" data-name="Group 11309">
+          <g id="Path_13041" data-name="Path 13041">
+            <path class="cls-4" d="M52.64,58.13c-2.89-.84-5.92.84-6.76,3.73l-6.12,21.17c-.57,1.96,1.56,5.83,3.29,8.21,2.75-1.09,6.63-3.22,7.19-5.18l6.12-21.17c.84-2.89-.84-5.92-3.73-6.76Z"/>
+          </g>
+          <g id="Rectangle_13605" data-name="Rectangle 13605">
+            <path class="cls-5" d="M51.15,62.47h0c5.31,1.54,10.87-1.53,12.4-6.84l5.01-17.32c1.54-5.31-1.53-10.87-6.84-12.4h0c-5.31-1.54-10.87,1.53-12.4,6.84l-5.01,17.32c-1.54,5.31,1.53,10.87,6.84,12.4Z"/>
+          </g>
+          <g id="Rectangle_13606" data-name="Rectangle 13606">
+            <rect class="cls-5" x="47.9" y="43.61" width="9.01" height="29.05" transform="translate(-18 92.33) rotate(-73.87)"/>
+          </g>
+          <g id="Path_13042" data-name="Path 13042">
+            <path class="cls-5" d="M45.8,88.33l-3.61-1.01c.36.74.8,1.56,1.28,2.39.84-.46,1.64-.94,2.33-1.38Z"/>
+            <path class="cls-5" d="M42.69,92.5s6.88-3.44,7.38-5.17l-10.98-3.06c-.5,1.73,3.6,8.23,3.6,8.23Z"/>
+          </g>
+        </g>
+        <g>
+          <line id="Line_1004" data-name="Line 1004" class="cls-2" x1="84.61" y1="10.13" x2="72.82" y2="21.85"/>
+          <line id="Line_1005" data-name="Line 1005" class="cls-2" x1="68.79" y1=".18" x2="65.43" y2="17.21"/>
+          <line id="Line_1006" data-name="Line 1006" class="cls-2" x1="56.06" y1="15.74" x2="47.69" y2="2.75"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

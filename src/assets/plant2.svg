@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 92.36 150.94">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #d6f5f3;
+      }
+
+      .cls-2 {
+        fill: none;
+        stroke: #0357ff;
+      }
+
+      .cls-3 {
+        fill: #5777ea;
+        fill-rule: evenodd;
+      }
+
+      .cls-4 {
+        fill: #0aa39f;
+      }
+    </style>
+  </defs>
+  <g id="Headers">
+    <g id="Plant_2" data-name="Plant 2">
+      <path id="Path_12198" data-name="Path 12198" class="cls-2" d="M0,150.44h92.36"/>
+      <g>
+        <path class="cls-4" d="M36.85,98.27S-17.42,60.57,5.76,1.52c.7-1.78,3.09-2.07,4.19-.51,9.71,13.85,43.53,66.38,31.19,109.57"/>
+        <path class="cls-1" d="M41.21,101.18S3,54.85,37.75,6.69c.85-1.18,2.67-.93,3.16.44,4.84,13.69,22.41,69.48,1.42,106.08"/>
+        <path class="cls-4" d="M47.75,102.2S85.12,61.25,68.28,3.12c-.49-1.69-2.87-1.72-3.42-.05-10.55,32.13-44.67,94.49-18.29,111.81"/>
+        <path class="cls-1" d="M9.91,10s8.93,52.72,23.89,79.24"/>
+        <path class="cls-4" d="M39.76,13.61c-1.51,17.84-4.3,61.94-1.43,74.75"/>
+        <polygon class="cls-3" points="61.31 150.28 18.22 150.28 7.7 83.53 71.82 83.53 61.31 150.28"/>
+      </g>
+    </g>
+  </g>
+</svg>

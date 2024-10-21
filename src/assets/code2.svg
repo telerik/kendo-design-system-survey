@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 90 90">
+  <defs>
+    <style>
+      .cls-1 {
+        stroke: #0357ff;
+      }
+
+      .cls-1, .cls-2 {
+        fill: none;
+        stroke-miterlimit: 10;
+        stroke-width: .75px;
+      }
+
+      .cls-3 {
+        fill: #d6f5f3;
+      }
+
+      .cls-2 {
+        stroke: #fff;
+      }
+
+      .cls-4 {
+        fill: #5777ea;
+      }
+
+      .cls-5 {
+        fill: #89a0f0;
+      }
+    </style>
+  </defs>
+  <g id="Headers">
+    <g id="Code_2" data-name="Code 2">
+      <circle id="Ellipse_132" data-name="Ellipse 132" class="cls-5" cx="45" cy="45" r="45"/>
+      <circle id="Ellipse_133" data-name="Ellipse 133" class="cls-4" cx="45" cy="45" r="22.5"/>
+      <circle id="Ellipse_134" data-name="Ellipse 134" class="cls-1" cx="45" cy="45" r="33.3"/>
+      <path id="Path_185863" data-name="Path 185863" class="cls-3" d="M76.06,43.82l-21.31-12.31c-.3-.18-.69-.07-.87.23-.06.1-.09.21-.09.32v5.7c0,.43.23.82.6,1.03l9.08,5.24-9.08,5.24c-.37.21-.6.61-.6,1.03v5.7c0,.35.28.64.64.64.11,0,.22-.03.32-.09l15.24-8.8h0l6.07-3.5c.12-.07.16-.22.09-.34-.02-.04-.05-.07-.09-.09"/>
+      <path id="Path_185863-2" data-name="Path 185863" class="cls-3" d="M13.94,44.24l21.31,12.31c.3.18.69.07.87-.23.06-.1.09-.21.09-.32v-5.7c0-.43-.23-.82-.6-1.03l-9.08-5.24,9.08-5.24c.37-.21.6-.61.6-1.03v-5.7c0-.35-.28-.64-.64-.64-.11,0-.22.03-.32.09l-15.24,8.8h0l-6.07,3.5c-.12.07-.16.22-.09.34.02.04.05.07.09.09"/>
+      <line class="cls-2" x1="37.95" y1="62.43" x2="50.81" y2="27.57"/>
+    </g>
+  </g>
+</svg>
