@@ -8,7 +8,9 @@ import {
   ChartTooltip,
   ChartValueAxis,
   ChartValueAxisItem,
-  ChartValueAxisTitle
+  ChartValueAxisTitle,
+  ChartArea,
+  ChartAxisDefaults
 } from "@progress/kendo-react-charts";
 
 export default function Industry () {
@@ -19,16 +21,20 @@ const [firstSeries] = [
 
 const categories = ["Education", "Government/Military", "Finance/Banking", "Manufacturing", "Healthcare", "Printing/Publishing", "Engineering/Architecture", "Insurance", "Professional Services", "Chemicals", "Agriculture/Forest/Fishing", "Entertainment", "Online IT services", "Retail", "Telecommunication", "Transportation", "Wholesale"];
 
+const labels = {color: 'white'}; 
+
 return (
   <Chart>
-    <ChartTooltip format="{0}%"/>
+    <ChartAxisDefaults majorGridLines={{color: 'rgba(255,255,255, 0.2'}} />
+    <ChartArea background="rgba(0,0,0,0)"/>
+    <ChartTooltip format="{0}%" />
     <ChartValueAxis>
-      <ChartValueAxisItem format="{0}%">
-        <ChartValueAxisTitle text="Percentage" />
+      <ChartValueAxisItem format="{0}%" labels={labels}>
+        <ChartValueAxisTitle text="Percentage" color="white"/>
       </ChartValueAxisItem>
     </ChartValueAxis>
     <ChartCategoryAxis >
-      <ChartCategoryAxisItem categories={categories}>
+      <ChartCategoryAxisItem categories={categories} labels={labels}>
       </ChartCategoryAxisItem>
     </ChartCategoryAxis>
     <ChartSeries>

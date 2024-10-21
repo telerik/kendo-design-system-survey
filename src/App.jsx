@@ -11,6 +11,9 @@ import Description from './describe';
 import Industry from './industry';
 import InternalExternal from './internal-external';
 import ProjectNumber from './project-number';
+import DesignerNumber from './designer-number';
+import DeveloperNumber from './developer-number';
+import OutsideHelp from './outside-help';
 
 function App() {
 
@@ -110,7 +113,9 @@ function App() {
         <p>While the responses we got are skewed (82% of respondents were on the engineering side vs. 14% on the design side), the sample is large enough to give us valuable insights. </p>
 
         <h3>Would you describe yourself as...</h3>
-        <Titles/>
+        <div className='chartWrapperDark'>
+          <Titles/>
+        </div>
 
         <p>The majority of respondents were full-time employees.</p>
         <p>One interesting difference between developer and designer roles is that while 18% of all engineering roles reported being self-employed, only 7% of designers did. What's more, while 20% of developers chose the “solo entrepreneur” label, none of the designers did. </p>
@@ -131,7 +136,9 @@ function App() {
         <p>Age is but a number; you could be 60 and just starting on a new career path. That's why, instead of age, we asked for the respondents' years of experience. A majority (54%) of respondents have 11+ years in the software development industry, and 27% have been at it for 5 years or less.  </p>
 
         <h3>How long have you been involved in the software development industry? </h3>
-        <Experience/>
+        <div className='chartWrapperLight'>
+          <Experience/>
+        </div>
       </section>
 
       <section>
@@ -139,15 +146,21 @@ function App() {
         <p>The survey represents the full spectrum, from one-person businesses to small and medium-sized companies and enterprises with 5,000+ employees.</p>
         <p>30% of all respondents work in large enterprises of 500+ employees, while 41% work in small businesses of 2-100 employees.</p>  
         <h3>What is the total number of employees in your company? </h3>
-        <CompanySize/>
+        <div className='chartWrapperDark'>
+          <CompanySize/>
+        </div>
         <p>The largest share of respondents (31%) work at companies whose focus is not on software development (e.g. a manufacturer or an educational institution), and 22% work for independent software vendors.</p>
 
         <h3>Which of the below best describes your company? </h3>
-        <Description/> 
+        <div className='chartWrapperDark'>
+          <Description/> 
+        </div>
         <p>People working in over 20 different industries took the survey. <b>Education, government, finance, manufacturing and healthcare</b> were the most represented ones.</p>
         <h3>In which industry does your company operate?</h3> 
         <p><i>(Only people who selected “The focus of my company is not development-related” to the previous question were asked)</i></p> 
-        <Industry/>
+        <div className='chartWrapperDark'>
+          <Industry/>
+        </div>
       </section>
 
       <section>
@@ -164,18 +177,22 @@ function App() {
         <p>One in four developers we surveyed doesn't have a designer assigned to their current project. Often, this means that developers are leveraging resources with design “built-in” and making minimal UI changes. This could include <a href="https://www.telerik.com/?utm_medium=pdf&utm_source=telerik&utm_campaign=dt_ar_design_dev_collab_report">UI component libraries</a> or pre-existing design systems such as Material or Fluent. For specific design needs, these groups may hire a freelancer or contract worker to help with a one-off design project (read on for more insight on this). Generally, we see this kind of setup in startups, small businesses or other similarly under-resourced ventures. As businesses (and userbases) grow, so does the need for a dedicated designer.</p>
 
         <h3>How many designers are working on your current project/product? </h3>
-        {/* TO-DO: NumDesigners Chart */}
+        <div className='chartWrapperDark'>
+           <DesignerNumber/>
+        </div>
 
         <p>On the design side, 17% have just one developer they partner with on their current project and 51% work with 2-5 developers.</p>
 
         <h3>How many developers are working on your current project/product? </h3>
-        {/* TO-DO: NumDevelopers Chart */}
+        <div className='chartWrapperDark'>
+          <DeveloperNumber/>
+        </div>
 
         <p>When it comes to hiring outside help, most companies seem reluctant — 72% count exclusively on their internal specialists to get the job done.</p>
         <p>A small share of developers (5%), versus none of the designers, report that their companies don't do any design/development work internally.</p>
 
         <h3>When you have a project/product that involves both design and development work what's your approach? </h3>
-        {/* TO-DO: OutsideHelp Chart */}
+        <OutsideHelp/>
       </section>
 
       <section>

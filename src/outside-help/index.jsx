@@ -7,21 +7,25 @@ import {
   ChartTooltip
 } from "@progress/kendo-react-charts";
 
-export default function Employment () {
+export default function OutsideHelp () {
 
   const series = [
     {
-      category: 'Full-time employee',
-      value: 81,
+      category: "We work with internal teams only",
+      value: 72,
     },
     {
-      category: 'Self-employed',
-      value: 16,
+      category: 'We assign both internal and external specialists',
+      value: 22,
     },
     {
-      category: 'Part-time employee',
-      value: 3,
+      category: "We hire external consultant(s)",
+      value: 4,
     },
+    {
+      category: 'We outsource to an external agency',
+      value: 2,
+    }
   ];
 
 return (

@@ -1,6 +1,7 @@
 import * as React from "react";
 import {
   Chart,
+  ChartArea,
   ChartSeries,
   ChartSeriesItem,
   ChartCategoryAxis,
@@ -9,7 +10,8 @@ import {
   ChartTooltip,
   ChartValueAxis,
   ChartValueAxisItem,
-  ChartValueAxisTitle
+  ChartValueAxisTitle,
+  ChartAxisDefaults
 } from "@progress/kendo-react-charts";
 
 export default function Titles () {
@@ -20,18 +22,20 @@ const [firstSeries] = [
 
 const categories = ["Full-stack developer", "Web developer", "Front-end developer", "UI/UX designer", "Product manager", "CEO/CTO/VP of Engineering", "Engineering manager", "Information Architect", "Product designer", "Design (UI/UX) manager", "Project manager", "Interaction designer", "Design system lead", "Graphic designer", "Other"];
 
+const labels = {color: 'white'}; 
+
 return (
   <Chart>
+    <ChartAxisDefaults majorGridLines={{color: 'rgba(255,255,255, 0.2'}} />
+    <ChartArea background="rgba(0,0,0,0)"/>
     <ChartTooltip format="{0}%"/>
     <ChartValueAxis>
-      <ChartValueAxisItem format="{0}%">
-        <ChartValueAxisTitle text="Percentage" />
+      <ChartValueAxisItem format="{0}%" labels={labels}>
+        <ChartValueAxisTitle text="Percentage" color="white"/>
       </ChartValueAxisItem>
     </ChartValueAxis>
     <ChartCategoryAxis >
-      <ChartCategoryAxisItem categories={categories}>
-        <ChartCategoryAxisTitle text="Titles" />
-      </ChartCategoryAxisItem>
+      <ChartCategoryAxisItem categories={categories} labels={labels} />
     </ChartCategoryAxis>
     <ChartSeries>
       <ChartSeriesItem type="bar" gap={2} spacing={0.25} data={firstSeries} />
