@@ -52,6 +52,10 @@ import DesignSystemRole from './charts/design-system-role';
 import DesignSystemUse from './charts/design-system-use';
 import DesignSystemCreation from './charts/design-system-creation';
 import DesignSystemBenefit from './charts/design-system-benefit';
+import DesignSystemBlockers from './charts/design-system-blockers';
+import DesignSystemAdoption from './charts/design-system-adoption';
+import DesignSystemMaintenanceChallenge from './charts/design-system-maintenance-challenge';
+import DesignSystemCreationChallenge from './charts/design-system-creation-challenge';
 
 
 function App() {
@@ -480,19 +484,33 @@ function App() {
         <h2>Design System Challenges & Benefits </h2>
         <p>This next set of questions sheds some light on the primary inhibitors to design system creation. While resource dedication (time, energy, finances, etc.) all play a role, lack of buy-in at the management level was reported as the primary factor standing in the way.  </p>
 
-        <h3>Why don't you have a design system in place if you think your company would benefit from it?</h3>
-        {/* TO-DO: DesignSystemBlockers Chart */}
-
-        <h3>Which of these factors impacted the adoption and usage of design system the most in your company? </h3>
-        {/* TO-DO: DesignSystemAdoption Chart */}
-
+        <div className='doubleChartFlex'>
+          <div>
+            <h3>Why don't you have a design system in place if you think your company would benefit from it?</h3>
+            <DesignSystemBlockers/>
+          </div>
+          <div>
+            <h3>Which of these factors impacted the adoption and usage of design system the most in your company? </h3>
+            <DesignSystemAdoption/>
+          </div>
+        </div>
+      
         <p>Of course, once you've cleared the hurdle of creating the design system, that doesn't mean it's all sunshine and roses. There are different pain points when we're talking about adopting a design system. For our respondents, the biggest struggles were getting design and dev aligned and establishing clear processes — things that naturally go together. After that, documenting everything and proving ROI were the next biggest challenges.  </p>
 
-        <h3>What are the main challenges in the process of creating a design system? Select all that apply.</h3>
-        {/* TO-DO: DesignSystemCreationChallenge Chart */}
+        <div className='doubleChartFlex'>
+          <div className='chartWrapperDark'>
+            <h3>What are the main challenges in the process of creating a design system? Select all that apply.</h3>
+            <DesignSystemCreationChallenge/>
+          </div>
+          <div className='chartWrapperDark'>
+            <h3>What are the main challenges of maintaining a design system? Select all that apply.</h3>
+            <DesignSystemMaintenanceChallenge/>
+          </div>
+        </div>
 
-        <h3>What are the main challenges of maintaining a design system? Select all that apply.</h3>
-        {/* TO-DO: DesignSystemMaintenanceChallenge Chart */}
+        
+
+        
 
         <p>Now, it's not all bad—after all, if it was, nobody would bother. A design system requires significant upfront time and energy (and no small amount of maintenance afterwards), but it pays back those investments in spades.  </p>
 
