@@ -1,4 +1,4 @@
-import './App.scss'
+import './styles/App.scss'
 
 //KR Components
 import { Button } from "@progress/kendo-react-buttons";
@@ -18,40 +18,40 @@ import design1 from './assets/design.svg'
 import code from './assets/code.svg'
 
 //Charts
-import Titles from './titles'
-import Employment from './employment'
-import Location from './location'
-import Experience from './experience';
-import CompanySize from './companysize';
-import Description from './describe';
-import Industry from './industry';
-import InternalExternal from './internal-external';
-import ProjectNumber from './project-number';
-import DesignerNumber from './designer-number';
-import DeveloperNumber from './developer-number';
-import OutsideHelp from './outside-help';
-import Collaboration from './collaboration';
-import Channels from './channels';
-import Challenges from './challenges';
-import Relationship from './relationship';
-import RelationshipImprovement from './relationship-improvement';
-import GoodRelationship from './good-relationship';
-import Cost from './cost';
-import Tools from './tools';
-import SatisfiedTooling from './satisfied-tooling';
-import Complexity from './complexity';
-import SatisfiedHandoff from './satisfied-handoff'
-import SatisfiedDesign from './satisfied-design';
-import WhyNot from './why-not';
-import VersionControl from './version-control';
-import Implementation from './implementation';
-import DesignSystem from './design-system';
-import DesignSystemAge from './design-system-age'
-import DesignSystemApproach from './design-system-approach';
-import DesignSystemRole from './design-system-role';
-import DesignSystemUse from './design-system-use';
-import DesignSystemCreation from './design-system-creation';
-import DesignSystemBenefit from './design-system-benefit';
+import Titles from './charts/titles'
+import Employment from './charts/employment'
+import Location from './charts/location'
+import Experience from './charts/experience';
+import CompanySize from './charts/companysize';
+import Description from './charts/describe';
+import Industry from './charts/industry';
+import InternalExternal from './charts/internal-external';
+import ProjectNumber from './charts/project-number';
+import DesignerNumber from './charts/designer-number';
+import DeveloperNumber from './charts/developer-number';
+import OutsideHelp from './charts/outside-help';
+import Collaboration from './charts/collaboration';
+import Channels from './charts/channels';
+import Challenges from './charts/challenges';
+import Relationship from './charts/relationship';
+import RelationshipImprovement from './charts/relationship-improvement';
+import GoodRelationship from './charts/good-relationship';
+import Cost from './charts/cost';
+import Tools from './charts/tools';
+import SatisfiedTooling from './charts/satisfied-tooling';
+import Complexity from './charts/complexity';
+import SatisfiedHandoff from './charts/satisfied-handoff'
+import SatisfiedDesign from './charts/satisfied-design';
+import WhyNot from './charts/why-not';
+import VersionControl from './charts/version-control';
+import Implementation from './charts/implementation';
+import DesignSystem from './charts/design-system';
+import DesignSystemAge from './charts/design-system-age'
+import DesignSystemApproach from './charts/design-system-approach';
+import DesignSystemRole from './charts/design-system-role';
+import DesignSystemUse from './charts/design-system-use';
+import DesignSystemCreation from './charts/design-system-creation';
+import DesignSystemBenefit from './charts/design-system-benefit';
 
 
 function App() {
