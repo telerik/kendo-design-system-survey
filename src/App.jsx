@@ -3,6 +3,20 @@ import './App.scss'
 //KR Components
 import { Button } from "@progress/kendo-react-buttons";
 
+//Images
+import logo from './assets/progress-telerik-black.svg'
+import screen from './assets/screen.svg'
+import wheel from './assets/wheel.svg'
+import design from './assets/design-comp.svg'
+import dots from './assets/dots.png'
+import ninjaKendoka from './assets/ninja-kendoka.svg'
+import info from './assets/info.svg'
+import code2 from './assets/code2.svg'
+import design2 from './assets/design2.svg'
+import ninja2 from './assets/ninja2.svg'
+import design1 from './assets/design.svg'
+import code from './assets/code.svg'
+
 //Charts
 import Titles from './titles'
 import Employment from './employment'
@@ -16,15 +30,21 @@ import ProjectNumber from './project-number';
 import DesignerNumber from './designer-number';
 import DeveloperNumber from './developer-number';
 import OutsideHelp from './outside-help';
+import Collaboration from './collaboration';
+import Channels from './channels';
+import Challenges from './challenges';
+import Relationship from './relationship';
+import RelationshipImprovement from './relationship-improvement';
+import GoodRelationship from './good-relationship';
+import Cost from './cost';
+import Tools from './tools';
+import SatisfiedTooling from './satisfied-tooling';
+import Complexity from './complexity';
+import SatisfiedHandoff from './satisfied-handoff'
+import SatisfiedDesign from './satisfied-design';
+import WhyNot from './why-not';
+import VersionControl from './version-control';
 
-//Images
-import logo from './assets/progress-telerik-black.svg'
-import screen from './assets/screen.svg'
-import wheel from './assets/wheel.svg'
-import design from './assets/design-comp.svg'
-import dots from './assets/dots.png'
-import ninjaKendoka from './assets/ninja-kendoka.svg'
-import info from './assets/info.svg'
 
 function App() {
 
@@ -48,11 +68,8 @@ function App() {
         <hr/>
         <p>Whether you're on the development or design end of creating web applications, it's equally easy to lose track of the world beyond your daily work. Sometimes, it can be hard to break out of the silos our companies create for us, inadvertently or on purpose. However, the crossroads of design and development is a bustling, beautiful, and, yes, sometimes a bit of a bumpy place, and it is one worth visiting often for anyone looking to be a better and happier professional.</p>
         <p>We went deep into the findings of the State of Designer-Developer Collaboration 2024 survey and created a report that surfaces everything there is to learn about the relationship between designers and developers, including ideas for making it more efficient and satisfying. <b>To quote Figma's Front End Developer Research Report (Oct 2023), “The designer/developer relationship just might be the most important partnership in business today.”</b></p>
-      </div>
-    </section>
-    <main>
-        <section className='toc'>
-        <h2>Jump to Section:</h2>
+
+        <h2 style={{color: 'white'}}>Jump to Section:</h2>
         <ol>
           <li><a>Highlights</a></li>
           <li><a>Methodology</a></li>
@@ -61,9 +78,10 @@ function App() {
           <li><a>Design Systems</a></li>
           <li><a>Conclusion</a></li>
         </ol>
-      </section>
-      
-
+      </div>
+    </section>
+    
+    <main>
       <section className='highlights'>
         <h2>Highlights</h2>
         <div className='flex'>
@@ -151,6 +169,7 @@ function App() {
           </ul>
           <p>Anyone who selected a role outside this scope exited the survey.</p>
           <p>While the responses we got are skewed (82% of respondents were on the engineering side vs. 14% on the design side), the sample is large enough to give us valuable insights. </p>
+          <img className='design1' src={design1}/>
 
         </div>
         <div className='chartWrapperDark'>
@@ -167,6 +186,7 @@ function App() {
           <div className='text'>
             <p>The majority of respondents were full-time employees.</p>
             <p>One interesting difference between developer and designer roles is that while 18% of all engineering roles reported being self-employed, only 7% of designers did. What's more, while 20% of developers chose the “solo entrepreneur” label, none of the designers did. </p>
+            <img className='ninja2' src={ninja2}/>
           </div>
       </div>
       </section>
@@ -190,10 +210,11 @@ function App() {
       <section>
         <h2>The Businesses</h2>
         <div className='chartFlex'>
-          <div>
+          <div className='text'>
             <p>The survey represents the full spectrum, from one-person businesses to small and medium-sized companies and enterprises with 5,000+ employees.</p>
             <p>30% of all respondents work in large enterprises of 500+ employees, while 41% work in small businesses of 2-100 employees.</p> 
             <p>The largest share of respondents (31%) work at companies whose focus is not on software development (e.g. a manufacturer or an educational institution), and 22% work for independent software vendors.</p> 
+            <img className="code" src={code}/>
           </div>
           <div className='chartWrapperDark'>
             <h3>What is the total number of employees in your company? </h3>
@@ -240,17 +261,19 @@ function App() {
         <h2>Team Composition</h2>
         <p>The more, the merrier, the saying goes—but is that so when it comes to team composition? The most prevalent team model involves 2-5 developers and 1 designer. This aligns with the ratio that zeroheight saw in their <a href="https://19492330.fs1.hubspotusercontent-na1.net/hubfs/19492330/Community%20and%20Content/How%20We%20Document/HowWeDocument-2024.pdf">Design Systems Report 2023</a>, where they saw ranges between 1:6 and 1:15 depending on company size.</p>
         <p>One in four developers we surveyed doesn't have a designer assigned to their current project. Often, this means that developers are leveraging resources with design “built-in” and making minimal UI changes. This could include <a href="https://www.telerik.com/?utm_medium=pdf&utm_source=telerik&utm_campaign=dt_ar_design_dev_collab_report">UI component libraries</a> or pre-existing design systems such as Material or Fluent. For specific design needs, these groups may hire a freelancer or contract worker to help with a one-off design project (read on for more insight on this). Generally, we see this kind of setup in startups, small businesses or other similarly under-resourced ventures. As businesses (and userbases) grow, so does the need for a dedicated designer.</p>
-
-        <h3>How many designers are working on your current project/product? </h3>
-        <div className='chartWrapperDark'>
-           <DesignerNumber/>
-        </div>
-
         <p>On the design side, 17% have just one developer they partner with on their current project and 51% work with 2-5 developers.</p>
 
-        <h3>How many developers are working on your current project/product? </h3>
-        <div className='chartWrapperDark'>
-          <DeveloperNumber/>
+        <div className='doubleChartFlex'>
+          <div className='chartWrapperDark'>
+            <h3>How many designers are working on your current project? </h3>
+            <DesignerNumber/>
+            <img className='designIcon' src={design2}/>
+          </div>
+          <div className='chartWrapperDark'>
+            <h3>How many developers are working on your current project? </h3>
+            <DeveloperNumber/>
+            <img className='codeIcon' src={code2}/>
+          </div>
         </div>
 
         <p>When it comes to hiring outside help, most companies seem reluctant — 72% count exclusively on their internal specialists to get the job done.</p>
@@ -263,14 +286,24 @@ function App() {
       <section>
         <h2>Designer-Developer Collaboration </h2>
         <p>Almost half of respondents report having a regular communication rhythm, with 46% of all teams collaborating daily — or at least a few times a week. However, 4% of collaborating designers and developers never communicate directly; rather, they use a mediator. A further 7% collaborate very rarely — just once a month or less! </p>
-
+ 
+        <div className='chartWrapperLight'>
         <h3>How often are designers and developers usually collaborating on a single project/product? </h3>
-        {/* TO-DO: Collaboration Chart */}
+          <Collaboration/>
+        </div>
 
-        <p>On average, each professional uses 2.3 different communication channels. Happily, 64% of them opt for synchronous one-on-one conversations—either in person or by getting on a call. Team meetings (53%) come in a close second place, followed by messaging and email (51%). Two free-form responses saying they use Azure Dev Ops to communicate piqued our curiosity. That's unique, isn't it? But our favorite response to this question is definitely: “The developers are the designers at our company thru [sic] direction of the IT Manager.” We feel you, folks. We feel you. </p>
+        <div className='chartFlex'>
+          <div className='text'>
+            <p>On average, each professional uses 2.3 different communication channels. Happily, 64% of them opt for synchronous one-on-one conversations—either in person or by getting on a call. Team meetings (53%) come in a close second place, followed by messaging and email (51%). Two free-form responses saying they use Azure Dev Ops to communicate piqued our curiosity. That's unique, isn't it? But our favorite response to this question is definitely: “The developers are the designers at our company thru [sic] direction of the IT Manager.” We feel you, folks. We feel you. </p>
+          </div>
+          <div className='chartWrapperDark'>
+            <h3>Which communication channels do designers and developers at your company use most frequently?</h3>
+            <Channels/>
+          </div>
 
-        <h3>Which communication channels do designers and developers at your company use most frequently?</h3>
-        {/* TO-DO: CommunicationMethod Chart */}
+ 
+        </div>
+        
       </section>
 
       <section>
@@ -282,59 +315,46 @@ function App() {
         <p>The third most prevalent consequence is low quality of delivery (14%). Some companies may be able to weather this (for a time), but for others, it's a death knell. </p>
 
         <h3>What are the main challenges in the design-to-development process in your company? </h3>
-           {/* TO-DO: Challenges Chart */}
+        <Challenges/>
       </section>
 
       <section>
         <h2>A "Developers are from Saturn, Designers from Neptune" Kind of Situation </h2>
         <p>Now it's time to open Pandora's Box and look at the split responses of designers and developers. While 36% of engineers say the designer-developer collaboration goes smoothly and without challenges, only 10% of designers would agree.</p> 
-        <p>Developers are 50% more likely to experience challenges around slow time-to-market, while designers are more than twice as likely to be concerned about low quality of delivery. Unfortunately, we didn't include designers' main concerns among the options we listed—52% of designers opted for "Other." Among the free-form responses (modified for clarity):</p>
-        <ul>
-          <li>“Insufficient understanding from higher management”</li>
-          <li>“Siloed communications” </li> 
-          <li>“At times the implementation does not reflect the design”</li>
-          <li>“Lack of communication between DEV team and UI/UX designer after initial hand-off to Dev team results in Devs making design decisions that negatively impact the UX”</li>
-          <li>“Poor project specifications (e.g. unaddressed limitations)” </li>
-          <li>“Skills not up to date” </li>
-          <li>“When the company hires an external agency, the internal developers have a tough time reaching out to the external designers as they rarely communicate” </li>
-        </ul>  
+        <p>Developers are 50% more likely to experience challenges around slow time-to-market, while designers are more than twice as likely to be concerned about low quality of delivery.</p>
         <p>27% of all respondents report a perfect relationship between design and development on their project (a rating of 9 or 10 on a 10-scale). A further 45% are quite satisfied (a rating of 7 or 8).  </p>
         <p>The “meh” zone is also significant, with 22% going for a 5 or a 6. Sounds innocent enough, but if your partner gave your relationship a 5 or a 6, you'd be on high alert, wouldn't you? </p>
         <p>Just 6% rate their relationship as bad (3 or 4) and no one is in the “complete breakdown” zone. Phew! (And yes, we're all thinking it: those folks do exist, but they are probably way too busy struggling to have time for a survey). </p>
 
         <h3>If 10 is a perfectly functioning relationship with nothing to add and 1 is a complete breakdown where no one talks to the other, how would you rate the relationship between designers and developers working on the same project? </h3>
-        {/* TO-DO: Relationship Chart */}
-      </section>
+        <Relationship/>
 
-      <section>
-        <h2>A Chat a Week Keeps the Designer-Developer Relationship at Its Peak </h2>
-        <p>If daily catchups seem excessive, don’t worry – once a week may be the sweet spot for collaboration.  69% of respondents who chat once per week report that their relationship is positive (7 or higher) and only 7% rate their relationships as poor. </p>
-
-        <h3>How often do you communicate with your partner?</h3>
-         {/* TO-DO: Communication Chart */}
-
-        <h3>Finish the sentence to reflect your thoughts: "I think the relationship between designers and developers would be smoother if..." </h3>
-        <p><i>(question only appeared to respondents who rated their relationship 6 or lower) </i></p>
-        {/* TO-DO: RelationshipImprovement Chart */}
+        <div className='callout'>
+          <p>What's the sweet spot between designers and developers? <a href='x'>Download the report</a> to find out!</p>
+        </div>
 
         <p>We also followed up with those who rated their relationship 7 or higher and asked them what they thought worked so well. Sneakily, we gave them the same options as the folks who rated it low. As expected, the results are mirror images. What people in poor relationships crave for is what those in good relationships give credit to for their success. </p>
-        <h3>What are the key factors to good collaboration between designers and developers? </h3>
-        <p><i>(question only appeared to respondents who rated their relationship 7 or higher)</i></p>
-        {/* TO-DO: GoodRelationship Chart */}
+
+        <div className='doubleChartFlex'>
+          <div>
+            <h3>I think the relationship between designers and developers would be smoother if... </h3>
+            <p><i>(question only appeared to respondents who rated their relationship 6 or lower) </i></p>
+            <RelationshipImprovement/>
+          </div>
+          <div>
+            <h3>What are the key factors to good collaboration between designers and developers? </h3>
+            <p><i>(question only appeared to respondents who rated their relationship 7 or higher)</i></p>
+            <GoodRelationship/>
+          </div>
+        </div>
 
         <p>What's the cost of inaction, you ask? So did we.</p>
         <p>The top three reported responses about easing the designer-developer relationship all had to do with developers learning more about the goals and processes of their designer counterparts. Whether that's understanding the tools designers are using, the reason why they're making certain design decisions or just becoming an active participant in the design process, it all (clearly) adds up — in this case, to over 50% of issues! </p>
 
-        <h3>What is the cost to your business from the existing collaboration issues between designers and developers? </h3>
-         {/* TO-DO: Cost Chart */}
-
-         <p>Now the design-development divide in responses hints at some interesting dynamics. Unfortunately, the design side of the data is not statistically significant as many of them had dropped off by this point in the survey. However, it's still super interesting to consider the differences that popped up (consider this anecdotal evidence): </p>
-
-         <ul>
-          <li>Many more developers than designers thought bringing in developers into the design process earlier would help.</li>
-          <li>Designers and developers both think the other should level up their knowledge of the other side.</li>
-          <li>Designers seem much more convinced that the issues come from misaligned timelines.</li>
-         </ul>
+        <div className='chartWrapperDark'>
+          <h3>What is the cost to your business from the existing collaboration issues between designers and developers? </h3>
+          <Cost/>
+        </div>
 
          <p>An insightful free-form response we got: </p>
          <blockquote>“The design tools don't produce things that are usable (…) in the dev tools” </blockquote>
@@ -345,37 +365,46 @@ function App() {
         <h2>Tooling</h2>
         <p>Now, for the extra fun part—because who doesn't love to geek out about all the cool tools available for design and dev work these days?</p>
 
-        <h3>Which design-to-code tools are you currently using?</h3>
-        {/* TO-DO: Tools Chart */}
+        <div className='chartWrapperLight'>
+          <h3>Which design-to-code tools are you currently using?</h3>
+          <Tools/>
+        </div>
 
-        <p>As expected, we saw some fan favorites in here: Figma and <a href="https://www.telerik.com/themebuilder/?utm_medium=pdf&utm_source=telerik&utm_campaign=dt_ar_design_dev_collab_report">Progress ThemeBuilder</a>. But perhaps most surprising was the significant portion (52%) of respondents who aren't using anything at all! Design to code is a longstanding problem that many have tried to find automated solutions for, pretty much since the dawn of the internet—with varying levels of success. One respondent did specifically mention they are still using Dreamweaver, which...hey, if it's working for you, godspeed. Clearly, though, this is still a space that's ripe for innovation and new methods of problem-solving for our modern era of app design and development.</p>
+        <p>As expected, we saw some fan favorites in here: Figma and <a href="https://www.telerik.com/themebuilder/?utm_medium=pdf&utm_source=telerik&utm_campaign=dt_ar_design_dev_collab_report">Progress ThemeBuilder</a>. But perhaps most surprising was the significant portion (52%) of respondents who aren't using anything at all! Clearly, though, this is still a space that's ripe for innovation and new methods of problem-solving for our modern era of app design and development.</p>
 
         <h3>How satisfied are you with the output of your design-to-code tool? </h3>
-        {/* TO-DO: SatisfiedTooling Chart */}
+        <SatisfiedTooling/>
 
         <p>We were also curious what designers were building with their tools, so we asked about the complexity of their prototypes. Most are building highly interactive interfaces—with a smaller percentage sticking to static designs only.</p>
 
         <h3>How complex are your prototypes? </h3>
-         {/* TO-DO: Complexity Chart */}
+         <Complexity/>
 
          <p>But, of course, the million-dollar question is whether or not they're <i>happy</i> with the finished product. While most are okay with their internal processes, unfortunately only about 1 in 4 are satisfied with the finished work—the rest feel it's not good enough or just “passable.” </p>
 
-         <h3>Are you satisfied with the design handoff for your project/product? </h3> 
-          {/* TO-DO: SatisfiedHandoff Chart */}
+         <div className='doubleChartFlex'>
+            <div className='chartWrapperLight'>
+            <h3>Are you satisfied with the design handoff for your project/product? </h3> 
+            <SatisfiedHandoff/>
+          </div>
+          <div className='chartWrapperLight'>
+            <h3>Are you satisfied with the way design is implemented? </h3>
+            <SatisfiedDesign/>
+          </div>
+         </div>
 
-         <h3>Are you satisfied with the way design is implemented? </h3>
-         {/* TO-DO: SatisfiedDesign Chart */}
-
-         <p>When we dig into why there’s dissatisfaction, it seems to boil down to two main pain points: lack of clarity in the initial doc/file leading to lots of follow-up questions (50%) and changing requirements on the design side (65%). </p>
+         <p>When we dig into why there's dissatisfaction, it seems to boil down to two main pain points: lack of clarity in the initial doc/file leading to lots of follow-up questions (50%) and changing requirements on the design side (65%). </p>
 
          <h3>Why not? </h3>
-         {/* TO-DO: NotSatisfiedDesign Chart */}
+         <WhyNot/>
 
          <p>Other interesting open-response answers from this section included, “Accessibility issues are often overlooked” and “Designs just don't work in the real world”—both cases where something that looks great “on paper” just doesn't quite align with the practical requirements.</p>
          <p>Speaking of version control, we asked folks about how that looks for them on both the design and dev side of things. </p>
 
-         <h3>Do you have version control (version history) for your project/product? </h3>
-         {/* TO-DO: VersionControl Chart */}
+        <div className='chartWrapperDark'>
+          <h3>Do you have version control (version history) for your project/product? </h3>
+          <VersionControl/>
+        </div>
 
          <p>As noted earlier, pretty much everyone is using version control for their software...but it's a little more hit-or-miss on the design side, where that's a (relatively) newer concept. At least, assuming we're talking about something a little more standardized than the infamous “design_file_v2_FINAL_FINAL_FINAL_NO_REALLY” naming systems that almost every one of us has been guilty of at some point in our lives.</p>
       </section>

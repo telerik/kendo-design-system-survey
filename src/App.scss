@@ -12,11 +12,11 @@ main {
   margin: auto;
 }
 
+
 .intro {
   margin: 0;
   background-color: #141850;
   color: white;
-  padding-bottom: 50px;
 
   .cover {
     border-bottom: 10px solid $tb-primary;
@@ -105,9 +105,16 @@ main {
   display: flex;
   align-items: center;
   
+
+  .text {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
   .chartWrapperDark, .chartWrapperLight {
     min-width: 50%;
-    padding: 50px;
   }
 }
 
@@ -115,24 +122,21 @@ main {
   .chartFlex {
     flex-wrap: wrap;
   }
-
-  .chartWrapperDark, .chartWrapperLight {
-    width: 100%;
-  }
 }
 
 .doubleChartFlex {
   display: flex;
+  justify-content: space-evenly;
 
   > div {
-    width: 50%;
+    width: 45%;
   }
 }
 
 @media (max-width: 800px) {
   .doubleChartFlex {
     flex-wrap: wrap;
-    
+
     div {
       width: 100%
     }
@@ -144,12 +148,32 @@ main {
   padding: 1% 5% 1% 1%;
 }
 
+.ninja2, .design1, .code {
+  width: 275px;
+  margin: 30px 0;
+}
+
 .infoIcon {
   width: 40px;
   position: relative;
   top: 12px;
   left: -20px;
   position: absolute;
+}
+
+.designIcon {
+  position: absolute;
+  width: 80px;
+  left: -10px;
+  bottom: -15px;
+  transform: rotate(40deg);
+}
+
+.codeIcon {
+  position: absolute;
+  width: 80px;
+  left: -10px;
+  bottom: -15px;
 }
 
 .callout {
@@ -175,6 +199,7 @@ main {
   border-radius: 10px;
   padding: 20px;
   margin: 10px;
+  position: relative;
 
   h3 {
     color: white;
@@ -191,6 +216,10 @@ main {
   border-radius: 10px;
   padding: 20px;
   margin: 10px;
+
+  h3 {
+    margin: 0 0 2% 0;
+  }
 }
 
 table {
@@ -253,4 +282,11 @@ table {
     height: 15px;
     margin: 5px;
   }
+}
+
+blockquote {
+  border-left: 2px solid $tb-primary-on-subtle;
+  padding-left: 20px;
+  font-size: 20px;
+  color: $tb-primary-on-subtle
 }

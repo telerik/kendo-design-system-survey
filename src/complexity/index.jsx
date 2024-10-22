@@ -4,30 +4,29 @@ import {
   ChartSeries,
   ChartSeriesItem,
   ChartCategoryAxis,
-  ChartCategoryAxisTitle,
   ChartCategoryAxisItem,
   ChartTooltip,
   ChartValueAxis,
   ChartValueAxisItem,
   ChartValueAxisTitle,
-  ChartAxisDefaults,
   ChartArea
 } from "@progress/kendo-react-charts";
 
-export default function Experience () {
+export default function Complexity () {
 
 const [firstSeries] = [
-        [7, 20, 19, 17, 37]
+        [18, 50, 45]
       ];
 
-const categories = ["Less than a year", "1-5 years", "6-10 years", "11-20 years", "20+ years"];
+const categories = ["Static design", "Interactive design", "Full prototype (with functionality)"];
 
 return (
   <Chart>
+
     <ChartArea background="rgba(0,0,0,0)"/>
     <ChartTooltip format="{0}%"/>
     <ChartValueAxis>
-      <ChartValueAxisItem format="{0}%">
+      <ChartValueAxisItem format="{0}%" >
         <ChartValueAxisTitle text="Percentage" />
       </ChartValueAxisItem>
     </ChartValueAxis>

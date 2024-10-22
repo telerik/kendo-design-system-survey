@@ -4,35 +4,37 @@ import {
   ChartSeries,
   ChartSeriesItem,
   ChartCategoryAxis,
-  ChartCategoryAxisTitle,
   ChartCategoryAxisItem,
   ChartTooltip,
   ChartValueAxis,
   ChartValueAxisItem,
   ChartValueAxisTitle,
-  ChartAxisDefaults,
-  ChartArea
+  ChartArea,
+  ChartAxisDefaults
 } from "@progress/kendo-react-charts";
 
-export default function Experience () {
+export default function Cost () {
 
 const [firstSeries] = [
-        [7, 20, 19, 17, 37]
+        [51, 51, 26, 21, 18, 13, 13, 10, 5]
       ];
 
-const categories = ["Less than a year", "1-5 years", "6-10 years", "11-20 years", "20+ years"];
+const categories = ["Inefficient use of specialist time", "Rework required often", "Low quality end product", "Low morale", "People leaving team/company", "Missed deadlines", "Lagging behind competition", "Lost clients", "Other"];
+
+const labels = {color: 'white'}; 
 
 return (
   <Chart>
+    <ChartAxisDefaults majorGridLines={{color: 'rgba(255,255,255, 0.2'}} />
     <ChartArea background="rgba(0,0,0,0)"/>
     <ChartTooltip format="{0}%"/>
     <ChartValueAxis>
-      <ChartValueAxisItem format="{0}%">
-        <ChartValueAxisTitle text="Percentage" />
+      <ChartValueAxisItem format="{0}%" labels={labels}>
+        <ChartValueAxisTitle text="Percentage" color="white" />
       </ChartValueAxisItem>
     </ChartValueAxis>
     <ChartCategoryAxis >
-      <ChartCategoryAxisItem categories={categories}>
+      <ChartCategoryAxisItem categories={categories} labels={labels}>
       </ChartCategoryAxisItem>
     </ChartCategoryAxis>
     <ChartSeries>

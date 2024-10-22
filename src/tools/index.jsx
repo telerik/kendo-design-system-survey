@@ -14,13 +14,13 @@ import {
   ChartArea
 } from "@progress/kendo-react-charts";
 
-export default function Experience () {
+export default function Tools () {
 
 const [firstSeries] = [
-        [7, 20, 19, 17, 37]
+        [22, 18, 13, 2, 1, 4, 7, 41, 11]
       ];
 
-const categories = ["Less than a year", "1-5 years", "6-10 years", "11-20 years", "20+ years"];
+const categories = ["Figma plugins", "Figma Code Connect", "Progress ThemeBuilder", "Builder.io", "Anima", "Other", "Internally built tool", "No tools", "What design-to-code tools?"];
 
 return (
   <Chart>

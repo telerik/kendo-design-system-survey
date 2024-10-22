@@ -4,30 +4,29 @@ import {
   ChartSeries,
   ChartSeriesItem,
   ChartCategoryAxis,
-  ChartCategoryAxisTitle,
   ChartCategoryAxisItem,
   ChartTooltip,
   ChartValueAxis,
   ChartValueAxisItem,
   ChartValueAxisTitle,
-  ChartAxisDefaults,
   ChartArea
 } from "@progress/kendo-react-charts";
 
-export default function Experience () {
+export default function Collaboration () {
 
 const [firstSeries] = [
-        [7, 20, 19, 17, 37]
+        [23, 23, 16, 11, 7, 4, 16]
       ];
 
-const categories = ["Less than a year", "1-5 years", "6-10 years", "11-20 years", "20+ years"];
+const categories = ["Daily", "Several times a week", "Once a week", "A few times a month", "Once a month or less", "No direct collaboration", "No one to collaborate with"];
 
 return (
   <Chart>
+
     <ChartArea background="rgba(0,0,0,0)"/>
     <ChartTooltip format="{0}%"/>
     <ChartValueAxis>
-      <ChartValueAxisItem format="{0}%">
+      <ChartValueAxisItem format="{0}%" >
         <ChartValueAxisTitle text="Percentage" />
       </ChartValueAxisItem>
     </ChartValueAxis>
