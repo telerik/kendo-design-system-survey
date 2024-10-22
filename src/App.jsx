@@ -44,6 +44,14 @@ import SatisfiedHandoff from './satisfied-handoff'
 import SatisfiedDesign from './satisfied-design';
 import WhyNot from './why-not';
 import VersionControl from './version-control';
+import Implementation from './implementation';
+import DesignSystem from './design-system';
+import DesignSystemAge from './design-system-age'
+import DesignSystemApproach from './design-system-approach';
+import DesignSystemRole from './design-system-role';
+import DesignSystemUse from './design-system-use';
+import DesignSystemCreation from './design-system-creation';
+import DesignSystemBenefit from './design-system-benefit';
 
 
 function App() {
@@ -414,41 +422,56 @@ function App() {
         <p>No matter what tools we're using to get there, the end goal is a beautiful and functional finished application or website. While that's awfully easy to type, it is much harder to accomplish. So, let's look at what goes into getting from concept to production.</p>
         <p>First, who gets to have a say in how the design is implemented? The results show a fairly even split between designers, developers, and product managers—with just a handful including marketing as well.  </p>
 
-       <h3>Who gets to have a say in how the design is implemented? </h3>
-        {/* TO-DO: Implementation Chart */}
+        <div className='chartWrapperLight'>
+          <h3>Who gets to have a say in how the design is implemented? </h3>
+          <Implementation/>
+        </div>
       </section>
 
       <section>
         <h2>Design Systems  </h2>
         <p>For our final section, of course we would be remiss if we talked about the designer-developer relationship and didn't ask about design systems. After all, a true design system is a blend of both worlds: a place where design and dev naturally overlap. We don't think there's been either a design or development conference in the last decade where there hasn't been at least one talk about design systems. Let's dig in:  </p>
 
-        <h3>First, the obvious: do you have a design system? </h3>
-        {/* TO-DO: DesignSystem Chart */}
-
-        <h3>How long have you had a design system in place? </h3>
-        {/* TO-DO: DesignSystemAge Chart */}
+        <div className='doubleChartFlex'>
+          <div>
+            <h3>First, the obvious: do you have a design system? </h3>
+            <DesignSystem/>
+          </div>
+          <div>
+            <h3>How long have you had a design system in place? </h3>
+            <DesignSystemAge/>
+          </div>
+        </div>
 
       <p>About half of all respondents did—whether it was one they had just started or a more mature and established system. Of those who didn't, about one-third were planning to create one in the future. </p>
 
-      <h3>What is your approach when creating a design system? </h3>
-        {/* TO-DO: DesignSystemApproach Chart */}
+      <div className='chartWrapperDark'>
+        <h3>What is your approach when creating a design system? </h3>
+        <DesignSystemApproach/>
 
+      </div>
+      
       <p>Of the folks that had or were planning to create a design system, most were working from the basis of a larger, established design system (like Material Design or Fluent). This makes a ton of sense — after all, why reinvent the wheel?</p>
       <p>Naturally, we were also curious about each respondent's role in shaping and using their design systems.  </p>
 
-      <h3>What was your role in creating the design system you have in place currently? </h3>
-        {/* TO-DO: DesignSystemRole Chart */}
-
-      <h3>How often do you use the design system you have in place currently? </h3>
-        {/* TO-DO: DesignSystemUse Chart */}
-
-      <h3>Who decided that you'll be creating an internal design system? </h3>
-        {/* TO-DO: DesignSystemCreation Chart */}
-
+      <div className='doubleChartFlex'>
+        <div className='chartWrapperLight'>
+          <h3>What was your role in creating the design system you have in place currently? </h3>
+          <DesignSystemRole/>
+        </div>
+        <div className='chartWrapperLight'>
+          <h3>How often do you use the design system you have in place currently? </h3>
+          <DesignSystemUse/>
+        </div>
+      </div>
+      <div className='chartWrapperDark'>
+        <h3>Who decided that you'll be creating an internal design system? </h3>
+          <DesignSystemCreation/>
+      </div>
       <p>Most folks who made it this far in the survey were either direct contributors or consultants in some way to the creation of the system (whether that was in the past or actively ongoing), with 23% not involved at all. Similarly, most of the respondents with established design systems used them regularly in their day-to-day work, with only 6% not using them. However, when it came to who got the final say on design system creation, it was overwhelmingly the design leads — with almost half of respondents saying that the Design Lead or Design System Lead was the one who decided to create the system.  </p>
 
       <h3>Do you think your company or business unit would benefit from adopting a design system? </h3>
-        {/* TO-DO: DesignSystemBenefit Chart */}
+        <DesignSystemBenefit/>
 
       <p>For those without a design system, the vast majority (about 80%) felt like it would either somewhat or definitely benefit them to adopt one. However, we all know that's easier said than done... </p>
       </section>
