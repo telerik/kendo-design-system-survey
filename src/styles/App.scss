@@ -198,9 +198,17 @@ section {
   bottom: -15px;
 }
 
+.cta {
+  background-color: $tb-tertiary-subtle;
+  text-align: center;
+  padding: 10px 20px;
+  margin: 25px 0;
+  border-radius: 10px;
+}
+
 .callout {
   background-color: $tb-tertiary-subtle;
-  padding: 1% 5%;
+  padding: 1% 5% 2%;
   border-radius: 10px;
   margin: 1%;
   position: relative;
@@ -232,7 +240,7 @@ section {
     color: white;
   }
 
-  h3 {
+  h3, h4 {
     color: white;
     margin: 0 0 2% 0;
   }
@@ -321,4 +329,8 @@ blockquote {
   padding-left: 20px;
   font-size: 20px;
   color: $tb-primary-on-subtle
+}
+
+.jumplink {
+  text-decoration: none !important;
 }
