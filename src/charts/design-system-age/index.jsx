@@ -4,7 +4,8 @@ import {
   ChartSeries,
   ChartSeriesItem,
   ChartLegend,
-  ChartTooltip
+  ChartTooltip,
+  ChartArea
 } from "@progress/kendo-react-charts";
 
 export default function DesignSystemAge () {
@@ -30,6 +31,7 @@ export default function DesignSystemAge () {
 
 return (
   <Chart>
+    <ChartArea height={230}/>
     <ChartTooltip format="{0}%"/>
     <ChartLegend position="bottom" />
     <ChartSeries>

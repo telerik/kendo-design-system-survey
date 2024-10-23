@@ -23,7 +23,7 @@ const categories = ["Aligning design/development", "Establishing processes", "Do
 return (
   <Chart>
 
-    <ChartArea background="rgba(0,0,0,0)"/>
+    <ChartArea background="rgba(0,0,0,0)" height={300}/>
     <ChartTooltip format="{0}%"/>
     <ChartValueAxis>
       <ChartValueAxisItem format="{0}%" >

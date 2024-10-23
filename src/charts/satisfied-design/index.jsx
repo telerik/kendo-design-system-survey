@@ -27,7 +27,7 @@ export default function SatisfiedDesign () {
 
 return (
   <Chart>
-    <ChartArea background="rgba(0,0,0,0)"/>
+    <ChartArea background="rgba(0,0,0,0)" height={275}/>
     <ChartTooltip format="{0}%"/>
     <ChartLegend position="bottom" />
     <ChartSeries>

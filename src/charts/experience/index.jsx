@@ -24,7 +24,7 @@ const categories = ["Less than a year", "1-5 years", "6-10 years", "11-20 years"
 
 return (
   <Chart>
-    <ChartArea background="rgba(0,0,0,0)"/>
+    <ChartArea background="rgba(0,0,0,0)" height={200}/>
     <ChartTooltip format="{0}%"/>
     <ChartValueAxis>
       <ChartValueAxisItem format="{0}%">
@@ -36,7 +36,7 @@ return (
       </ChartCategoryAxisItem>
     </ChartCategoryAxis>
     <ChartSeries>
-      <ChartSeriesItem type="bar" data={firstSeries} />
+      <ChartSeriesItem type="bar" gap={0.5} data={firstSeries} />
     </ChartSeries>
   </Chart>
   )

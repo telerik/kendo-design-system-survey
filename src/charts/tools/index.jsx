@@ -24,7 +24,7 @@ const categories = ["Figma plugins", "Figma Code Connect", "Progress ThemeBuilde
 
 return (
   <Chart>
-    <ChartArea background="rgba(0,0,0,0)"/>
+    <ChartArea background="rgba(0,0,0,0)" height={250}/>
     <ChartTooltip format="{0}%"/>
     <ChartValueAxis>
       <ChartValueAxisItem format="{0}%">

@@ -23,7 +23,7 @@ const categories = ["Figma", "Storybook", "VS/VS Code", "Confluence", "Penpot", 
 return (
   <Chart>
 
-    <ChartArea background="rgba(0,0,0,0)"/>
+    <ChartArea background="rgba(0,0,0,0)" height={350}/>
     <ChartTooltip format="{0}%"/>
     <ChartValueAxis>
       <ChartValueAxisItem format="{0}%" >

@@ -4,7 +4,8 @@ import {
   ChartSeries,
   ChartSeriesItem,
   ChartLegend,
-  ChartTooltip
+  ChartTooltip,
+  ChartArea
 } from "@progress/kendo-react-charts";
 
 export default function Challenges () {
@@ -38,6 +39,7 @@ export default function Challenges () {
 
 return (
   <Chart>
+    <ChartArea height={300}/>
     <ChartTooltip format="{0}%"/>
     <ChartLegend position="bottom" />
     <ChartSeries>

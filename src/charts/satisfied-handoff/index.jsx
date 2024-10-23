@@ -23,7 +23,7 @@ export default function SatisfiedHandoff () {
 
 return (
   <Chart>
-    <ChartArea background="rgba(0,0,0,0)"/>
+    <ChartArea background="rgba(0,0,0,0)" height={235}/>
     <ChartTooltip format="{0}%"/>
     <ChartLegend position="bottom" />
     <ChartSeries>

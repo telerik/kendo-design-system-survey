@@ -23,7 +23,7 @@ const categories = ["Faster process", "Faster time-to-market", "Improved consist
 return (
   <Chart>
 
-    <ChartArea background="rgba(0,0,0,0)"/>
+    <ChartArea background="rgba(0,0,0,0)" height={300}/>
     <ChartTooltip format="{0}%"/>
     <ChartValueAxis>
       <ChartValueAxisItem format="{0}%" >

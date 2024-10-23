@@ -111,6 +111,18 @@ section {
   display: flex;
 }
 
+.tocFlex {
+  width: 100%;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+
+.plant2 {
+  max-width: 13%;
+  margin: 0 5%;
+}
+
 .imgFlex {
   display: flex;
   align-items: center;
@@ -133,10 +145,11 @@ section {
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+    padding: 0 50px;
   }
   
   .chartWrapperDark, .chartWrapperLight {
-    min-width: 50%;
+    min-width: 40%;
   }
 }
 
@@ -228,7 +241,7 @@ section {
   background-color: #282E89;
   border-radius: 10px;
   padding: 20px;
-  margin: 10px;
+  margin: 10px auto;
   position: relative;
 
   a {
@@ -255,7 +268,7 @@ section {
   background-color: $tb-tertiary-subtle;
   border-radius: 10px;
   padding: 20px;
-  margin: 10px;
+  margin: 10px auto;
 
   h3 {
     margin: 0 0 2% 0;
@@ -333,4 +346,8 @@ blockquote {
 
 .jumplink {
   text-decoration: none !important;
+}
+
+.smallChart {
+  max-width: 300px;
 }

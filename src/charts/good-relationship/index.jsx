@@ -12,11 +12,11 @@ export default function GoodRelationship () {
 
   const series = [
     {
-      category: 'Developers were brought into the design process earlier',
+      category: 'Developers were in the design process earlier',
       value: 70,
     },
     {
-      category: 'Developers knew more about the principles of design',
+      category: 'Developers knew more about design principles',
       value: 51,
     },
     {
@@ -32,7 +32,7 @@ export default function GoodRelationship () {
       value: 48
     },
     {
-      category: 'There were clear processes in place / processes were followed closely',
+      category: 'There were clear processes being followed',
       value: 38
     },
     {
@@ -47,7 +47,7 @@ export default function GoodRelationship () {
 
 return (
   <Chart>
-    <ChartArea background="rgba(0,0,0,0"/>
+    <ChartArea background="rgba(0,0,0,0" height={400}/>
     <ChartTooltip format="{0}%"/>
     <ChartLegend position="bottom" />
     <ChartSeries>

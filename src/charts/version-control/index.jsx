@@ -26,7 +26,7 @@ const labels = {color: 'white'};
 return (
   <Chart>
     <ChartAxisDefaults majorGridLines={{color: 'rgba(255,255,255, 0.2'}} />
-    <ChartArea background="rgba(0,0,0,0)"/>
+    <ChartArea background="rgba(0,0,0,0)" height={160}/>
     <ChartTooltip format="{0}%"/>
     <ChartValueAxis>
       <ChartValueAxisItem format="{0}%" labels={labels}>

@@ -14,6 +14,11 @@ import design2 from './assets/design2.svg'
 import ninja2 from './assets/ninja2.svg'
 import design1 from './assets/design.svg'
 import code from './assets/code.svg'
+import deco1 from './assets/deco1.png'
+import deco2 from './assets/deco2.png'
+import deco3 from './assets/deco3.png'
+import deco4 from './assets/deco4.png'
+import plant2 from './assets/plant2.svg'
 
 //Charts
 import Titles from './charts/titles'
@@ -91,16 +96,19 @@ function App() {
       </section>
       <section>
       <h2>Jump to Section:</h2>
+        <div className='tocFlex'>
+          <img src={plant2} className='plant2'/>
           <ol>
-            <li><a href='#highlights'>Highlights</a></li>
-            <li><a href='#methodology'>Methodology</a></li>
-            <li><a href='#participants'>Participants</a></li>
-            <li><a href='#collaboration'>Designer-Developer Collaboration</a></li>
-            <li><a href='#tooling'>Tooling</a></li>
-            <li><a href='#designsystems'>Design Systems</a></li>
-            <li><a href='#conclusion'>Conclusion</a></li>
-            <li><a href='#about'>About Telerik and Kendo UI</a></li>
-          </ol>
+              <li><a href='#highlights'>Highlights</a></li>
+              <li><a href='#methodology'>Methodology</a></li>
+              <li><a href='#participants'>Participants</a></li>
+              <li><a href='#collaboration'>Designer-Developer Collaboration</a></li>
+              <li><a href='#tooling'>Tooling</a></li>
+              <li><a href='#designsystems'>Design Systems</a></li>
+              <li><a href='#conclusion'>Conclusion</a></li>
+              <li><a href='#about'>About Telerik and Kendo UI</a></li>
+            </ol>
+        </div>   
       </section>
       <section className='highlights'>
         <a className='jumplink' id='highlights'>
@@ -110,7 +118,8 @@ function App() {
           <div className='callout'><p>While <b style={{fontSize: '30px'}}>36%</b> of engineers say designer-developer collaboration goes smoothly and without challenges...</p></div>
           <div className='callout' style={{backgroundColor: '#ffcf79ff'}}><p>only <b style={{fontSize: '30px'}}>10%</b> of designers would agree.</p></div>
         </div>
-
+        
+        <br/> 
         <div className='imgFlex'>
        
           <img src={ninjaKendoka} className='decoImage'/>
@@ -137,6 +146,7 @@ function App() {
         <p>Respondents were invited to take the survey through various channels—being prompted on the telerik.com website, through social media and blog post promotion, and through paid promotion in newsletters and on social media.</p> 
         <p>The survey was open for submissions for the period July 18 - September 08, 2024.</p>
         <p>We received a total of 467 responses from 51 countries. Before proceeding with the analysis, we cleaned and validated data for accuracy and relevance using both targeted survey distribution and screening questions to filter out respondents outside our target group and bots. We also learned that bots taking surveys are getting more and more advanced, leaving AI-generated feedback on open-ended questions. After the clean-up, we ended up with 222 respondents.</p>
+        <br/>
         <div className='imgFlex'>
           <div className='callout'>
             <img className='infoIcon' src={info}/>
@@ -188,13 +198,14 @@ function App() {
         </a>
         <div className='chartFlex'>
           <div className='text'>
-          <p>The survey invitation specifically recruited people who were:</p>
-          <ul>
-            <li>Web designers or developers</li>
-            <li>Stakeholders in the designer-developer handoff (e.g. managers, product owners, senior leadership)</li>
-          </ul>
-          <p>Anyone who selected a role outside this scope exited the survey.</p>
-          <p>While the responses we got are skewed (82% of respondents were on the engineering side vs. 14% on the design side), the sample is large enough to give us valuable insights. </p>
+          <p>The survey invitation specifically recruited people who were:
+            <br/><br/>
+            <ul>
+              <li>Web designers or developers</li>
+              <li>Stakeholders in the designer-developer handoff (e.g. managers, product owners, senior leadership)</li>
+            </ul>
+          </p>
+          <p>Anyone who selected a role outside this scope exited the survey. While the responses we got are skewed (82% of respondents were on the engineering side vs. 14% on the design side), the sample is large enough to give us valuable insights. </p>
           <img className='design1' src={design1}/>
 
         </div>
@@ -211,7 +222,6 @@ function App() {
           </div>
           <div className='text'>
             <p>The majority of respondents were full-time employees.One interesting difference between developer and designer roles is that while 18% of all engineering roles reported being self-employed, only 7% of designers did. What's more, while 20% of developers chose the “solo entrepreneur” label, none of the designers did. </p>
-            <img className='ninja2' src={ninja2}/>
           </div>
       </div>
       </section>
@@ -313,6 +323,7 @@ function App() {
           <h2>Designer-Developer Collaboration </h2>
         </a>
         <p>Almost half of respondents report having a regular communication rhythm, with 46% of all teams collaborating daily — or at least a few times a week. However, 4% of collaborating designers and developers never communicate directly; rather, they use a mediator. A further 7% collaborate very rarely — just once a month or less! </p>
+        <br/>
  
         <div className='chartWrapperLight'>
         <h4>How often are designers and developers usually collaborating on a single project/product? </h4>
@@ -369,7 +380,7 @@ function App() {
             <RelationshipImprovement/>
           </div>
           <div>
-            <h4>What are the key factors to good collaboration between designers and developers? </h4>
+            <h4>What are the key factors to good collaboration? </h4>
             <p><i>(question only appeared to respondents who rated their relationship 7 or higher)</i></p>
             <GoodRelationship/>
           </div>
@@ -496,13 +507,14 @@ function App() {
       <h4>Do you think your company or business unit would benefit from adopting a design system? </h4>
         <DesignSystemBenefit/>
 
+      <br/>
       <p>For those without a design system, the vast majority (about 80%) felt like it would either somewhat or definitely benefit them to adopt one. However, we all know that's easier said than done... </p>
       </section>
 
       <section>
         <h3>Design System Challenges & Benefits </h3>
         <p>This next set of questions sheds some light on the primary inhibitors to design system creation. While resource dedication (time, energy, finances, etc.) all play a role, lack of buy-in at the management level was reported as the primary factor standing in the way.  </p>
-
+        <br/>
         <div className='doubleChartFlex'>
           <div>
             <h4>Why don't you have a design system in place if you think your company would benefit from it?</h4>
@@ -513,12 +525,12 @@ function App() {
             <DesignSystemAdoption/>
           </div>
         </div>
-      
+        <br/>
         <p>Of course, once you've cleared the hurdle of creating the design system, that doesn't mean it's all sunshine and roses. There are different pain points when we're talking about adopting a design system. For our respondents, the biggest struggles were getting design and dev aligned and establishing clear processes — things that naturally go together. After that, documenting everything and proving ROI were the next biggest challenges.  </p>
 
         <div className='doubleChartFlex'>
           <div className='chartWrapperDark'>
-            <h4>What are the main challenges in the process of creating a design system? Select all that apply.</h4>
+            <h4>What are the main challenges of creating a design system? Select all that apply.</h4>
             <DesignSystemCreationChallenge/>
           </div>
           <div className='chartWrapperDark'>
@@ -557,9 +569,9 @@ function App() {
           <h4>Who's responsible for maintaining and/or contributing to the design system in your company? Select all that apply.</h4>
           <DesignSystemContributor/>
         </div>
-
+        <br/>
         <p>When it comes to tooling, we see some familiar old favorites made an appearance again: Figma and Visual Studio/VS Code. Axure was a common write-in — we'll make sure to include it next year — but otherwise, no real surprises here. </p>
-
+        <br/>
         <div className='doubleChartFlex'>
           <div>
             <h4>Which tools will you use for the creation of your design system? Select all that apply.</h4>
@@ -570,7 +582,7 @@ function App() {
             <DesignSystemMaintenanceTools/>
           </div>
         </div>
-
+        <br/>
         <p>The other good news is that folks are, on balance, happy with those tools. While just over 40% feel that there’s room for improvement, only 12% are outright unhappy with their options. </p>
 
         <div className='chartWrapperLight'>

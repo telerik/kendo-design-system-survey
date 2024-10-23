@@ -27,7 +27,7 @@ export default function Employment () {
 
 return (
   <Chart>
-    <ChartArea background="rgba(0,0,0,0"/>
+    <ChartArea background="rgba(0,0,0,0" height={200}/>
     <ChartTooltip format="{0}%"/>
     <ChartLegend position="bottom" />
     <ChartSeries>

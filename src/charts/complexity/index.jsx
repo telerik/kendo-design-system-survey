@@ -23,7 +23,7 @@ const categories = ["Static design", "Interactive design", "Full prototype (with
 return (
   <Chart>
 
-    <ChartArea background="rgba(0,0,0,0)"/>
+    <ChartArea background="rgba(0,0,0,0)" height={150}/>
     <ChartTooltip format="{0}%"/>
     <ChartValueAxis>
       <ChartValueAxisItem format="{0}%" >

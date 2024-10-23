@@ -23,7 +23,7 @@ const categories = ["Daily", "Several times a week", "Once a week", "A few times
 return (
   <Chart>
 
-    <ChartArea background="rgba(0,0,0,0)"/>
+    <ChartArea background="rgba(0,0,0,0)" height={200}/>
     <ChartTooltip format="{0}%"/>
     <ChartValueAxis>
       <ChartValueAxisItem format="{0}%" >
