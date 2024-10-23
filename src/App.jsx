@@ -56,6 +56,13 @@ import DesignSystemBlockers from './charts/design-system-blockers';
 import DesignSystemAdoption from './charts/design-system-adoption';
 import DesignSystemMaintenanceChallenge from './charts/design-system-maintenance-challenge';
 import DesignSystemCreationChallenge from './charts/design-system-creation-challenge';
+import DesignSystemGoals from './charts/design-system-goals';
+import DesignSystemImplemented from './charts/design-system-implemented';
+import DesignSystemFeelings from './charts/design-system-feeling';
+import DesignSystemContributor from './charts/design-system-contributor';
+import DesignSystemCreationTools from './charts/design-system-creation-tools';
+import DesignSystemMaintenanceTools from './charts/design-system-maintenance-tools';
+import DesignSystemCollaborationTools from './charts/design-system-collaboration-tools';
 
 
 function App() {
@@ -63,37 +70,36 @@ function App() {
   return (
     <>
     <section className='intro'>
-      <div className='cover' style= {{backgroundImage: `url(${dots})`, backgroundSize: 'cover'}}>
-      <img className='logo' src={logo}/>
-        <div>
-          
-          <div className='illustration'>
-            <img className='wheel' src={wheel}/>
-            <img className='screen' src={screen}/>
-            <img className='design' src={design}/>
+      <div className='cover'>
+          <div>
+            <div className='illustration'>
+              <img className='wheel' src={wheel}/>
+              <img className='screen' src={screen}/>
+              <img className='design' src={design}/>
+            </div>
           </div>
-          <h1>State of <br/> Designer-Developer<br/> Collaboration 2024</h1>
+          <h1>The State of Designer-Developer Collaboration 2024</h1>
         </div>
-      </div>
-      <div className='text'>
-        <h4>Survey Report</h4>
-        <hr/>
-        <p>Whether you're on the development or design end of creating web applications, it's equally easy to lose track of the world beyond your daily work. Sometimes, it can be hard to break out of the silos our companies create for us, inadvertently or on purpose. However, the crossroads of design and development is a bustling, beautiful, and, yes, sometimes a bit of a bumpy place, and it is one worth visiting often for anyone looking to be a better and happier professional.</p>
-        <p>We went deep into the findings of the State of Designer-Developer Collaboration 2024 survey and created a report that surfaces everything there is to learn about the relationship between designers and developers, including ideas for making it more efficient and satisfying. <b>To quote Figma's Front End Developer Research Report (Oct 2023), “The designer/developer relationship just might be the most important partnership in business today.”</b></p>
-
-        <h2 style={{color: 'white'}}>Jump to Section:</h2>
-        <ol>
-          <li><a>Highlights</a></li>
-          <li><a>Methodology</a></li>
-          <li><a>Participants</a></li>
-          <li><a>Collaboration & Implementation</a></li>
-          <li><a>Design Systems</a></li>
-          <li><a>Conclusion</a></li>
-        </ol>
-      </div>
     </section>
-    
-    <main>
+
+    <div className='surveyWrapper'>
+      <section className='intro'>
+        <div className='text'>
+          <p>Whether you're on the development or design end of creating web applications, it's equally easy to lose track of the world beyond your daily work. Sometimes, it can be hard to break out of the silos our companies create for us, inadvertently or on purpose. However, the crossroads of design and development is a bustling, beautiful, and, yes, sometimes a bit of a bumpy place, and it is one worth visiting often for anyone looking to be a better and happier professional.</p>
+          <p>We went deep into the findings of the State of Designer-Developer Collaboration 2024 survey and created a report that surfaces everything there is to learn about the relationship between designers and developers, including ideas for making it more efficient and satisfying. <b>To quote Figma's Front End Developer Research Report (Oct 2023), “The designer/developer relationship just might be the most important partnership in business today.”</b></p>
+        </div>
+      </section>
+      <section>
+      <h2>Jump to Section:</h2>
+          <ol>
+            <li><a>Highlights</a></li>
+            <li><a>Methodology</a></li>
+            <li><a>Participants</a></li>
+            <li><a>Collaboration & Implementation</a></li>
+            <li><a>Design Systems</a></li>
+            <li><a>Conclusion</a></li>
+          </ol>
+      </section>
       <section className='highlights'>
         <h2>Highlights</h2>
         <div className='flex'>
@@ -508,22 +514,24 @@ function App() {
           </div>
         </div>
 
-        
-
-        
-
         <p>Now, it's not all bad—after all, if it was, nobody would bother. A design system requires significant upfront time and energy (and no small amount of maintenance afterwards), but it pays back those investments in spades.  </p>
 
-        <h3>What are your top 3 goals in creating a design system?</h3>
-        {/* TO-DO: DesignSystemGoals Chart */}
+        <div className='doubleChartFlex'>
+          <div className='chartWrapperLight'>
+            <h3>What are your top 3 goals in creating a design system?</h3>
+            <DesignSystemGoals/>
+          </div>
 
-        <h3>What are the top 3 benefits of having implemented a design system in place?</h3>
-        {/* TO-DO: DesignSystemImplementedBenefits Chart */}
-
-        <h3>What is the general feeling in your team regarding the adoption/usage of design systems?</h3>
-        {/* TO-DO: DesignSystemFeelings Chart */}
+          <div className='chartWrapperLight'>
+            <h3>What are the top 3 benefits of having a design system in place?</h3>
+            <DesignSystemImplemented/>
+          </div>
+        </div>
 
         <p>Even better, the results show that expectations are matched by results in many cases. For the folks that don't yet have a finished design system — better user experience, improved consistency and faster design to dev time are the top 3 reasons why they want one. And great news: those are also the top 3 benefits listed by folks who do have them! It's reassuring to see that expectations and results are aligned regarding the power and impact of a design system.  </p>
+
+        <h3>What is the general feeling in your team regarding the adoption/usage of design systems?</h3>
+        <DesignSystemFeelings/>
 
         <p>Overall, about half of users felt that design systems solved their problems, and the other half felt that it solved some problems but also created some new ones. Only 3% of users felt that it was a net negative, creating too many issues to be worthwhile. It's always reassuring to see that such a huge project isn't just wishful thinking; it does have real, tangible benefits.  </p>
       </section>
@@ -532,29 +540,37 @@ function App() {
         <h2>Design System Tools and Maintenace</h2>
         <p>When it comes to maintenance and continued contributions to the design system, our survey found that there are two main approaches: everyone contributes equally or a dedicated design system team owns the system.  </p>
 
-        <h3>Who's responsible for maintaining and/or contributing to the design system in your company? Select all that apply.</h3>
-        {/* TO-DO: DesignSystemMaintenance Chart */}
+        <div className='chartWrapperDark'>
+          <h3>Who's responsible for maintaining and/or contributing to the design system in your company? Select all that apply.</h3>
+          <DesignSystemContributor/>
+        </div>
 
         <p>When it comes to tooling, we see some familiar old favorites made an appearance again: Figma and Visual Studio/VS Code. Axure was a common write-in — we'll make sure to include it next year — but otherwise, no real surprises here. </p>
 
-
-        <h3>Which tools will you use for the creation of your design system? Select all that apply.</h3>
-        {/* TO-DO: DesignSystemCreationTools Chart */}
-
-        <h3>Which tools do you use for the maintenance of your design system? Select all that apply.</h3>
-        {/* TO-DO: DesignSystemMaintenanceTools Chart */}
+        <div className='doubleChartFlex'>
+          <div>
+            <h3>Which tools will you use for the creation of your design system? Select all that apply.</h3>
+            <DesignSystemCreationTools/>
+          </div>
+          <div>
+            <h3>Which tools do you use for the maintenance of your design system? Select all that apply.</h3>
+            <DesignSystemMaintenanceTools/>
+          </div>
+        </div>
 
         <p>The other good news is that folks are, on balance, happy with those tools. While just over 40% feel that there’s room for improvement, only 12% are outright unhappy with their options. </p>
 
-        <h3>Do you believe your team/company is using the tools that best enable designer-developer collaboration?</h3>
-        {/* TO-DO: CollaborationTools Chart */}
+        <div className='chartWrapperLight'>
+          <h3>Do you believe your team/company is using the tools that best enable designer-developer collaboration?</h3>
+          <DesignSystemCollaborationTools/>
+        </div>
       </section>
 
       <section>
         <h2>The Future of Design Systems </h2>
-        <p>What’s a survey without a good predictions section? Let's see what folks are planning, excited for and thinking about with their design systems in the years ahead.</p>
+        <p>What's a survey without a good predictions section? Let's see what folks are planning, excited for and thinking about with their design systems in the years ahead.</p>
 
-        <h3>Are you experiamenting with AI in your design system</h3>
+        <h3>Are you experimenting with AI in your design system</h3>
         {/* TO-DO: DesignSystemAI Chart */}
 
         <p>When it comes to AI in design systems, most folks are still feeling hesitant. Only 7% have implemented AI in their design system currently, and (from our open response follow-up question) they're primarily using GenAI to answer questions or create placeholder elements. 37% consider using AI to make suggestions, create templates or help brainstorm ideas.  </p>
@@ -582,7 +598,7 @@ function App() {
         <p>The Telerik and Kendo UI component libraries and UI customization tools give developers and designers a common language. This toolkit removes many of the obstacles presented by the design-to-code process and significantly reduces tedious CSS, guesswork, and frustrating back and forth—and, ultimately, time to market. </p>
         <a href="https://www.telerik.com/ui-customization-tools?utm_medium=pdf&utm_source=telerik&utm_campaign=dt_ar_design_dev_collab_report"><Button>I want better designer-developer collaboration</Button></a>
       </section>
-      </main>
+      </div>
     </>
   )
 }
