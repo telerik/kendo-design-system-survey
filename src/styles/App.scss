@@ -223,6 +223,15 @@ section {
   margin: 10px;
   position: relative;
 
+  a {
+    color: white;
+    text-decoration: underline;
+  }
+
+  h2 {
+    color: white;
+  }
+
   h3 {
     color: white;
     margin: 0 0 2% 0;
@@ -230,6 +239,7 @@ section {
 
   p {
     color: white;
+    line-height: 25px;
   }
 }
 

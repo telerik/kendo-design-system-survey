@@ -4,11 +4,9 @@ import './styles/App.scss'
 import { Button } from "@progress/kendo-react-buttons";
 
 //Images
-import logo from './assets/progress-telerik-black.svg'
 import screen from './assets/screen.svg'
 import wheel from './assets/wheel.svg'
 import design from './assets/design-comp.svg'
-import dots from './assets/dots.png'
 import ninjaKendoka from './assets/ninja-kendoka.svg'
 import info from './assets/info.svg'
 import code2 from './assets/code2.svg'
@@ -63,6 +61,8 @@ import DesignSystemContributor from './charts/design-system-contributor';
 import DesignSystemCreationTools from './charts/design-system-creation-tools';
 import DesignSystemMaintenanceTools from './charts/design-system-maintenance-tools';
 import DesignSystemCollaborationTools from './charts/design-system-collaboration-tools';
+import DesignSystemAI from './charts/design-system-ai';
+import DesignSystemFuture from './charts/design-system-future';
 
 
 function App() {
@@ -571,32 +571,36 @@ function App() {
         <p>What's a survey without a good predictions section? Let's see what folks are planning, excited for and thinking about with their design systems in the years ahead.</p>
 
         <h3>Are you experimenting with AI in your design system</h3>
-        {/* TO-DO: DesignSystemAI Chart */}
+        <DesignSystemAI/>
 
         <p>When it comes to AI in design systems, most folks are still feeling hesitant. Only 7% have implemented AI in their design system currently, and (from our open response follow-up question) they're primarily using GenAI to answer questions or create placeholder elements. 37% consider using AI to make suggestions, create templates or help brainstorm ideas.  </p>
 
         <h3>In a best-case scenario, what do you want for your company's design system in the future?</h3>
-        {/* TO-DO: DesignSystemFuture Chart */}
+        <DesignSystemFuture/>
 
         <p>Long term, most respondents are hopeful that their design system becomes an integral aspect of their internal design-to-development process, serving as a single source of truth that's continually updated and well-maintained. Only 6% are hoping to follow in the footsteps of giants and launch their design system for public use. To them, we wish the very best of luck and look forward to seeing what they create!  </p>
       </section>
 
       <section>
-        <h2>Conclusion</h2>
-        <p>When we look at these results compiled together, it's easy to feel optimistic about the future of designer/developer collaboration. Sure, there's work to be done—no doubt about it. But it's reassuring to see that none of the problems are insurmountable or unsolvable.</p>  
-        <p>Many of the challenges hinge on communication: not speaking the same language, getting involved in the process too late, not checking in often enough, not clearly communicating expectations, not sharing a tool set. These aren't problems that will magically solve themselves. They require a commitment from both parties to work together towards bridging the gap. But as they say: “We have the technology. We have the capability...” </p>
-        <p>If you're looking for ways to help improve the design to development flow at your job, check out the <a href='https://www.telerik.com/ui-customization-tools?utm_medium=pdf&utm_source=telerik&utm_campaign=dt_ar_design_dev_collab_report'>Telerik and Kendo UI tools.</a> Our Design System Kit, ThemeBuilder, Figma UI Design Kits, building blocks, page templates and 100+ beautiful, accessible UI components can help get everyone unified and working towards the same goal—faster and more smoothly than ever before. </p> 
-        <p>And, of course, this isn't the end of the conversation. We'd love to hear from you! If there's something we left out, something you disagree with or just something that sparked an idea, we'd love to hear about it.  </p>
-        <p>Keep working hard! We can't wait to hear about everything you've accomplished as designers and developers working together. </p>
-        <p>Until next year,</p>
-        <p>Kathryn & Nora </p>
+        <div className='chartWrapperDark'>
+          <h2>Conclusion</h2>
+          <p>When we look at these results compiled together, it's easy to feel optimistic about the future of designer/developer collaboration. Sure, there's work to be done—no doubt about it. But it's reassuring to see that none of the problems are insurmountable or unsolvable.</p>  
+          <p>Many of the challenges hinge on communication: not speaking the same language, getting involved in the process too late, not checking in often enough, not clearly communicating expectations, not sharing a tool set. These aren't problems that will magically solve themselves. They require a commitment from both parties to work together towards bridging the gap. But as they say: “We have the technology. We have the capability...” </p>
+          <p>If you're looking for ways to help improve the design to development flow at your job, check out the <a href='https://www.telerik.com/ui-customization-tools?utm_medium=pdf&utm_source=telerik&utm_campaign=dt_ar_design_dev_collab_report'>Telerik and Kendo UI tools.</a> Our Design System Kit, ThemeBuilder, Figma UI Design Kits, building blocks, page templates and 100+ beautiful, accessible UI components can help get everyone unified and working towards the same goal—faster and more smoothly than ever before. </p> 
+          <p>And, of course, this isn't the end of the conversation. We'd love to hear from you! If there's something we left out, something you disagree with or just something that sparked an idea, we'd love to hear about it.  </p>
+          <p>Keep working hard! We can't wait to hear about everything you've accomplished as designers and developers working together. </p>
+          <p>Until next year,</p>
+          <p><b>Kathryn & Nora </b></p>
+        </div>
       </section>
 
       <section>
         <h2>About Telerik and Kendo UI </h2>
         <p><i>UI component libraries that care about the design process </i></p>
         <p>The Telerik and Kendo UI component libraries and UI customization tools give developers and designers a common language. This toolkit removes many of the obstacles presented by the design-to-code process and significantly reduces tedious CSS, guesswork, and frustrating back and forth—and, ultimately, time to market. </p>
-        <a href="https://www.telerik.com/ui-customization-tools?utm_medium=pdf&utm_source=telerik&utm_campaign=dt_ar_design_dev_collab_report"><Button>I want better designer-developer collaboration</Button></a>
+        <a href="https://www.telerik.com/ui-customization-tools?utm_medium=pdf&utm_source=telerik&utm_campaign=dt_ar_design_dev_collab_report">
+          <Button>I want better designer-developer collaboration</Button>
+        </a>
       </section>
       </div>
     </>

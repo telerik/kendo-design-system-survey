@@ -25,7 +25,11 @@
 }
     a{
         font-weight: bold;
-                color: rgb(34, 94, 255);
+        color: rgb(34, 94, 255);
+
+        :hover {
+            color: black;
+        }
         
 }
     h4{
@@ -37,5 +41,11 @@
     p, table, li {
         font-size: 14px;
         font-family: 'Open Sans', sans-serif;
+    }
+
+    .k-button {
+        padding: 10px 30px;
+        margin: 20px 0;
+        font-weight: bold;
     }
         
