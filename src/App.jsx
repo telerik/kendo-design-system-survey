@@ -14,11 +14,8 @@ import design2 from './assets/design2.svg'
 import ninja2 from './assets/ninja2.svg'
 import design1 from './assets/design.svg'
 import code from './assets/code.svg'
-import deco1 from './assets/deco1.png'
-import deco2 from './assets/deco2.png'
-import deco3 from './assets/deco3.png'
-import deco4 from './assets/deco4.png'
 import plant2 from './assets/plant2.svg'
+import lego from './assets/lego.svg'
 
 //Charts
 import Titles from './charts/titles'
@@ -95,7 +92,7 @@ function App() {
         </div>
       </section>
       <section>
-   
+  
         <div className='tocFlex'>
           <img src={plant2} className='plant2'/>
           <ol>
@@ -115,8 +112,8 @@ function App() {
             <h2>Highlights</h2>
         </a>
         <div className='flex'>
-          <div className='callout'><p>While <b style={{fontSize: '30px'}}>36%</b> of engineers say designer-developer collaboration goes smoothly and without challenges...</p></div>
-          <div className='callout' style={{backgroundColor: '#ffcf79ff'}}><p>only <b style={{fontSize: '30px'}}>10%</b> of designers would agree.</p></div>
+          <div className='callout'><p>While <b style={{fontSize: '20px'}}>36%</b> of engineers say designer-developer collaboration goes smoothly and without challenges...</p></div>
+          <div className='callout' style={{backgroundColor: '#ffcf79ff'}}><p>only <b style={{fontSize: '20px'}}>10%</b> of designers would agree.</p></div>
         </div>
         
         <br/> 
@@ -349,11 +346,20 @@ function App() {
         <p>The good news is that 33% of respondents feel satisfied with their design-to-development process—that's every third person! The bad news is that at least 65% experience challenges (we say at least because many of the free-form responses in the “Other” category also spoke about challenges).</p>
         <p>And now we will find out why making sure that designers and developers collaborate well is business-critical: </p>
         <blockquote>The price many businesses pay for not establishing a smooth design-to-development process is slow time to market. </blockquote>
-        <p>Slow time to market is the price 28% of companies pay, but that's not all. 17% of teams suffer from internal conflict—and we all know that conflict at work is often resolved by people leaving the team or company. That, in turn, leads to all sorts of gnarly complications. </p>
-        <p>The third most prevalent consequence is low quality of delivery (14%). Some companies may be able to weather this (for a time), but for others, it's a death knell. </p>
+        
         <br/> 
-        <h4>What are the main challenges in the design-to-development process in your company? </h4>
-        <Challenges/>
+        <div className='chartFlex'>
+          <div>
+            <h4>What are the main challenges in the design-to-development process in your company? </h4>
+            <Challenges/>
+          </div>
+          <div className='text'>
+          <p>Slow time to market is the price 28% of companies pay, but that's not all. 17% of teams suffer from internal conflict—and we all know that conflict at work is often resolved by people leaving the team or company. That, in turn, leads to all sorts of gnarly complications. </p>
+          <p>The third most prevalent consequence is low quality of delivery (14%). Some companies may be able to weather this (for a time), but for others, it's a death knell. </p>
+            <img src={ninja2} className='ninja2'/>
+          </div>
+        </div>
+          
       </section>
 
       <section>
@@ -444,8 +450,9 @@ function App() {
         <div className='chartWrapperDark'>
           <h4>Do you have version control (version history) for your project/product? </h4>
           <VersionControl/>
+          <img className='codeIcon' src={lego}/>
         </div>
-
+        <br/>
          <p>As noted earlier, pretty much everyone is using version control for their software...but it's a little more hit-or-miss on the design side, where that's a (relatively) newer concept. At least, assuming we're talking about something a little more standardized than the infamous “design_file_v2_FINAL_FINAL_FINAL_NO_REALLY” naming systems that almost every one of us has been guilty of at some point in our lives.</p>
       </section>
 
