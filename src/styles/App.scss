@@ -114,7 +114,7 @@ section {
 .tocFlex {
   width: 100%;
   display: flex;
-  justify-content: start;
+  justify-content: center;
   align-items: center;
 }
 
@@ -156,6 +156,10 @@ section {
 @media (max-width: 800px) {
   .chartFlex {
     flex-wrap: wrap;
+
+    .text {
+      padding: 0;
+    }
   }
 }
 

@@ -95,7 +95,7 @@ function App() {
         </div>
       </section>
       <section>
-      <h2>Jump to Section:</h2>
+   
         <div className='tocFlex'>
           <img src={plant2} className='plant2'/>
           <ol>
