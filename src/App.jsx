@@ -640,7 +640,6 @@ function App() {
       <section>
         <h2>Download the Full Report</h2>
         <p>A blurb about report downloading goes here, before the form.</p>
-        <br/>
       </section>
       </div>
     </>
