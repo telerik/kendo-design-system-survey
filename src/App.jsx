@@ -80,7 +80,7 @@ function App() {
               <img className='design' src={design}/>
             </div>
           </div>
-          <h1>The State of Designer-Developer Collaboration 2024</h1>
+          <h1>The State of <br/> Designer-Developer Collaboration <br/>2024</h1>
         </div>
     </section>
 
@@ -155,6 +155,7 @@ function App() {
            <img className='infoIcon' src={info}/>
             <h3>Note on the Wording</h3>
             <p>Whenever we look at the differences between designer and development roles, we'll refer to them as “design/designers” and “development/developers/engineers/dev” for short. The job roles are grouped in these two categories in the following way: </p>
+            <br/>
             <table>
               <tr>
                 <th>Designer Roles</th>
@@ -348,17 +349,16 @@ function App() {
         <blockquote>The price many businesses pay for not establishing a smooth design-to-development process is slow time to market. </blockquote>
         
         <br/> 
-        <div className='chartFlex'>
+        
           <div>
             <h4>What are the main challenges in the design-to-development process in your company? </h4>
             <Challenges/>
           </div>
-          <div className='text'>
+
           <p>Slow time to market is the price 28% of companies pay, but that's not all. 17% of teams suffer from internal conflict—and we all know that conflict at work is often resolved by people leaving the team or company. That, in turn, leads to all sorts of gnarly complications. </p>
           <p>The third most prevalent consequence is low quality of delivery (14%). Some companies may be able to weather this (for a time), but for others, it's a death knell. </p>
-            <img src={ninja2} className='ninja2'/>
-          </div>
-        </div>
+ 
+    
           
       </section>
 
@@ -633,10 +633,14 @@ function App() {
           <h2>About Telerik and Kendo UI </h2>
         </a>
         <p><i>UI component libraries that care about the design process </i></p>
-        <p>The Telerik and Kendo UI component libraries and UI customization tools give developers and designers a common language. This toolkit removes many of the obstacles presented by the design-to-code process and significantly reduces tedious CSS, guesswork, and frustrating back and forth—and, ultimately, time to market. </p>
-        <a href="https://www.telerik.com/ui-customization-tools?utm_medium=pdf&utm_source=telerik&utm_campaign=dt_ar_design_dev_collab_report">
-          <Button>I want better designer-developer collaboration</Button>
-        </a>
+        <p> <a href="https://www.telerik.com/ui-customization-tools?utm_medium=pdf&utm_source=telerik&utm_campaign=dt_ar_design_dev_collab_report">The Telerik and Kendo UI component libraries and UI customization tools</a> give developers and designers a common language. This toolkit removes many of the obstacles presented by the design-to-code process and significantly reduces tedious CSS, guesswork, and frustrating back and forth—and, ultimately, time to market. </p>
+        <h3>About This Page</h3>
+        <p>This page was built using <a href="https://www.telerik.com/kendo-react-ui">KendoReact</a>, styled with the <a href='https://www.telerik.com/themebuilder'>ThemeBuilder</a> and hosted with <a href='https://www.progress.com/sitefinity-cms'>Sitefinity</a>.</p>
+      </section>
+      <section>
+        <h2>Download the Full Report</h2>
+        <p>A blurb about report downloading goes here, before the form.</p>
+        <br/>
       </section>
       </div>
     </>

@@ -29,7 +29,7 @@ return (
   <Chart>
     <ChartArea background="rgba(0,0,0,0" height={300}/>
     <ChartTooltip format="{0}%"/>
-    <ChartLegend position="bottom" />
+    <ChartLegend position="right" />
     <ChartSeries>
       <ChartSeriesItem
         type="pie"

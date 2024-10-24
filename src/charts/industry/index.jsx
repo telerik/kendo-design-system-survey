@@ -19,7 +19,7 @@ const [firstSeries] = [
         [16, 13, 12, 12, 7, 6, 5, 5, 5, 3, 1, 1, 1, 1, 1, 1, 1]
       ];
 
-const categories = ["Education", "Government/Military", "Finance/Banking", "Manufacturing", "Healthcare", "Printing/Publishing", "Engineering/Architecture", "Insurance", "Professional Services", "Chemicals", "Agriculture/Forest/Fishing", "Entertainment", "Online IT services", "Retail", "Telecommunication", "Transportation", "Wholesale"];
+const categories = ["Education  ", "Government/Military  ", "Finance/Banking  ", "Manufacturing  ", "Healthcare  ", "Printing/Publishing  ", "Engineering/Architecture  ", "Insurance  ", "Professional Services ", "Chemicals  ", "Agriculture/Forest/Fishing  ", "Entertainment  ", "Online IT services  ", "Retail  ", "Telecommunication  ", "Transportation  ", "Wholesale  "];
 
 const labels = {color: 'white'}; 
 

@@ -19,7 +19,7 @@ const [firstSeries] = [
         [31, 22, 15, 11, 9, 6, 6]
       ];
 
-const categories = ["Not development-related", "Independent software vendor (SV)", "Small development shop", "Consultancy", "Solo dev/entrepreneur", "Web/Digital agency", "System integrator"];
+const categories = ["Not development-related  ", "Independent software vendor (SV)  ", "Small development shop  ", "Consultancy  ", "Solo dev/entrepreneur  ", "Web/Digital agency  ", "System integrator  "];
 
 const labels = {color: 'white'}; 
 
