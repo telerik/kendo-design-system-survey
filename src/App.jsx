@@ -1,8 +1,5 @@
 import './styles/App.scss'
 
-//KR Components
-import { Button } from "@progress/kendo-react-buttons";
-
 //Images
 import screen from './assets/screen.svg'
 import wheel from './assets/wheel.svg'
@@ -11,11 +8,12 @@ import ninjaKendoka from './assets/ninja-kendoka.svg'
 import info from './assets/info.svg'
 import code2 from './assets/code2.svg'
 import design2 from './assets/design2.svg'
-import ninja2 from './assets/ninja2.svg'
 import design1 from './assets/design.svg'
 import code from './assets/code.svg'
 import plant2 from './assets/plant2.svg'
 import lego from './assets/lego.svg'
+import kathryn from './assets/kathryn.svg'
+import nora from './assets/nora.svg'
 
 //Charts
 import Titles from './charts/titles'
@@ -635,6 +633,8 @@ function App() {
           <p>And, of course, this isn't the end of the conversation. We'd love to hear from you! If there's something we left out, something you disagree with or just something that sparked an idea, we'd love to hear about it.  </p>
           <p>Keep working hard! We can't wait to hear about everything you've accomplished as designers and developers working together. </p>
           <p>Until next year,</p>
+          <img className='sig_kat' src={kathryn}/>
+          <img className="sig_nora" src={nora}/>
           <p><b>Kathryn & Nora </b></p>
         </div>
       </section>
