@@ -358,9 +358,7 @@ function App() {
         
           <div>
             <h4>What are the main challenges in the design-to-development process in your company? </h4>
-            <div className='pieChartWrapper'>
             <Challenges/>
-            </div>
           </div>
 
           <p>Slow time to market is the price 28% of companies pay, but that's not all. 17% of teams suffer from internal conflict—and we all know that conflict at work is often resolved by people leaving the team or company. That, in turn, leads to all sorts of gnarly complications. </p>
@@ -449,9 +447,7 @@ function App() {
          <p>When we dig into why there's dissatisfaction, it seems to boil down to two main pain points: lack of clarity in the initial doc/file leading to lots of follow-up questions (50%) and changing requirements on the design side (65%). </p>
 
          <h4>Why not? </h4>
-         <div className='pieChartWrapper'>
          <WhyNot/>
-         </div>
 
          <p>Other interesting open-response answers from this section included, “Accessibility issues are often overlooked” and “Designs just don't work in the real world”—both cases where something that looks great “on paper” just doesn't quite align with the practical requirements.</p>
          <p>Speaking of version control, we asked folks about how that looks for them on both the design and dev side of things. </p>

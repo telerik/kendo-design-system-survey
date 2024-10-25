@@ -30,7 +30,7 @@ export default function GoodRelationship () {
 
 return (
  <Chart>
-   <ChartAxisDefaults majorGridLines={{color: 'rgba(255,255,255, 0.2'}} />
+   <ChartAxisDefaults majorGridLines={{color: 'rgba(0,0,0, 0.2'}} />
    <ChartArea background="rgba(0,0,0,0)" height={400}/>
    <ChartCategoryAxis >
      <ChartCategoryAxisItem categories={categories} >

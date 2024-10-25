@@ -16,7 +16,7 @@ export default function DesignSystemRole () {
   const [firstSeries] = [[48, 38, 29, 21, 23,2]];
 
   const categories = [
-  "I contributed \n\ (design/development)", "I was consulted during kick-off", "I was part of the core team","I made key decisions","I wasn't involved","Other",
+  "I contributed \n\ (design/development)", "I was consulted \n\ during kick-off", "I was part of \n\ the core team","I made key decisions","I wasn't involved","Other",
   ];
   const itemLabels = {visible: true, color: 'black', background: 'rgba(0,0,0,0)', padding: 5, format: "{0}%"};
 

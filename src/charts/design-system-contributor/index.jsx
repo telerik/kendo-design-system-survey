@@ -16,7 +16,7 @@ import {
 export default function DesignSystemContributor () {
 
 const [firstSeries] = [
-        [42, 47, 3, 8]
+        [45, 49, 3, 9]
       ];
 
 const categories = ["Everyone contributes", "Designated internal team", "Designated external team", "Other"];

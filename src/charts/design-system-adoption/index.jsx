@@ -9,6 +9,7 @@ import {
   ChartValueAxis,
   ChartValueAxisItem,
   ChartValueAxisTitle,
+  ChartAxisDefaults,
   ChartArea
 } from "@progress/kendo-react-charts";
 
@@ -26,6 +27,7 @@ return (
   <Chart>
 
     <ChartArea background="rgba(0,0,0,0)" height={300}/>
+    <ChartAxisDefaults majorGridLines={{color: 'rgba(0,0,0, 0.2'}} />
     <ChartValueAxis>
       <ChartValueAxisItem labels={{visible: false}} />
       </ChartValueAxis>

@@ -34,7 +34,7 @@ export default function SatisfiedTooling () {
     },
     {
       category: 'Moderately satisfied: \n\ output needs to be heavily modified',
-      value: 17,
+      value: 55,
     },
     {
       category: 'Dissatisfied: \n\ tools wastes more time than it saves',

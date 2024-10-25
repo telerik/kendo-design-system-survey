@@ -9,16 +9,17 @@ import {
   ChartValueAxis,
   ChartValueAxisItem,
   ChartValueAxisTitle,
-  ChartArea
+  ChartArea,
+ChartAxisDefaults
 } from "@progress/kendo-react-charts";
 
 export default function DesignSystemMaintenanceTools () {
 
 const [firstSeries] = [
-        [31, 3, 36, 4, 1, 1, 4, 1, 7, 3, 3, 3]
+        [31, 36, 3,  4, 4, 7, 1, 1, 1,  3, 3, 3]
       ];
 
-const categories = ["Figma", "Storybook", "VS/VS Code", "Confluence", "Penpot", "Zeplin", "Miro", "Zeroheight", "Adobe XD", "Unsure", "None", "Other"];
+const categories = ["Figma", "VS/VS Code","Storybook",  "Confluence", "Miro", "Adobe XD","Zeroheight","Penpot", "Zeplin",    "Unsure", "None", "Other"];
 
 const itemLabels = {visible: true, color: 'black', background: 'rgba(0,0,0,0)', padding: 5, format: "{0}%"};
 
@@ -26,7 +27,7 @@ return (
   <Chart>
 
     <ChartArea background="rgba(0,0,0,0)" height={350}/>
-
+    <ChartAxisDefaults majorGridLines={{color: 'rgba(0,0,0, 0.2'}} />
     <ChartValueAxis>
       <ChartValueAxisItem labels={{visible: false}}/>
     </ChartValueAxis>
