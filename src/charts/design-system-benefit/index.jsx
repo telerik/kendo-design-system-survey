@@ -14,17 +14,18 @@ export default function DesignSystemBenefit () {
 
 const [yes, partially, no] = [[28], [51], [21]];
 
+const itemLabels = {visible: true, color: 'black', background: 'rgba(0,0,0,0)',format: "{0}%"};
+
 return (
   <>
     <Chart style={{height: 200}}>
-      <ChartTooltip format="{0}%"/>
       <ChartLegend position="bottom" orientation="horizontal" visible={true}/>
       <ChartSeries>
         <ChartSeriesItem type="bar" stack={{
             type: "100%",
-          }} data={yes} />
-        <ChartSeriesItem type="bar" data={partially} />
-        <ChartSeriesItem type="bar" data={no} />
+          }} data={yes} labels={itemLabels}/>
+        <ChartSeriesItem type="bar" data={partially} labels={itemLabels} />
+        <ChartSeriesItem type="bar" data={no} labels={itemLabels} />
     </ChartSeries>
   </Chart>
 

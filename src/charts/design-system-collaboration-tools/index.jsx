@@ -42,12 +42,11 @@ export default function DesignSystemCollaborationTools () {
     }
   ];
 
-
+  const itemLabels = {visible: true, color: 'black', background: 'rgba(0,0,0,0)',format: "{0}%"};
 
 return (
   <Chart>
     <ChartArea background="rgba(0,0,0,0" height={300}/>
-    <ChartTooltip format="{0}%"/>
     <ChartLegend position={position} orientation="vertical" />
     <ChartSeries>
       <ChartSeriesItem
@@ -55,6 +54,7 @@ return (
         data={series}
         field="value"
         categoryField="category"
+        labels={itemLabels}
       />
     </ChartSeries>
   </Chart>

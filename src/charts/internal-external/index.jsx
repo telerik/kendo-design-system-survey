@@ -25,10 +25,11 @@ export default function InternalExternal () {
     },
   ];
 
+  const itemLabels = {visible: true, color: 'black', background: 'rgba(0,0,0,0)',format: "{0}%"};
+
 return (
   <Chart>
     <ChartArea height={250}/>
-    <ChartTooltip format="{0}%"/>
     <ChartLegend position="bottom" orientation="vertical"/>
     <ChartSeries>
       <ChartSeriesItem
@@ -36,6 +37,7 @@ return (
         data={series}
         field="value"
         categoryField="category"
+        labels={itemLabels}
       />
     </ChartSeries>
   </Chart>
