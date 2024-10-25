@@ -31,9 +31,9 @@ export default function DesignSystemAge () {
 
 return (
   <Chart>
-    <ChartArea height={230}/>
+    <ChartArea height={270}/>
     <ChartTooltip format="{0}%"/>
-    <ChartLegend position="bottom" />
+    <ChartLegend position="bottom" orientation="vertical"/>
     <ChartSeries>
       <ChartSeriesItem
         type="pie"

@@ -21,22 +21,20 @@ const [firstSeries] = [
       ];
 
 const categories = ["Less than a year", "1-5 years", "6-10 years", "11-20 years", "20+ years"];
+const itemLabels = {visible: true, color: 'black', background: 'rgba(0,0,0,0)', padding: 5, format: "{0}%"};
 
 return (
   <Chart>
     <ChartArea background="rgba(0,0,0,0)" height={200}/>
-    <ChartTooltip format="{0}%"/>
     <ChartValueAxis>
-      <ChartValueAxisItem format="{0}%">
-        <ChartValueAxisTitle text="Percentage" />
-      </ChartValueAxisItem>
+      <ChartValueAxisItem labels={{visible: false}} />
     </ChartValueAxis>
     <ChartCategoryAxis >
       <ChartCategoryAxisItem categories={categories}>
       </ChartCategoryAxisItem>
     </ChartCategoryAxis>
     <ChartSeries>
-      <ChartSeriesItem type="bar" gap={0.5} data={firstSeries} />
+      <ChartSeriesItem type="bar" gap={0.5} data={firstSeries} labels={itemLabels}/>
     </ChartSeries>
   </Chart>
   )

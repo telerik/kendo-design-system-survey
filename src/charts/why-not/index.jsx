@@ -1,4 +1,5 @@
 import * as React from "react";
+import { useState, useEffect } from 'react';
 import {
   Chart,
   ChartSeries,
@@ -10,9 +11,26 @@ import {
 
 export default function WhyNot () {
 
+  const [width, setWidth] = useState(window.innerWidth);
+
+  useEffect(() => {
+    const handleResize = () => setWidth(window.innerWidth);
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  let position
+
+  if (width < 500) {
+    position = 'bottom'
+  } else {
+    position = 'right'
+  }
+
+
   const series = [
     {
-      category: "Designs keep changing afterwards and it's hard to track them",
+      category: "Designs keep changing afterwards \n\ and it's hard to track them",
       value: 65,
     },
     {
@@ -20,7 +38,7 @@ export default function WhyNot () {
       value: 50,
     },
     {
-      category: 'Processes are not followed closly, causing confusion',
+      category: 'Processes are not followed \n\ closly, causing confusion',
       value: 31,
     },
     {
@@ -33,7 +51,7 @@ return (
   <Chart>
     <ChartArea height={300}/>
     <ChartTooltip format="{0}%"/>
-    <ChartLegend position="right" />
+    <ChartLegend position={position} orientation="vertical" />
     <ChartSeries>
       <ChartSeriesItem
         type="donut"

@@ -3,60 +3,45 @@ import {
   Chart,
   ChartSeries,
   ChartSeriesItem,
-  ChartLegend,
-  ChartTooltip,
+  ChartCategoryAxis,
+  ChartCategoryAxisItem,
+  ChartValueAxis,
+  ChartValueAxisItem,
+  ChartAxisDefaults,
   ChartArea
 } from "@progress/kendo-react-charts";
 
 export default function RelationshipImprovement () {
+  
+  const [firstSeries] = [
+    [46, 41, 15, 56, 13, 21, 31, 8]];
 
-  const series = [
-    {
-      category: 'Developers were in the design process earlier',
-      value: 46,
-    },
-    {
-      category: 'Developers knew more about design principles',
-      value: 41,
-    },
-    {
-      category: 'Developers knew more about design tools',
-      value: 15,
-    },
-    {
-      category: 'Designers understood development technical constraints',
-      value: 56
-    },
-    {
-      category: 'Designers knew more about development processes',
-      value: 13
-    },
-    {
-      category: 'There were clear processes being followed',
-      value: 21
-    },
-    {
-      category: 'Timelines of designers and developers were aligned',
-      value: 31
-    },
-    {
-      category: 'Other',
-      value: 8
-    }
+  const categories = [
+     'Developers were in \n\ the design process earlier',
+  'Developers knew more  \n\ about design principles',
+    'Developers knew more  \n\ about design tools',
+   'Designers understood  \n\ development technical constraints',
+   'Designers knew more  \n\ about development processes',
+    'There were \n\  clear processes being followed',
+  'Timelines of designers and  \n\ developers were aligned',
+   'Other',
   ];
+
+  const itemLabels = {visible: true, color: 'black', background: 'rgba(0,0,0,0)', padding: 5, format: "{0}%"};
 
 return (
   <Chart>
-    <ChartArea background="rgba(0,0,0,0" height={400}/>
-    <ChartTooltip format="{0}%"/>
-    <ChartLegend position="bottom" />
+    <ChartAxisDefaults majorGridLines={{color: 'rgba(255,255,255, 0.2'}} />
+    <ChartArea background="rgba(0,0,0,0)" height={400}/>
+    <ChartCategoryAxis >
+      <ChartCategoryAxisItem categories={categories} >
+      </ChartCategoryAxisItem>
+    </ChartCategoryAxis>
+    <ChartValueAxis>
+      <ChartValueAxisItem labels={{visible: false}} />
+    </ChartValueAxis>
     <ChartSeries>
-      <ChartSeriesItem
-        type="donut"
-        data={series}
-        field="value"
-        categoryField="category"
-      />
+      <ChartSeriesItem type="bar" data={firstSeries} labels={itemLabels}/>
     </ChartSeries>
   </Chart>
   )

@@ -35,9 +35,9 @@ export default function ProjectNumber () {
 
 return (
   <Chart>
-    <ChartArea height={200}/>
+    <ChartArea height={300}/>
     <ChartTooltip format="{0}%"/>
-    <ChartLegend position="bottom" />
+    <ChartLegend position="bottom" orientation="vertical"/>
     <ChartSeries>
       <ChartSeriesItem
         type="pie"

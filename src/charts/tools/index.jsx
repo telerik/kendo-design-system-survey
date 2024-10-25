@@ -20,23 +20,22 @@ const [firstSeries] = [
         [22, 18, 13, 2, 1, 4, 7, 41, 11]
       ];
 
-const categories = ["Figma plugins", "Figma Code Connect", "Progress ThemeBuilder", "Builder.io", "Anima", "Other", "Internally built tool", "No tools", "What design-to-code tools?"];
+const categories = ["Figma plugins", "Figma Code Connect", "Progress ThemeBuilder", "Builder.io", "Anima", "Other", "Internally built tool", "No tools", "What are \n\ design-to-code tools?"];
+
+const itemLabels = {visible: true, color: 'black', background: 'rgba(0,0,0,0)', padding: 5, format: "{0}%"};
 
 return (
   <Chart>
     <ChartArea background="rgba(0,0,0,0)" height={250}/>
-    <ChartTooltip format="{0}%"/>
     <ChartValueAxis>
-      <ChartValueAxisItem format="{0}%">
-        <ChartValueAxisTitle text="Percentage" />
-      </ChartValueAxisItem>
-    </ChartValueAxis>
+      <ChartValueAxisItem labels={{visible: false}}/>
+      </ChartValueAxis>
     <ChartCategoryAxis >
       <ChartCategoryAxisItem categories={categories}>
       </ChartCategoryAxisItem>
     </ChartCategoryAxis>
     <ChartSeries>
-      <ChartSeriesItem type="bar" data={firstSeries} />
+      <ChartSeriesItem type="bar" data={firstSeries} labels={itemLabels}/>
     </ChartSeries>
   </Chart>
   )

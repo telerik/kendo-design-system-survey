@@ -15,27 +15,26 @@ import {
 export default function DesignSystemGoals () {
 
 const [firstSeries] = [
-        [17, 8, 17, 24, 7, 0, 0, 11, 9, 6, 3]
+        [24, 17, 17, 11, 9, 8, 7, 6, 3, 0, 0]
       ];
 
-const categories = ["Faster process", "Faster time-to-market", "Improved consistency", "Better UX", "Single source of truth", "Other", "Improved legal compliance", "Improved accessibility", "Better collaboration", "Scalability", "Enabled creativity"];
+const categories = ["Better UX", "Faster process", "Improved consistency", "Improved accessibility", "Better collaboration", "Faster time-to-market", "Scalability", "Single source of truth", "Enabled creativity", "Improved legal compliance", "Other" ];
+
+const itemLabels = {visible: true, color: 'black', background: 'rgba(0,0,0,0)', padding: 5, format: "{0}%"};
 
 return (
   <Chart>
 
     <ChartArea background="rgba(0,0,0,0)" height={300}/>
-    <ChartTooltip format="{0}%"/>
     <ChartValueAxis>
-      <ChartValueAxisItem format="{0}%" >
-        <ChartValueAxisTitle text="Percentage" />
-      </ChartValueAxisItem>
+      <ChartValueAxisItem labels={{visible: false}} />
     </ChartValueAxis>
     <ChartCategoryAxis >
       <ChartCategoryAxisItem categories={categories}>
       </ChartCategoryAxisItem>
     </ChartCategoryAxis>
     <ChartSeries>
-      <ChartSeriesItem type="bar" data={firstSeries} />
+      <ChartSeriesItem type="bar" data={firstSeries} labels={itemLabels}/>
     </ChartSeries>
   </Chart>
   )

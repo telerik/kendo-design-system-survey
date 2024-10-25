@@ -53,5 +53,9 @@
 
     .k-chart {
         height: 100%;
+
+        .k-chart-surface > svg {
+            overflow: visible !important;
+        }
     }
         

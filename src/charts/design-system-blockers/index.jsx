@@ -3,52 +3,36 @@ import {
   Chart,
   ChartSeries,
   ChartSeriesItem,
-  ChartLegend,
-  ChartTooltip,
+  ChartCategoryAxis,
+  ChartCategoryAxisItem,
+  ChartValueAxis,
+  ChartValueAxisItem,
+  ChartAxisDefaults,
   ChartArea
 } from "@progress/kendo-react-charts";
 
 export default function DesignSystemBlockers () {
 
-  const series = [
-    {
-      category: "Lack of buy-in from management",
-      value: 39,
-    },
-    {
-      category: "Too time-consuming to build",
-      value: 23,
-    },
-    {
-      category: "Too expensive to build",
-      value: 19
-    },
-    {
-      category: "People won't use it",
-      value: 16
-    },
-    {
-      category: "Other team members don't see value",
-      value: 13
-    },
-    {
-      category: "Other",
-      value: 16
-    }
+  const [firstSeries] = [[39, 23, 19, 16, 13, 16]];
+
+  const categories = ["Lack of buy-in \n\ from management", "Too time-consuming \n\ to build","Too expensive\n\ to build","People won't\n\ use it", "Other team members \n\ don't see value", "Other"
   ];
+
+  const itemLabels = {visible: true, color: 'black', background: 'rgba(0,0,0,0)', padding: 5, format: "{0}%"};
 
 return (
   <Chart>
+    <ChartAxisDefaults majorGridLines={{color: 'rgba(255,255,255, 0.2'}} />
     <ChartArea background="rgba(0,0,0,0)" height={300}/>
-    <ChartTooltip format="{0}%"/>
-    <ChartLegend position="bottom" />
+    <ChartCategoryAxis >
+      <ChartCategoryAxisItem categories={categories} >
+      </ChartCategoryAxisItem>
+    </ChartCategoryAxis>
+    <ChartValueAxis>
+      <ChartValueAxisItem labels={{visible: false}} />
+    </ChartValueAxis>
     <ChartSeries>
-      <ChartSeriesItem
-        type="pie"
-        data={series}
-        field="value"
-        categoryField="category"
-      />
+      <ChartSeriesItem type="bar" data={firstSeries} labels={itemLabels}/>
     </ChartSeries>
   </Chart>
   )

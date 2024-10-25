@@ -16,7 +16,7 @@ export default function SatisfiedDesign () {
       value: 26,
     },
     {
-      category: "No, developers make changes that don't involve design",
+      category: "No, developers make changes \n\ that don't involve design",
       value: 37,
     },
     {
@@ -29,7 +29,7 @@ return (
   <Chart>
     <ChartArea background="rgba(0,0,0,0)" height={275}/>
     <ChartTooltip format="{0}%"/>
-    <ChartLegend position="bottom" />
+    <ChartLegend position="bottom" orientation="vertical" />
     <ChartSeries>
       <ChartSeriesItem
         type="pie"

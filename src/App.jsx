@@ -88,7 +88,7 @@ function App() {
       <section className='intro'>
         <div className='text'>
           <p>Whether you're on the development or design end of creating web applications, it's equally easy to lose track of the world beyond your daily work. Sometimes, it can be hard to break out of the silos our companies create for us, inadvertently or on purpose. However, the crossroads of design and development is a bustling, beautiful, and, yes, sometimes a bit of a bumpy place, and it is one worth visiting often for anyone looking to be a better and happier professional.</p>
-          <p>We went deep into the findings of the State of Designer-Developer Collaboration 2024 survey and created a report that surfaces everything there is to learn about the relationship between designers and developers, including ideas for making it more efficient and satisfying. <b>To quote Figma's Front End Developer Research Report (Oct 2023), “The designer/developer relationship just might be the most important partnership in business today.”</b></p>
+          <p>We went deep into the findings of the State of Designer-Developer Collaboration 2024 survey and created a report that surfaces everything there is to learn about the relationship between designers and developers, including ideas for making it more efficient and satisfying. To quote Figma's Front End Developer Research Report (Oct 2023), <b>“The designer/developer relationship just might be the most important partnership in business today.”</b></p>
         </div>
       </section>
       <section>
@@ -128,6 +128,8 @@ function App() {
               <li>For developers to be brought into the design process earlier.</li>
               <li>For developers to learn more about the principles of design.</li>
             </ul>
+            <br/>
+            <h3>On design systems: </h3>
             <p>For the folks that don't yet have a finished design system — better user experience, improved consistency and faster design to dev time are the top three reasons why they want one. And great news: <b>those are also the top three benefits listed by folks who do have them!</b></p>
           </div>
         </div>
@@ -194,7 +196,7 @@ function App() {
         <a className='jumplink' id='participants'>
           <h2>Participants</h2>
         </a>
-        <div className='chartFlex'>
+        <div className='doubleChartFlex'>
           <div className='text'>
           <p>The survey invitation specifically recruited people who were:
             <br/><br/>
@@ -213,13 +215,14 @@ function App() {
         </div>
         </div>
 
-        <div className='chartFlex'>
+        <div className='doubleChartFlex'>
           <div className='chartWrapperLight'>
             <h4>Are you...</h4>
             <Employment/>
           </div>
           <div className='text'>
-            <p>The majority of respondents were full-time employees.One interesting difference between developer and designer roles is that while 18% of all engineering roles reported being self-employed, only 7% of designers did. What's more, while 20% of developers chose the “solo entrepreneur” label, none of the designers did. </p>
+            <br/>
+            <p>The majority of respondents were full-time employees. <br/>One interesting difference between developer and designer roles is that while 18% of all engineering roles reported being self-employed, only 7% of designers did. What's more, while 20% of developers chose the “solo entrepreneur” label, none of the designers did. </p>
           </div>
       </div>
       </section>
@@ -293,7 +296,7 @@ function App() {
       <section>
         <h3>Team Composition</h3>
         <p>The more, the merrier, the saying goes—but is that so when it comes to team composition? The most prevalent team model involves 2-5 developers and 1 designer. This aligns with the ratio that zeroheight saw in their <a href="https://19492330.fs1.hubspotusercontent-na1.net/hubfs/19492330/Community%20and%20Content/How%20We%20Document/HowWeDocument-2024.pdf">Design Systems Report 2023</a>, where they saw ranges between 1:6 and 1:15 depending on company size.</p>
-        <p>One in four developers we surveyed doesn't have a designer assigned to their current project. Often, this means that developers are leveraging resources with design “built-in” and making minimal UI changes. This could include <a href="https://www.telerik.com/?utm_medium=pdf&utm_source=telerik&utm_campaign=dt_ar_design_dev_collab_report">UI component libraries</a> or pre-existing design systems such as Material or Fluent. For specific design needs, these groups may hire a freelancer or contract worker to help with a one-off design project (read on for more insight on this). Generally, we see this kind of setup in startups, small businesses or other similarly under-resourced ventures. As businesses (and userbases) grow, so does the need for a dedicated designer.</p>
+        <p>One in four developers we surveyed doesn't have a designer assigned to their current project. Often, this means that developers are leveraging resources with design “built-in” and making minimal UI changes. This could include <a href="https://www.telerik.com">UI component libraries</a> or pre-existing design systems such as Material or Fluent. For specific design needs, these groups may hire a freelancer or contract worker to help with a one-off design project (read on for more insight on this). Generally, we see this kind of setup in startups, small businesses or other similarly under-resourced ventures. As businesses (and userbases) grow, so does the need for a dedicated designer.</p>
         <p>On the design side, 17% have just one developer they partner with on their current project and 51% work with 2-5 developers.</p>
 
         <div className='doubleChartFlex'>
@@ -313,7 +316,9 @@ function App() {
         <p>A small share of developers (5%), versus none of the designers, report that their companies don't do any design/development work internally.</p>
         <br/>
         <h4>When you have a project/product that involves both design and development work what's your approach? </h4>
-        <OutsideHelp/>
+        <div className='pieChartWrapper'>
+          <OutsideHelp/>
+        </div>
       </section>
 
       <section>
@@ -327,8 +332,9 @@ function App() {
         <h4>How often are designers and developers usually collaborating on a single project/product? </h4>
           <Collaboration/>
         </div>
+        <br/>
 
-        <div className='chartFlex'>
+        <div className='doubleChartFlex'>
           <div className='text'>
             <p>On average, each professional uses 2.3 different communication channels. Happily, 64% of them opt for synchronous one-on-one conversations—either in person or by getting on a call. Team meetings (53%) come in a close second place, followed by messaging and email (51%). Two free-form responses saying they use Azure Dev Ops to communicate piqued our curiosity. That's unique, isn't it? But our favorite response to this question is definitely: “The developers are the designers at our company thru [sic] direction of the IT Manager.” We feel you, folks. We feel you. </p>
           </div>
@@ -352,7 +358,9 @@ function App() {
         
           <div>
             <h4>What are the main challenges in the design-to-development process in your company? </h4>
+            <div className='pieChartWrapper'>
             <Challenges/>
+            </div>
           </div>
 
           <p>Slow time to market is the price 28% of companies pay, but that's not all. 17% of teams suffer from internal conflict—and we all know that conflict at work is often resolved by people leaving the team or company. That, in turn, leads to all sorts of gnarly complications. </p>
@@ -379,18 +387,15 @@ function App() {
     
         <p>We also followed up with those who rated their relationship 7 or higher and asked them what they thought worked so well. Sneakily, we gave them the same options as the folks who rated it low. As expected, the results are mirror images. What people in poor relationships crave for is what those in good relationships give credit to for their success. </p>
 
-        <div className='doubleChartFlex'>
-          <div>
+    
             <h4>I think the relationship between designers and developers would be smoother if... </h4>
             <p><i>(question only appeared to respondents who rated their relationship 6 or lower) </i></p>
             <RelationshipImprovement/>
-          </div>
-          <div>
+         
             <h4>What are the key factors to good collaboration? </h4>
             <p><i>(question only appeared to respondents who rated their relationship 7 or higher)</i></p>
             <GoodRelationship/>
-          </div>
-        </div>
+          
 
         <p>What's the cost of inaction, you ask? So did we.</p>
         <p>The top three reported responses about easing the designer-developer relationship all had to do with developers learning more about the goals and processes of their designer counterparts. Whether that's understanding the tools designers are using, the reason why they're making certain design decisions or just becoming an active participant in the design process, it all (clearly) adds up — in this case, to over 50% of issues! </p>
@@ -402,7 +407,7 @@ function App() {
 
          <p>An insightful free-form response we got: </p>
          <blockquote>“The design tools don't produce things that are usable (…) in the dev tools” </blockquote>
-        <p>This is a problem we've recognized that many, many teams have. We spoke to lots of them and devised a solution. <a href="https://www.telerik.com/ui-customization-tools?utm_medium=pdf&utm_source=telerik&utm_campaign=dt_ar_design_dev_collab_report">Learn more</a> about how our family of design- and developer-friendly tools give developers and designers a common language and bridge the gap.</p>
+        <p>This is a problem we've recognized that many, many teams have. We spoke to lots of them and devised a solution. <a href="https://www.telerik.com/ui-customization-tools">Learn more</a> about how our family of design- and developer-friendly tools give developers and designers a common language and bridge the gap.</p>
       </section>
 
       <section>
@@ -416,10 +421,12 @@ function App() {
           <Tools/>
         </div>
 
-        <p>As expected, we saw some fan favorites in here: Figma and <a href="https://www.telerik.com/themebuilder/?utm_medium=pdf&utm_source=telerik&utm_campaign=dt_ar_design_dev_collab_report">Progress ThemeBuilder</a>. But perhaps most surprising was the significant portion (52%) of respondents who aren't using anything at all! Clearly, though, this is still a space that's ripe for innovation and new methods of problem-solving for our modern era of app design and development.</p>
+        <p>As expected, we saw some fan favorites in here: Figma and <a href="https://www.telerik.com/themebuilder">Progress ThemeBuilder</a>. But perhaps most surprising was the significant portion (52%) of respondents who aren't using anything at all! Clearly, though, this is still a space that's ripe for innovation and new methods of problem-solving for our modern era of app design and development.</p>
 
         <h4>How satisfied are you with the output of your design-to-code tool? </h4>
+        <div className='pieChartWrapper'>
         <SatisfiedTooling/>
+        </div>
 
         <p>We were also curious what designers were building with their tools, so we asked about the complexity of their prototypes. Most are building highly interactive interfaces—with a smaller percentage sticking to static designs only.</p>
 
@@ -442,7 +449,9 @@ function App() {
          <p>When we dig into why there's dissatisfaction, it seems to boil down to two main pain points: lack of clarity in the initial doc/file leading to lots of follow-up questions (50%) and changing requirements on the design side (65%). </p>
 
          <h4>Why not? </h4>
+         <div className='pieChartWrapper'>
          <WhyNot/>
+         </div>
 
          <p>Other interesting open-response answers from this section included, “Accessibility issues are often overlooked” and “Designs just don't work in the real world”—both cases where something that looks great “on paper” just doesn't quite align with the practical requirements.</p>
          <p>Speaking of version control, we asked folks about how that looks for them on both the design and dev side of things. </p>
@@ -563,7 +572,9 @@ function App() {
         <p>Even better, the results show that expectations are matched by results in many cases. For the folks that don't yet have a finished design system — better user experience, improved consistency and faster design to dev time are the top 3 reasons why they want one. And great news: those are also the top 3 benefits listed by folks who do have them! It's reassuring to see that expectations and results are aligned regarding the power and impact of a design system.  </p>
 
         <h4>What is the general feeling in your team regarding the adoption/usage of design systems?</h4>
+        <div className='pieChartWrapper'>
         <DesignSystemFeelings/>
+        </div>
 
         <p>Overall, about half of users felt that design systems solved their problems, and the other half felt that it solved some problems but also created some new ones. Only 3% of users felt that it was a net negative, creating too many issues to be worthwhile. It's always reassuring to see that such a huge project isn't just wishful thinking; it does have real, tangible benefits.  </p>
       </section>
@@ -594,7 +605,9 @@ function App() {
 
         <div className='chartWrapperLight'>
           <h4>Do you believe your team/company is using the tools that best enable designer-developer collaboration?</h4>
-          <DesignSystemCollaborationTools/>
+          <div className='pieChartWrapper'>
+            <DesignSystemCollaborationTools/>
+          </div>
         </div>
       </section>
 
@@ -603,7 +616,9 @@ function App() {
         <p>What's a survey without a good predictions section? Let's see what folks are planning, excited for and thinking about with their design systems in the years ahead.</p>
 
         <h4>Are you experimenting with AI in your design system</h4>
+        <div className='pieChartWrapper'>
         <DesignSystemAI/>
+        </div>
 
         <p>When it comes to AI in design systems, most folks are still feeling hesitant. Only 7% have implemented AI in their design system currently, and (from our open response follow-up question) they're primarily using GenAI to answer questions or create placeholder elements. 37% consider using AI to make suggestions, create templates or help brainstorm ideas.  </p>
 
@@ -620,7 +635,7 @@ function App() {
           </a>
           <p>When we look at these results compiled together, it's easy to feel optimistic about the future of designer/developer collaboration. Sure, there's work to be done—no doubt about it. But it's reassuring to see that none of the problems are insurmountable or unsolvable.</p>  
           <p>Many of the challenges hinge on communication: not speaking the same language, getting involved in the process too late, not checking in often enough, not clearly communicating expectations, not sharing a tool set. These aren't problems that will magically solve themselves. They require a commitment from both parties to work together towards bridging the gap. But as they say: “We have the technology. We have the capability...” </p>
-          <p>If you're looking for ways to help improve the design to development flow at your job, check out the <a href='https://www.telerik.com/ui-customization-tools?utm_medium=pdf&utm_source=telerik&utm_campaign=dt_ar_design_dev_collab_report'>Telerik and Kendo UI tools.</a> Our Design System Kit, ThemeBuilder, Figma UI Design Kits, building blocks, page templates and 100+ beautiful, accessible UI components can help get everyone unified and working towards the same goal—faster and more smoothly than ever before. </p> 
+          <p>If you're looking for ways to help improve the design to development flow at your job, check out the <a href='https://www.telerik.com/ui-customization-tools'>Telerik and Kendo UI tools.</a> Our Design System Kit, ThemeBuilder, Figma UI Design Kits, building blocks, page templates and 100+ beautiful, accessible UI components can help get everyone unified and working towards the same goal—faster and more smoothly than ever before. </p> 
           <p>And, of course, this isn't the end of the conversation. We'd love to hear from you! If there's something we left out, something you disagree with or just something that sparked an idea, we'd love to hear about it.  </p>
           <p>Keep working hard! We can't wait to hear about everything you've accomplished as designers and developers working together. </p>
           <p>Until next year,</p>
@@ -633,13 +648,13 @@ function App() {
           <h2>About Telerik and Kendo UI </h2>
         </a>
         <p><i>UI component libraries that care about the design process </i></p>
-        <p> <a href="https://www.telerik.com/ui-customization-tools?utm_medium=pdf&utm_source=telerik&utm_campaign=dt_ar_design_dev_collab_report">The Telerik and Kendo UI component libraries and UI customization tools</a> give developers and designers a common language. This toolkit removes many of the obstacles presented by the design-to-code process and significantly reduces tedious CSS, guesswork, and frustrating back and forth—and, ultimately, time to market. </p>
+        <p> Learn more about how our family of <a href="https://www.telerik.com/ui-customization-tools">design- and developer-friendly tools</a> give developers and designers a common language. This toolkit removes many of the obstacles presented by the design-to-code process and significantly reduces tedious CSS, guesswork, and frustrating back and forth—and, ultimately, time to market. </p>
         <h3>About This Page</h3>
-        <p>This page was built using <a href="https://www.telerik.com/kendo-react-ui">KendoReact</a>, styled with the <a href='https://www.telerik.com/themebuilder'>ThemeBuilder</a> and hosted with <a href='https://www.progress.com/sitefinity-cms'>Sitefinity</a>.</p>
+        <p>This page was built using <a href="https://www.telerik.com/kendo-react-ui">KendoReact</a>, styled with the <a href='https://www.telerik.com/themebuilder'>ThemeBuilder</a>.</p>
       </section>
       <section>
         <h2>Download the Full Report</h2>
-        <p>A blurb about report downloading goes here, before the form.</p>
+        <p>For a deep dive into all the insights and fascinating cross-sections, download the free report analysis. It surfaces everything we learned about the relationship between designers and developers, including ideas for making it more efficient and satisfying—all beautifully presented and laid out for your reading pleasure.</p>
       </section>
       </div>
     </>

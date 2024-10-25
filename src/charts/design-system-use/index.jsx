@@ -27,9 +27,9 @@ export default function DesignSystemUse () {
 
 return (
   <Chart>
-    <ChartArea background="rgba(0,0,0,0)" height={250}/>
+    <ChartArea background="rgba(0,0,0,0)" height={370}/>
     <ChartTooltip format="{0}%"/>
-    <ChartLegend position="bottom" />
+    <ChartLegend position="bottom" orientation="vertical"/>
     <ChartSeries>
       <ChartSeriesItem
         type="pie"

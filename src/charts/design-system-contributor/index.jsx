@@ -22,23 +22,21 @@ const [firstSeries] = [
 const categories = ["Everyone contributes", "Designated internal team", "Designated external team", "Other"];
 
 const labels = {color: 'white'}; 
+const itemLabels = {visible: true, color: 'white', background: 'rgba(0,0,0,0)', padding: 5, format: "{0}%"};
 
 return (
   <Chart>
     <ChartAxisDefaults majorGridLines={{color: 'rgba(255,255,255, 0.2'}} />
     <ChartArea background="rgba(0,0,0,0)" height={150}/>
-    <ChartTooltip format="{0}%"/>
     <ChartValueAxis>
-      <ChartValueAxisItem format="{0}%" labels={labels}>
-        <ChartValueAxisTitle text="Percentage" color="white" />
-      </ChartValueAxisItem>
+      <ChartValueAxisItem labels={{visible: false}}/>
     </ChartValueAxis>
     <ChartCategoryAxis >
       <ChartCategoryAxisItem categories={categories} labels={labels}>
       </ChartCategoryAxisItem>
     </ChartCategoryAxis>
     <ChartSeries>
-      <ChartSeriesItem type="bar" data={firstSeries} />
+      <ChartSeriesItem type="bar" data={firstSeries} labels={itemLabels}/>
     </ChartSeries>
   </Chart>
   )
