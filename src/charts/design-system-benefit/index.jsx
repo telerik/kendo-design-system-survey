@@ -14,7 +14,7 @@ export default function DesignSystemBenefit () {
 
 const [yes, partially, no] = [[28], [51], [21]];
 
-const itemLabels = {visible: true, color: 'black', background: 'rgba(0,0,0,0)',format: "{0}%"};
+const itemLabels = {visible: true, color: 'black', background: 'rgba(0,0,0,0)',format: "{0}%", position: 'center'};
 
 return (
   <>
