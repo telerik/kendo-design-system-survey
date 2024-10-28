@@ -14,6 +14,7 @@ import plant2 from './assets/plant2.svg'
 import lego from './assets/lego.svg'
 import kathryn from './assets/kathryn.svg'
 import nora from './assets/nora.svg'
+import dots from './assets/dots.png'
 
 //Charts
 import Titles from './charts/titles'
@@ -65,21 +66,24 @@ import DesignSystemAI from './charts/design-system-ai';
 import DesignSystemFuture from './charts/design-system-future';
 
 
+
 function App() {
 
   return (
     <>
-    <section className='intro'>
-      <div className='cover'>
-          <div>
-            <div className='illustration'>
-              <img className='wheel' src={wheel}/>
-              <img className='screen' src={screen}/>
-              <img className='design' src={design}/>
-            </div>
+     <section className='intro'>
+      <div className='cover' style= {{backgroundImage: `url(${dots})`, backgroundSize: 'cover'}}>
+        <div>
+          
+          <div className='illustration'>
+            <img className='wheel' src={wheel}/>
+            <img className='screen' src={screen}/>
+            <img className='design' src={design}/>
           </div>
-          <h1>The State of <br/> Designer-Developer Collaboration <br/>2024</h1>
+          <h3>Report</h3>
+          <h1>State of Designer-Developer<br/> Collaboration 2024</h1>
         </div>
+      </div>
     </section>
 
     <div className='surveyWrapper'>
@@ -653,6 +657,7 @@ function App() {
         <p>For a deep dive into all the insights and fascinating cross-sections, download the free report analysis. It surfaces everything we learned about the relationship between designers and developers, including ideas for making it more efficient and satisfying—all beautifully presented and laid out for your reading pleasure.</p>
       </section>
       </div>
+
     </>
   )
 }
