@@ -94,7 +94,9 @@ function App() {
         </div>
       </section>
       <section>
-  
+      <div className='cta'>
+          <p>For a deep dive into all the insights and fascinating cross-sections, <a href='#download'>download the free report analysis.</a></p>
+        </div>
         <div className='tocFlex'>
           <img src={plant2} className='plant2'/>
           <ol>
@@ -382,7 +384,7 @@ function App() {
         <Relationship/>
        
         <div className='cta'>
-          <p>What's the sweet spot between designers and developers? <a href='x'>Download the report</a> to find out!</p>
+          <p>What's the sweet spot between designers and developers? <a href='#download'>Download the report</a> to find out!</p>
         </div>
     
         <p>We also followed up with those who rated their relationship 7 or higher and asked them what they thought worked so well. Sneakily, we gave them the same options as the folks who rated it low. As expected, the results are mirror images. What people in poor relationships crave for is what those in good relationships give credit to for their success. </p>
@@ -653,7 +655,8 @@ function App() {
         <p>This page was built using <a href="https://www.telerik.com/kendo-react-ui">KendoReact</a>, styled with the <a href='https://www.telerik.com/themebuilder'>ThemeBuilder</a>.</p>
       </section>
       <section>
-        <h2>Download the Full Report</h2>
+      <a className='jumplink' id='download'>
+        <h2>Download the Full Report</h2></a>
         <p>For a deep dive into all the insights and fascinating cross-sections, download the free report analysis. It surfaces everything we learned about the relationship between designers and developers, including ideas for making it more efficient and satisfying—all beautifully presented and laid out for your reading pleasure.</p>
       </section>
       </div>
