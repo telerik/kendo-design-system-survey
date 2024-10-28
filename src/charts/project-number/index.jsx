@@ -3,49 +3,38 @@ import {
   Chart,
   ChartSeries,
   ChartSeriesItem,
-  ChartLegend,
+  ChartCategoryAxis,
+  ChartCategoryAxisItem,
   ChartTooltip,
-  ChartArea
+  ChartValueAxis,
+  ChartValueAxisItem,
+  ChartValueAxisTitle,
+  ChartArea,
+  ChartAxisDefaults
 } from "@progress/kendo-react-charts";
 
 export default function ProjectNumber () {
 
-  const series = [
-    {
-      category: "I'm focused on a single project/product",
-      value: 22,
-    },
-    {
-      category: '2-5',
-      value: 47,
-    },
-    {
-      category: '6-10',
-      value: 20,
-    },
-    {
-      category: '11-20',
-      value: 7,
-    },
-    {
-      category: '20+ different projects/products',
-      value: 4,
-    },
-  ];
+  const [firstSeries] = [[22, 47, 20, 7, 4]];
 
-return (
-  <Chart>
-    <ChartArea height={200}/>
-    <ChartTooltip format="{0}%"/>
-    <ChartLegend position="bottom" />
-    <ChartSeries>
-      <ChartSeriesItem
-        type="pie"
-        data={series}
-        field="value"
-        categoryField="category"
-      />
-    </ChartSeries>
-  </Chart>
-  )
-};
+  const categories = ["I'm focused on \n\ a single project/product", '2-5', '6-10', '11-20', '20+ different \n\ projects/products'];
+  
+  const itemLabels = {visible: true, color: 'black', background: 'rgba(0,0,0,0)', padding: 5, format: "{0}%"};
+  
+  return (
+    <Chart>
+      <ChartAxisDefaults majorGridLines={{color: 'rgba(0,0,0, 0.2'}} />
+      <ChartArea background="rgba(0,0,0,0)" height={260}/>
+      <ChartValueAxis>
+        <ChartValueAxisItem labels={{visible: false}} />
+      </ChartValueAxis>
+      <ChartCategoryAxis >
+        <ChartCategoryAxisItem categories={categories} >
+        </ChartCategoryAxisItem>
+      </ChartCategoryAxis>
+      <ChartSeries>
+        <ChartSeriesItem type="bar" data={firstSeries} labels={itemLabels} />
+      </ChartSeries>
+    </Chart>
+    )
+  };

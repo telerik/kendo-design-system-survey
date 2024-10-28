@@ -142,6 +142,7 @@ section {
 .chartFlex {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   
 
   .text {
@@ -149,7 +150,6 @@ section {
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    padding: 0 50px;
   }
   
   .chartWrapperDark, .chartWrapperLight {
@@ -207,15 +207,14 @@ section {
 .designIcon {
   position: absolute;
   width: 80px;
-  left: -10px;
+  right: 15px;
   bottom: -15px;
-  transform: rotate(40deg);
 }
 
 .codeIcon {
   position: absolute;
   width: 80px;
-  left: -10px;
+  right: 15px;
   bottom: -15px;
 }
 
@@ -358,4 +357,17 @@ blockquote {
 
 .smallChart {
   max-width: 300px;
+}
+
+.pieChartWrapper {
+  max-width: 600px;
+  margin: auto;
+}
+
+.sig_kat {
+  max-width: 150px;
+}
+
+.sig_nora {
+  max-width: 120px;
 }

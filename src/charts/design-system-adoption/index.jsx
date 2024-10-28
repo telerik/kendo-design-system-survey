@@ -9,6 +9,7 @@ import {
   ChartValueAxis,
   ChartValueAxisItem,
   ChartValueAxisTitle,
+  ChartAxisDefaults,
   ChartArea
 } from "@progress/kendo-react-charts";
 
@@ -18,24 +19,24 @@ const [firstSeries] = [
         [49, 49, 37, 33, 24, 16, 12, 8, 3, 8]
       ];
 
-const categories = ["Aligning design/development", "Establishing processes", "Documentation", "Evidence of benefit", "Education", "Enforcement", "Incentives", "Limited creativity", "Internal champions", "Other"];
+const categories = ["Aligning \n\ design/development", "Establishing processes", "Documentation", "Evidence of benefit", "Education", "Enforcement", "Incentives", "Limited creativity", "Internal champions", "Other"];
+
+const itemLabels = {visible: true, color: 'black', background: 'rgba(0,0,0,0)', padding: 5, format: "{0}%"};
 
 return (
   <Chart>
 
     <ChartArea background="rgba(0,0,0,0)" height={300}/>
-    <ChartTooltip format="{0}%"/>
+    <ChartAxisDefaults majorGridLines={{color: 'rgba(0,0,0, 0.2'}} />
     <ChartValueAxis>
-      <ChartValueAxisItem format="{0}%" >
-        <ChartValueAxisTitle text="Percentage" />
-      </ChartValueAxisItem>
-    </ChartValueAxis>
+      <ChartValueAxisItem labels={{visible: false}} />
+      </ChartValueAxis>
     <ChartCategoryAxis >
       <ChartCategoryAxisItem categories={categories}>
       </ChartCategoryAxisItem>
     </ChartCategoryAxis>
     <ChartSeries>
-      <ChartSeriesItem type="bar" data={firstSeries} />
+      <ChartSeriesItem type="bar" data={firstSeries} labels={itemLabels} />
     </ChartSeries>
   </Chart>
   )

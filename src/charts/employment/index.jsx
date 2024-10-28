@@ -25,17 +25,20 @@ export default function Employment () {
     },
   ];
 
+  const itemLabels = {visible: true, color: 'black', background: 'rgba(0,0,0,0)',format: "{0}%"};
+
 return (
   <Chart>
-    <ChartArea background="rgba(0,0,0,0" height={200}/>
-    <ChartTooltip format="{0}%"/>
-    <ChartLegend position="bottom" />
+    <ChartArea background="rgba(0,0,0,0" height={300}/>
+
+    <ChartLegend position="bottom" orientation="vertical"/>
     <ChartSeries>
       <ChartSeriesItem
-        type="donut"
+        type="pie"
         data={series}
         field="value"
         categoryField="category"
+        labels={itemLabels}
       />
     </ChartSeries>
   </Chart>

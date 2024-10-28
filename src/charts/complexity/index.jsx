@@ -18,24 +18,23 @@ const [firstSeries] = [
         [18, 50, 45]
       ];
 
-const categories = ["Static design", "Interactive design", "Full prototype (with functionality)"];
+const categories = ["Static design", "Interactive design", "Full prototype \n\ (with functionality)"];
+
+const itemLabels = {visible: true, color: 'black', background: 'rgba(0,0,0,0)', padding: 5, format: "{0}%"};
 
 return (
   <Chart>
 
     <ChartArea background="rgba(0,0,0,0)" height={150}/>
-    <ChartTooltip format="{0}%"/>
     <ChartValueAxis>
-      <ChartValueAxisItem format="{0}%" >
-        <ChartValueAxisTitle text="Percentage" />
-      </ChartValueAxisItem>
+      <ChartValueAxisItem labels={{visible: false}} />
     </ChartValueAxis>
     <ChartCategoryAxis >
       <ChartCategoryAxisItem categories={categories}>
       </ChartCategoryAxisItem>
     </ChartCategoryAxis>
     <ChartSeries>
-      <ChartSeriesItem type="bar" data={firstSeries} />
+      <ChartSeriesItem type="bar" data={firstSeries} labels={itemLabels} />
     </ChartSeries>
   </Chart>
   )

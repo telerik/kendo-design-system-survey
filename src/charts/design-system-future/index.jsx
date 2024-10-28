@@ -1,62 +1,39 @@
 import * as React from 'react';
 import { 
-    Chart, 
-    ChartSeries, 
-    ChartSeriesItem, 
-    ChartValueAxis, 
-    ChartValueAxisItem, 
-    ChartArea,
-    ChartLegend,
-    ChartTooltip } 
+  Chart,
+  ChartSeries,
+  ChartSeriesItem,
+  ChartCategoryAxis,
+  ChartCategoryAxisItem,
+  ChartValueAxis,
+  ChartValueAxisItem,
+  ChartAxisDefaults,
+  ChartArea } 
     from '@progress/kendo-react-charts';
 
 export default function DesignSystemFuture () {
 
-const [finish, truth, product, retired, other] = [[38], [52], [6], [1], [2]];
+const [firstSeries]= [[38, 52, 6, 1, 2]];
+
+const categories = ["The team finishes \n\ and maintains it", "It becomes a single \n\ source of truth", "It becomes a product used \n\ beyond our team", "It's retired and \n\ not used again", "Other" ]
+
+const itemLabels = {visible: true, color: 'black', background: 'rgba(0,0,0,0)', padding: 5, format: "{0}%"};
 
 return (
-  <>
-    <Chart style={{height: 200}}>
-      <ChartTooltip format="{0}%"/>
-      <ChartLegend position="bottom" orientation="horizontal" visible={true}/>
-      <ChartSeries>
-        <ChartSeriesItem type="bar" stack={{
-            type: "100%",
-          }} data={finish} />
-        <ChartSeriesItem type="bar" data={truth} />
-        <ChartSeriesItem type="bar" data={product} />
-        <ChartSeriesItem type="bar" data={retired} />
-        <ChartSeriesItem type="bar" data={other} />
+  <Chart>
+    <ChartAxisDefaults majorGridLines={{color: 'rgba(0,0,0, 0.2'}} />
+    <ChartArea background="rgba(0,0,0,0)" height={280}/>
+    <ChartCategoryAxis >
+      <ChartCategoryAxisItem categories={categories} >
+      </ChartCategoryAxisItem>
+    </ChartCategoryAxis>
+    <ChartValueAxis>
+      <ChartValueAxisItem labels={{visible: false}} />
+    </ChartValueAxis>
+    <ChartSeries>
+      <ChartSeriesItem type="bar" data={firstSeries} labels={itemLabels}/>
     </ChartSeries>
   </Chart>
-
-          <div className='legend'>
-            <div className='wrapper'>
-              <div className='color' style={{backgroundColor: '#75C1FF'}}></div>
-              <p>Finish design system & maintain it</p>
-            </div>
-
-            <div className='wrapper'>
-              <div className='color' style={{backgroundColor: '#FFAD1B'}}></div>
-              <p>Become the single source of truth and be continuously developed / maintained</p>
-            </div>
-
-            <div className='wrapper'>
-              <div className='color' style={{backgroundColor: '#0CA39F'}}></div>
-              <p>Become a product used beyond our company / team</p>
-            </div>
-            <div className='wrapper'>
-              <div className='color' style={{backgroundColor: '#4B4CF6'}}></div>
-              <p>Be retired and never used again</p>
-            </div>
-
-            <div className='wrapper'>
-              <div className='color' style={{backgroundColor: '#89A1F1'}}></div>
-              <p>Other</p>
-            </div>
-          </div>
-
-  </>
   )
 };
 
