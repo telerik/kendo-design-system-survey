@@ -95,7 +95,7 @@ function App() {
       </section>
       <section>
       <div className='cta'>
-          <p>For a deep dive into all the insights and fascinating cross-sections, <a href='#download'>download the free report analysis.</a></p>
+          <p>For a deep dive into all the insights and fascinating cross-sections, <a href='#download'>download the free report.</a></p>
         </div>
         <div className='tocFlex'>
           <img src={plant2} className='plant2'/>
@@ -657,7 +657,7 @@ function App() {
       <section>
       <a className='jumplink' id='download'>
         <h2>Download the Full Report</h2></a>
-        <p>For a deep dive into all the insights and fascinating cross-sections, download the free report analysis. It surfaces everything we learned about the relationship between designers and developers, including ideas for making it more efficient and satisfying—all beautifully presented and laid out for your reading pleasure.</p>
+        <p>For a deep dive into all the insights and fascinating cross-sections, download the free report. It surfaces everything we learned about the relationship between designers and developers, including ideas for making it more efficient and satisfying—all beautifully presented and laid out for your reading pleasure.</p>
       </section>
       </div>
 
