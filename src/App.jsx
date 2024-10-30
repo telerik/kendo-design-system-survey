@@ -14,6 +14,7 @@ import plant2 from './assets/plant2.svg'
 import lego from './assets/lego.svg'
 import kathryn from './assets/kathryn.svg'
 import nora from './assets/nora.svg'
+import manuela from './assets/manuela.svg'
 import dots from './assets/dots.png'
 
 //Charts
@@ -297,6 +298,10 @@ function App() {
    
       </section>
 
+      <div className='cta'>
+          <p><a href='#download'>Download the full report</a> to discover how the quality of design-development collaboration correlates to the number of projects per year</p>
+        </div>
+
       <section>
         <h3>Team Composition</h3>
         <p>The more, the merrier, the saying goes—but is that so when it comes to team composition? The most prevalent team model involves 2-5 developers and 1 designer. This aligns with the ratio that zeroheight saw in their <a href="https://19492330.fs1.hubspotusercontent-na1.net/hubfs/19492330/Community%20and%20Content/How%20We%20Document/HowWeDocument-2024.pdf">Design Systems Report 2023</a>, where they saw ranges between 1:6 and 1:15 depending on company size.</p>
@@ -384,7 +389,7 @@ function App() {
         <Relationship/>
        
         <div className='cta'>
-          <p>What's the sweet spot between designers and developers? <a href='#download'>Download the report</a> to find out!</p>
+          <p>What's the sweet spot for the frequency of collaboration between designers and developers? <a href='#download'>Download the report</a> to find out!</p>
         </div>
     
         <p>We also followed up with those who rated their relationship 7 or higher and asked them what they thought worked so well. Sneakily, we gave them the same options as the folks who rated it low. As expected, the results are mirror images. What people in poor relationships crave for is what those in good relationships give credit to for their success. </p>
@@ -495,6 +500,10 @@ function App() {
 
       <p>About half of all respondents did—whether it was one they had just started or a more mature and established system. Of those who didn't, about one-third were planning to create one in the future. </p>
 
+      <div className='cta'>
+          <p><a href='#download'>In the full report</a> you will find out how the presence or absence of a design system relates to the perceived efficiency of the design system implementation process.</p>
+        </div>
+
       <div className='chartWrapperDark'>
         <h4>What is your approach when creating a design system? </h4>
         <DesignSystemApproach/>
@@ -556,6 +565,10 @@ function App() {
         </div>
 
         <p>Now, it's not all bad—after all, if it was, nobody would bother. A design system requires significant upfront time and energy (and no small amount of maintenance afterwards), but it pays back those investments in spades.  </p>
+
+        <div className='cta'>
+          <p>How do you think these approaches are spread acros companies of different sizes? <a href='#download'>Find out in the full report</a></p>
+        </div>
 
         <div className='doubleChartFlex'>
           <div className='chartWrapperLight'>
@@ -641,7 +654,8 @@ function App() {
           <p>Until next year,</p>
           <img className='sig_kat' src={kathryn}/>
           <img className="sig_nora" src={nora}/>
-          <p><b>Kathryn & Nora </b></p>
+          <img className="sig_kat" src={manuela}/>
+          <p><b>Kathryn, Nora, and Manuela </b></p>
         </div>
       </section>
 
