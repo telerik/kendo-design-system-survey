@@ -66,9 +66,13 @@ import DesignSystemCollaborationTools from './charts/design-system-collaboration
 import DesignSystemAI from './charts/design-system-ai';
 import DesignSystemFuture from './charts/design-system-future';
 
-
+import { Button } from '@progress/kendo-react-buttons'
 
 function App() {
+
+  function downloadForm(){
+    window.open('https://www.telerik.com/docs/default-source/whitepapers/state-of-designer-developer-collaboration-2024_telerik.pdf','_blank'); 
+  }; 
 
   return (
     <>
@@ -96,7 +100,7 @@ function App() {
       </section>
       <section>
       <div className='cta'>
-          <p>For a deep dive into all the insights and fascinating cross-sections, <a href='#download'>download the free report.</a></p>
+          <p>For a deep dive into all the insights and fascinating cross-sections, <a href='https://www.telerik.com/docs/default-source/whitepapers/state-of-designer-developer-collaboration-2024_telerik.pdf' target='_blank'>download the free report.</a></p>
         </div>
         <div className='tocFlex'>
           <img src={plant2} className='plant2'/>
@@ -299,7 +303,7 @@ function App() {
       </section>
 
       <div className='cta'>
-          <p><a href='#download'>Download the full report</a> to discover how the quality of design-development collaboration correlates to the number of projects per year</p>
+          <p><a href='https://www.telerik.com/docs/default-source/whitepapers/state-of-designer-developer-collaboration-2024_telerik.pdf' target='_blank'>Download the full report</a> to discover how the quality of design-development collaboration correlates to the number of projects per year</p>
         </div>
 
       <section>
@@ -389,7 +393,7 @@ function App() {
         <Relationship/>
        
         <div className='cta'>
-          <p>What's the sweet spot for the frequency of collaboration between designers and developers? <a href='#download'>Download the report</a> to find out!</p>
+          <p>What's the sweet spot for the frequency of collaboration between designers and developers? <a href='https://www.telerik.com/docs/default-source/whitepapers/state-of-designer-developer-collaboration-2024_telerik.pdf' target='_blank'>Download the report</a> to find out!</p>
         </div>
     
         <p>We also followed up with those who rated their relationship 7 or higher and asked them what they thought worked so well. Sneakily, we gave them the same options as the folks who rated it low. As expected, the results are mirror images. What people in poor relationships crave for is what those in good relationships give credit to for their success. </p>
@@ -501,7 +505,7 @@ function App() {
       <p>About half of all respondents did—whether it was one they had just started or a more mature and established system. Of those who didn't, about one-third were planning to create one in the future. </p>
 
       <div className='cta'>
-          <p><a href='#download'>In the full report</a> you will find out how the presence or absence of a design system relates to the perceived efficiency of the design system implementation process.</p>
+          <p><a href='https://www.telerik.com/docs/default-source/whitepapers/state-of-designer-developer-collaboration-2024_telerik.pdf' target='_blank'>In the full report</a> you will find out how the presence or absence of a design system relates to the perceived efficiency of the design system implementation process.</p>
         </div>
 
       <div className='chartWrapperDark'>
@@ -567,7 +571,7 @@ function App() {
         <p>Now, it's not all bad—after all, if it was, nobody would bother. A design system requires significant upfront time and energy (and no small amount of maintenance afterwards), but it pays back those investments in spades.  </p>
 
         <div className='cta'>
-          <p>How do you think these approaches are spread acros companies of different sizes? <a href='#download'>Find out in the full report</a></p>
+          <p>How do you think these approaches are spread acros companies of different sizes? <a href='https://www.telerik.com/docs/default-source/whitepapers/state-of-designer-developer-collaboration-2024_telerik.pdf' target='_blank'>Find out in the full report</a></p>
         </div>
 
         <div className='doubleChartFlex'>
@@ -672,6 +676,7 @@ function App() {
       <a className='jumplink' id='download'>
         <h2>Download the Full Report</h2></a>
         <p>For a deep dive into all the insights and fascinating cross-sections, download the free report. It surfaces everything we learned about the relationship between designers and developers, including ideas for making it more efficient and satisfying—all beautifully presented and laid out for your reading pleasure.</p>
+        <Button onClick={downloadForm}>Download the Report</Button>
       </section>
       </div>
 
