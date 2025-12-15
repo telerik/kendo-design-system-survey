@@ -8,3 +8,5 @@ node_modules
 bower_components
 
 kendo-ui-license.txt
+
+dist

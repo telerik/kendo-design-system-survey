@@ -1,0 +1,51 @@
+name: CD
+
+on:
+  push:
+    branches: [ main ]
+
+permissions:
+  id-token: write
+  contents: read
+
+env:
+  BASE_URL: /design-system/designer-developer-collaboration-survey-2024
+
+jobs:
+  cd:
+    runs-on: ubuntu-latest
+    environment: production
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install modules
+        run: npm ci --no-audit --no-fund
+
+      - name: Activate Kendo UI License
+        run: npx kendo-ui-license activate
+        env:
+          KENDO_UI_LICENSE: ${{ secrets.KENDO_UI_LICENSE }}
+
+      - name: Build site
+        run: |
+          npx vite build --base="$BASE_URL"
+
+      - uses: azure/login@v2
+        with:
+          client-id: ${{ secrets.AZURE_CLIENT_ID }}
+          tenant-id: ${{ secrets.AZURE_TENANT_ID }}
+          subscription-id: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
+
+      - name: Upload to blob storage
+        uses: azure/CLI@v2
+        with:
+          inlineScript: |
+            az storage blob upload-batch --overwrite \
+              --account-name ${{ vars.STORAGE_ACCOUNT_NAME }} \
+              --auth-mode key -d "\$web$BASE_URL" -s ./dist/
+
+      - name: Logout
+        run: |
+          az logout
+        if: always()
